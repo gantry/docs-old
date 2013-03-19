@@ -67,7 +67,7 @@ Notices are produced by using two levels of block quote for example `> >` to gen
 Blocks of code.
 ---------------
 
-~~~ {.prettyprint .linenums}
+~~~ .html
 <!DOCTYPE HTML>
 
 <html>
@@ -97,7 +97,7 @@ Blocks of code.
 Line Breaks
 -----------
 
-A `<br />` tag can be recreated by using two or more spaces at the end of a line.   
+A `<br />` tag can be recreated by using two or more spaces at the end of a line.
 This should text should be on a new line.
 
 An Image Example

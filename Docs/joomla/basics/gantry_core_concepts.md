@@ -15,7 +15,7 @@ Template index.php
 ------------------
 Let's start digging into Gantry by taking a look at how the index.php looks:
 
-~~~
+~~~ .php
 // no direct access
 defined( '_JEXEC' ) or die( 'Restricted index access' );
 
@@ -26,7 +26,7 @@ $gantry->init();
 
 This top code block is all that's needed to get Gantry up and running. By including the gantry.php bootstrap file, you are connecting to the Gantry framework and initializing it. A lot of heavy lifting gets processed in here, all safely out of sight and mind. Next is the start of the HTML:
 
-~~~
+~~~ .html
 <!doctype html>
 <html xml:lang="<?php echo $gantry->language; ?>" lang="<?php echo $gantry->language;?>" >
 <head>
@@ -46,7 +46,7 @@ This call has built in logic and will include core gantry css files, as well as 
 
 An important new features in Gantry4 is the ability to add and compile LESS files into CSS by using the `addLess()` method. You can also include JavaScript files with the `addScript()` method. Let's take a look at the next bit of the file that includes some references to some module positions:
 
-~~~
+~~~ .php
 <?php /** Begin Top Surround **/ if ($gantry->countModules('top')) : ?>
     <header id="rt-top-surround">
         <?php /** Begin Top **/ if ($gantry->countModules('top')) : ?>
@@ -75,7 +75,7 @@ This is the standard location to define positions for Joomla, as this is what is
 
 The top of this file contains some base information about the template and its configuraiton. The "**top**" module position has it's own configuration in the layouts section along with a default value and some configuration settings that define which options are available. The abbreviated XML for this looks like:
 
-~~~
+~~~ .xml
 <positions>
 .....
 <position>top-a</position>

@@ -8,7 +8,7 @@ You can read all of the documentation within as its just in plain text files, ma
 
 If you would like a local copy of the documentation, you can either [download it](https://github.com/gantry/docs/archive/master.zip) or you can clone the reopistory by running the follwing command:
 
-~~~
+~~~ .bash
 git clone git://github.com/gantry/docs gantry-docs
 ~~~
 
@@ -23,7 +23,7 @@ If you decide to fork for providing new content as commits. Please ensure you cr
 
 To get started with a local environment into the proper `staging` branch, you can run these commands:
 
-~~~
+~~~ .bash
 git clone git://github.com/gantry/docs gantry-docs
 cd gantry-docs
 git checkout -b staging origin/staging
