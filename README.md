@@ -1,6 +1,6 @@
 Gantry Documentation
 ====================
-This repository contains the source of the Gantry documentation, currently accessible at [http://gantry-framework.com/documentation]().
+This repository contains the source of the Gantry documentation, currently accessible at <http://gantry-framework.com/documentation>.
 
 The documentation is contained in [Docs/](Docs) and is structured in folders, exactly as you see them on the main website.
 
@@ -41,7 +41,7 @@ This is a list of few conventions we follow when writing documentation that help
 * There are some reserved names that can’t be used for anything but the scope they are intended for:
     * **README.md**: [ _file_ ] This is a reserved name of GitHub, used to describe the content of a particular repository directory, like this you are reading right now.
 
-    * **TOC.md**: [ _file_ ] TOC (Table Of Content) does represent the structure of a project. Its content is a list of links to the various documents in the project. The TOC is represented as sidebars in the [Gantry Docs](http://gantry.com/docs).
+    * **TOC.md**: [ _file_ ] TOC (Table Of Content) does represent the structure of a project. Its content is a list of links to the various documents in the project. The TOC is represented as sidebars in the [Gantry Docs](http://gantry-framework.com/documentation).
 
     * **INDEX.md**: [ _file_ ] This file defines the default content for a folder. Exactly like HTML pages, if you hit a folder without specifying any file, INDEX.md (if found) will be assumed.
 
