@@ -14,7 +14,7 @@ breadcrumb: /!joomla:Joomla/
     - [License & Usage](basics/license_and_usage.md)
     - [Installation](basics/installation.md)
     - [Upgrading](basics/upgrading.md)
-    - [Uninstalling](basics/uninstalling.md)
+    - [Uninstallation](basics/uninstallation.md)
 
 
 <!-- -->
