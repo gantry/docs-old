@@ -6,7 +6,10 @@ breadcrumb: /!joomla:Joomla/
 
 ---
 
-* [Basics](basics/)
+Joomla
+------
+
+* Basics
 
     - [Key Features](basics/)
     - [Gantry Core Concepts](basics/gantry_core_concepts.md)
@@ -19,7 +22,7 @@ breadcrumb: /!joomla:Joomla/
 
 <!-- -->
 
-* [Configure](configure/)
+* Configure
 
     - [Template Overrides](configure/)
     - [Presets](configure/presets.md)
@@ -30,7 +33,7 @@ breadcrumb: /!joomla:Joomla/
 
 <!-- -->
 
-* [Customize](customize/)
+* Customize
 
     - [Adding Module Positions](customize/adding_module_positions.md)
     - [Moving Module Positions](customize/moving_module_positions.md)
@@ -41,7 +44,7 @@ breadcrumb: /!joomla:Joomla/
 
 <!-- -->
 
-* [Advanced](advanced/)
+* Advanced
 
     - [Creating a New Layout](advanced/creating_new_layout.md)
     - [Creating a New Feature](advanced/creating_new_feature.md)
@@ -55,7 +58,7 @@ breadcrumb: /!joomla:Joomla/
 
 <!-- -->
 
-* [Tutorials](tutorials/)
+* Tutorials
 
     - [Overriding a Feature](tutorials/overriding_feature.md)
     - [Creating an Unsupported Page](tutorials/creating_unsupported_page.md)
