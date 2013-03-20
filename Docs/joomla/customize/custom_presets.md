@@ -39,7 +39,7 @@ $gantry_presets = array(
     ...
 ~~~
 
-This array contains a set of presets comprised of another array of parameters along with a special parameter called " **name** " which is the display name for this preset.
+This array contains a set of presets comprised of another array of parameters along with a special parameter called **name** which is the display name for this preset.
 
 The second kind of preset is the custom preset that you can save from the template administrator. If you set a bunch of parameters in the administrator, you can click **Save Preset** from the Save button dropdown and save as **new preset**. This will save the same parameters as defined in the `$gantry_presets` variable. If you want to save new parameters, you will also need to add them to the `$gantry_presets` variable in order for them to be saved as a custom preset. If you save a custom preset Gantry will create a file called presets.ini in your `YOUR_SITE/templates/YOUR_TEMPLATE/custom/` folder. In the example below, I saved a custom preset and chose the name "New Preset" in the popup dialog.
 
