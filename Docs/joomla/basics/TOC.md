@@ -1,6 +1,4 @@
 ---
-title: Basics
-description: Everything you need to know about Gantry
 breadcrumb: /joomla:Joomla/!basics:Basics
 
 ---
