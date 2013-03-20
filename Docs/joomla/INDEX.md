@@ -6,7 +6,7 @@ title: Joomla Documentation
 > [![](assets/g4-promo.jpg)](#)
 >
 > ## Gantry 4 Introductory Video ##
-> This short 3 minute screencast will give you a taste of the power and flexibility of the Gantry framework for Joomla. The short videos >below expand on many of these key features.
+> This short 3 minute screencast will give you a taste of the power and flexibility of the Gantry framework for Joomla. The short videos below expand on many of these key features.
 
 * [![](assets/g4-install.jpg)](#)
 
