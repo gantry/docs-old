@@ -6,7 +6,7 @@ breadcrumb: /joomla:Joomla/!basics:Basics
 Joomla
 ------
 
-* [Basics]()
+* Basics
 
     - [Key Features]()
     - [Gantry Core Concepts](gantry_core_concepts.md)
