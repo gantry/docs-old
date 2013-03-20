@@ -72,7 +72,6 @@ Gantry is packed full of features to empower the development of designs into ful
 
   AJAX-powered non-intrusive growl-style notifications for events such as save, cache clearing etc.
 
-<!-- -->
 
 * __Responsive HTML5 base template__
 
