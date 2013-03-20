@@ -22,7 +22,7 @@ Gantry has three available download types:
 
 The installation process is exactly the same for all three, the only difference is the file you are installing is different. Select whichever download option is best for you, we recommend the bundle for first time installs.
 
-[Download](/download#joomla25)
+[Download](http://www.gantry-framework.org/download#joomla25)
 
 Installing Gantry
 -----------------
