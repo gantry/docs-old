@@ -42,7 +42,7 @@ Local development is the preferred method of working with any Gantry based templ
 
 
 | Mac OS X                              | Windows                               | Linux                                 |
-|---------------------------------------|---------------------------------------|---------------------------------------|
+|:--------------------------------------|:--------------------------------------|:--------------------------------------|
 | [MAMP & MAMP Pro][mamp]               | [EasyPHP][easyphp]                    | [LAMP Bundle][lamp]                   |
 | [XAMPP for Mac OS X][xampm]           | [WampServer][wamp]                    | [XAMPP for Linux][xampl]              |
 | [Zend Server Community Edition][zend] | [Zend Server Community Edition][zend] | [Zend Server Community Edition][zend] |

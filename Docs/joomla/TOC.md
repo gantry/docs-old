@@ -35,7 +35,7 @@ Joomla
 
 * Customize
 
-    - [Adding Module Positions](customize/adding_module_positions.md)
+    - [Adding Module Positions](customize/)
     - [Moving Module Positions](customize/moving_module_positions.md)
     - [Custom Module Layout](customize/custom_module_layout.md)
     - [Custom Module Chrome](customize/custom_module_chrome.md)

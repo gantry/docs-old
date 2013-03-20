@@ -1,11 +1,12 @@
 ---
-title: Configure
-description: Easy steps on how to configure Gantry
 breadcrumb: /joomla:Joomla/!configure:Configure
 
 ---
 
-* [Configure]()
+Joomla
+------
+
+* Configure
 
     - [Template Overrides]()
     - [Presets](presets.md)
