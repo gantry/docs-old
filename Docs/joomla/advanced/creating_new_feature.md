@@ -7,38 +7,58 @@ Creating a New Feature
 ======================
 In the Gantry framework we use the term **Feature** to mean a specific bit of functionality. Features are flexible enough that they can be used to perform almost any kind of logic you would need. The base GantryFeature class contains methods that can be implemented to control how your feature functions. Those methods are:
 
-* `isEnabled()`: by default this gets its state from the enabled toggle in the admin. You can override this to force the enabling of a feature without any UI interaction.
+| `isEnabled()`
+|:---------------------------------------------------------------------------------------------------------------------------------------------------------
+| by default this gets its state from the enabled toggle in the admin. You can override this to force the enabling of a feature without any UI interaction.
+| Returns `boolean` [true | false]
 
-    - Returns `boolean` [true | false]
 
-* `getPosition()`: by default this gets its position from the position element in the admin. Again, you can override this to force a position without any UI interaction.
+| `getPosition()`
+|:------------------------------------------------------------------------------------------------------------------------------------------------------
+| by default this gets its position from the position element in the admin. Again, you can override this to force a position without any UI interaction.
+| Returns `string` [current position name]
 
-    - Returns `string` [current position name]
 
-* `isInPosition([string $position])`: a method to determine if the feature is located in a specified position.
+| `isInPosition([string $position])`
+|:-----------------------------------------------------------------------------------------------------
+| a method to determine if the feature is located in a specified position.
+| Argument [optional] `string` [position name to get compared with the current position of the feature]
+| Returns `boolean` [true | false] if the current position is the same as the argument
 
-    - Argument [optional] `string` [position name to get compared with the current position of the feature]
-    - Returns `boolean` [true | false] if the current position is the same as the argument
 
-* `isOrderable()`: a method that defaults to true, but can be overriden if the order of this position is not important.
+| `isOrderable()`
+|:----------------------------------------------------------------------------------------------------
+| a method that defaults to true, but can be overriden if the order of this position is not important.
+| Returns `boolean` [true | false]
 
-    - Returns `boolean` [true | false]
 
-* `setPrefix(string $prefix)`: sets a prefix for handling prefixed fields such as chained elements.
+| `setPrefix(string $prefix)`
+|:--------------------------------------------------------------------------
+| sets a prefix for handling prefixed fields such as chained elements.
+| Argument `string` [prefix name - usually the name of the main chain param]
 
-    - Argument `string` [prefix name - usually the name of the main chain param]
 
-* `get($param [, $prefixed = true])`: gets a param from the feature's configuration. Can also take a prefix for more specificity.
+| `get($param [, $prefixed = true])`
+|:------------------------------------------------------------------------------------------
+| gets a param from the feature's configuration. Can also take a prefix for more specificity.
+| Argument `string` [field name]
+| Argument [optional] `boolean` [true | false]
+| Returns `mixed` [the current value of the field]
 
-    - Argument `string` [field name]
-    - Argument [optional] `boolean` [true | false]
-    - Returns `mixed` [the current value of the field]
 
-* `init()`: by default empty. Is the first method called on initialization of a feature. Used for setup or initialization
+| `init()`
+|:-------------------------------------------------------------------------------------------------------------
+| by default empty. Is the first method called on initialization of a feature. Used for setup or initialization
 
-* `render()`: by default empty. Used to render output in a particular position
 
-* `finalize()`: by default empty. Called at the end of the feature
+| `render()`
+|:----------------------------------------------------------------
+| by default empty. Used to render output in a particular position
+
+
+| `finalize()`
+|:--------------------------------------------------
+| by default empty. Called at the end of the feature
 
 All core features and any custom feature you create, should extend this GantryFeature class. To create a new feature of your own, you would just have to create a new file in your  `features/` folder that extended the `libraries/gantry/core/gantryfeatures.class.php` class. It will automatically get picked up by the Gantry framework and be processed. The best way to see what a feature can do for you is to examine a few of the core features located in the `libraries/gantry/features/` folder.
 
