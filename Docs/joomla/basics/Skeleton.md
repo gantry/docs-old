@@ -75,7 +75,6 @@ Tables
 | be         |          be |      be      |
 | left       |       right |    center    |
 | aligned    |     aligned |   aligned    |
-| nospan     | should span 2 columns     ||
 
 
 Blocks of code.

@@ -64,6 +64,19 @@ Notices are produced by using two levels of block quote for example `> >` to gen
 > >
 > > This is another line of the same notice
 
+Tables
+------
+
+| Left align | Right align | Center align |
+|:-----------|------------:|:------------:|
+| This       |        This |     This     |
+| column     |    *column* |  **column**  |
+| will       |        will |     will     |
+| be         |          be |      be      |
+| left       |       right |    center    |
+| aligned    |     aligned |   aligned    |
+
+
 Blocks of code.
 ---------------
 
