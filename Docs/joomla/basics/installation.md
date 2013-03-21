@@ -7,7 +7,7 @@ Installation
 ============
 The Gantry framework itself is independent of any template. Each Gantry-enabled template relies on the Gantry framework to provide the underlying base and extensive functionality that enables the creation of such powerful sites.
 
-> [![](../assets/g4-install.jpg)](#)
+> [![](../assets/g4-install.jpg)](http://youtu.be/KOOuBQpSZDM)
 >
 > A quick way to see the installation process in action is to watch this short screencast. It will provide a run-through of the steps required to quickly and easily get Gantry installed.
 

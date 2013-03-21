@@ -7,7 +7,7 @@ Layouts
 =======
 The Layouts panel in the Gantry based template administration interface provides several options for configuring the layout of the template. Each modular section of the template design offers 6 module positions by default
 
-> [![](../assets/g4-module-widths.jpg)](#)
+> [![](../assets/g4-module-widths.jpg)](http://youtu.be/5sGujOho7cM)
 >
 > To find out about Layouts and Module Widths, check out this quick screencast. It covers some of the basic concepts involved in understanding and configuring layout with a combination of module configuration and Gantry layout control.
 

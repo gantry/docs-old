@@ -7,7 +7,7 @@ Custom Presets
 ==============
 This section covers how to create a new custom preset in a Gantry enabled template.
 
-> [![](../assets/g4-presets.jpg)](#)
+> [![](../assets/g4-presets.jpg)](http://youtu.be/n6FsulE58lU)
 >
 > Creating a custom preset is a very simple task with Gantry. Check out this short video on how to customize your layout then create a custom preset based on your configuration options.
 

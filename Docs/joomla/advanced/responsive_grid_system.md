@@ -7,7 +7,7 @@ Responsive Grid System
 ======================
 The Gantry Framework was originally based on the [960 Grid System](http://960.gs/) that offered a 12 column grid structure based on a fixed 960px wide layout. From version 4.x onwards, the responsive grid system of [Twitter's Bootstrap](http://twitter.github.com/bootstrap/) is now being used.
 
-> [![](../assets/g4-promo.jpg)](#)
+> [![](../assets/g4-promo.jpg)](http://youtu.be/AKqppYSttEE)
 >
 > Check out the Gantry introductory video to see the responsive capabilities of Gantry 4 powered template designs. Powerful features, presets, layout configuration, responsive design, and much, much more.
 
