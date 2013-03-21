@@ -14,3 +14,13 @@ Joomla
     - [Features](features.md)
     - [Layouts](layouts.md)
     - [Advanced](advanced.md)
+
+* Navigation
+
+	
+	- [Basics](../basics)
+	- Configure
+	- [Customize](../customize)
+	- [Advanced](../advanced)
+	- [Tutorials](../tutorials)
+	- [Back...](../)

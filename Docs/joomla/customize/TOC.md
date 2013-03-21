@@ -14,3 +14,12 @@ Joomla
     - [Custom Module Chrome](custom_module_chrome.md)
     - [Custom Presets](custom_presets.md)
     - [Using Force Positions](using_force_positions.md)
+
+* Navigation
+
+	- [Basics](../basics)
+	- [Configure](../configure)
+	- Customize
+	- [Advanced](../advanced)
+	- [Tutorials](../tutorials)
+	- [Back...](../)
