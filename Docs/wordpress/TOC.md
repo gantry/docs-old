@@ -1,6 +1,6 @@
 ---
 title: WordPress Documentation
-description: WordPress is a hugely popular open source Content Management System (CMS) and the platform this site is built upon. This section enables you to find out more about WordPress and how to use it with RocketTheme templates and extensions.
+description: WordPress is a free and open source blogging tool and a content management system (CMS) based on PHP and MySQL. It has many features including a plug-in architecture and a template system. [^1]
 landing: true
 breadcrumb: /!wordpress:WordPress/
 
@@ -67,3 +67,6 @@ WordPress
     - [Adding a Custom StyleSheet](tutorials/custom_stylesheet.md)
     - [Adding a Custom Font](tutorials/custom_font.md)
     - [Customize the Error Page](tutorials/customize_error_page.md)
+
+
+[^1]: http://en.wikipedia.org/wiki/Wordpress
