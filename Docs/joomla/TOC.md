@@ -46,7 +46,7 @@ Joomla
 
 * Advanced
 
-    - [Creating a New Layout](advanced/creating_new_layout.md)
+    - [Creating a New Layout](advanced/)
     - [Creating a New Feature](advanced/creating_new_feature.md)
     - [Built-In Ajax System](advanced/ajax_system.md)
     - [Per-Browser Specific Control](advanced/per_browser_control.md)
