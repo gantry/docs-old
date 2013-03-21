@@ -5,6 +5,9 @@ breadcrumb: /joomla:Joomla/!customize:Customize
 
 Joomla
 ------
+* [Basics](../basics)
+
+* [Configure](../configure)
 
 * Customize
 
@@ -15,11 +18,8 @@ Joomla
     - [Custom Presets](custom_presets.md)
     - [Using Force Positions](using_force_positions.md)
 
-* Navigation
+* [Advanced](../advanced)
 
-	- [Basics](../basics)
-	- [Configure](../configure)
-	- Customize
-	- [Advanced](../advanced)
-	- [Tutorials](../tutorials)
-	- [Back...](../)
+* [Tutorials](../tutorials)
+
+* [Back...](../)

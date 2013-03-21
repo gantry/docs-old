@@ -6,6 +6,8 @@ breadcrumb: /joomla:Joomla/!configure:Configure
 Joomla
 ------
 
+- [Basics](../basics)
+
 * Configure
 
     - [Template Overrides]()
@@ -15,12 +17,12 @@ Joomla
     - [Layouts](layouts.md)
     - [Advanced](advanced.md)
 
-* Navigation
+* [Customize](../customize)
 
-	
-	- [Basics](../basics)
-	- Configure
-	- [Customize](../customize)
-	- [Advanced](../advanced)
-	- [Tutorials](../tutorials)
-	- [Back...](../)
+* [Advanced](../advanced)
+
+* [Tutorials](../tutorials)
+
+* [Back...](../)	
+
+

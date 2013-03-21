@@ -16,14 +16,17 @@ Joomla
     - [Upgrading](upgrading.md)
     - [Uninstallation](Uninstallation.md)
 
-* Navigation
-	
-	- Basics	
-	- [Configure](../configure)
-	- [Customize](../customize)
-	- [Advanced](../advanced)
-	- [Tutorials](../tutorials)
-	- [Back...](../)
+* [Configure](../configure)
+
+* [Customize](../customize)
+
+* [Advanced](../advanced)
+
+* [Tutorials](../tutorials)
+
+* [Back...](../)
+
+<!-- -->
 
 * Unit Test
 

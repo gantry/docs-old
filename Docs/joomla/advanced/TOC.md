@@ -6,6 +6,12 @@ breadcrumb: /joomla:Joomla/!advanced:Advanced/
 Joomla
 ------
 
+* [Basics](../basics)
+
+* [Configure](../configure)
+
+* [Customize](../customize)
+
 * Advanced
 
     - [Creating a New Layout]()
@@ -18,11 +24,6 @@ Joomla
     - [Responsive Grid System](responsive_grid_system.md)
     - [LESS CSS](less_css.md)
 
-* Navigation
+* [Tutorials](../tutorials)
 
-    - [Basics](../basics)
-    - [Configure](../configure)
-    - [Customize](../customize)
-    - Advanced
-    - [Tutorials](../tutorials)
-    - [Back...](../)
+* [Back...](../)
