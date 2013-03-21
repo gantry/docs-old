@@ -56,7 +56,6 @@ A model can have any kind of purpose. For instance, in the Gantry Admin we use A
 * Removing LESS compiled files
 * Ajax saving
 * Creating presets
-* ...
 
 As you can see, a model can be anything that you can think of and the mechanism running behind the scenes, makes this a very powerful way to control via Ajax anything you would like.
 
