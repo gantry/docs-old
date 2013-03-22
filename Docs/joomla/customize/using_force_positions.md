@@ -7,7 +7,7 @@ Using Force Positions
 =====================
 There are times when you just don't want to have your modules taking up all the room in a horizontal row no matter what the layout. For example you might want to have a module on the left and a module on the right, with nothing in the middle. In traditional Joomla templates you would have to resort to making two specific module positions and using CSS, position them on the left and right sides of your design.
 
-> [![](../assets/g4-forcepos.jpg)](http://youtu.be/Lfl4nQnduvo)
+> [![](../assets/g4-forcepos.jpg)](http://youtube.com/embed/Lfl4nQnduvo)
 >
 > Forcing the module positions is a powerful layout control. This short screencast provides some insight in how to achieve this and also the layout control that can be attained using this technique.
 

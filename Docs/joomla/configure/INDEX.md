@@ -7,7 +7,7 @@ Template Overrides
 ==================
 Gantry offers the ability to override default template configurations for individual menu items. A frequent example is to have different layout configurations for your site's frontpage, versus subpages. Gantry makes this achievable in just a few clicks.
 
-> [![](../assets/g4-overrides.jpg)](http://youtu.be/xG1TJUM4SQ8)
+> [![](../assets/g4-overrides.jpg)](http://youtube.com/embed/xG1TJUM4SQ8)
 >
 > Discover the power of Gantry and it's ability to configure any parameter based on template overrides using custom template styles. Gantry adds the power of inheritance of settings to enable easier per-menu custom configurations.
 

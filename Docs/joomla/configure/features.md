@@ -6,7 +6,7 @@ title: Features
 Features
 ========
 
-> [![](../assets/g4-features.jpg)](http://youtu.be/CiSkV5QVyhY)
+> [![](../assets/g4-features.jpg)](http://youtube.com/embed/CiSkV5QVyhY)
 >
 > A quick way to see the power of Gantry features is to check out this short screencast. It covers some of the basics of features and how they work and how they can be easily integrated into your design.
 

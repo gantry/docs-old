@@ -7,7 +7,7 @@ Gantry Core Concepts
 ====================
 One of the key concepts that make Gantry so powerful is that it provides a wealth of power and functionality that can easily be accessed by the Joomla template. This makes it easier for you the template developer to write cleaner code and as a side benefit, provide a level of abstraction that will allow you to go from Joomla 2.5 to 3.0+ without changing anything in your template. The Gantry library handles all the complicated bits for you.
 
-> [![](../assets/g4-promo.jpg)](http://youtu.be/AKqppYSttEE)
+> [![](../assets/g4-promo.jpg)](http://youtube.com/embed/AKqppYSttEE)
 >
 > Check out the Gantry introductory video to get a feel of the features and capabilities that you Gantry brings to the table. Powerful features, presets, layout configuration, responsive design, and much, much more.
 

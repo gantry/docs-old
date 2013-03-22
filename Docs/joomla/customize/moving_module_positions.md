@@ -7,7 +7,7 @@ Moving Module Positions
 =======================
 This section covers moving a set of module positions within your Gantry enabled template.
 
-> [![](../assets/g4-module-positions.jpg)](http://youtu.be/snZSUSWMnpM)
+> [![](../assets/g4-module-positions.jpg)](http://youtube.com/embed/snZSUSWMnpM)
 >
 > Check out this quick screencast on Module Positions to get an overview of how module positions work within Joomla and the Gantry Framework.
 

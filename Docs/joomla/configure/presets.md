@@ -7,7 +7,7 @@ Presets
 =======
 Gantry makes use of a powerful Preset system allowing developers and site builders to create preset styles and configurations.
 
-> [![](../assets/g4-presets.jpg)](http://youtu.be/n6FsulE58lU)
+> [![](../assets/g4-presets.jpg)](http://youtube.com/embed/n6FsulE58lU)
 >
 > Creating a custom preset is a very simple task with Gantry. Check out this short video on how to customize your layout then create a custom preset based on your configuration options.
 
