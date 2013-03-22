@@ -14,7 +14,7 @@ Joomla
     - [License & Usage](license_and_usage.md)
     - [Installation](installation.md)
     - [Upgrading](upgrading.md)
-    - [Uninstallation](Uninstallation.md)
+    - [Uninstallation](uninstallation.md)
 
 * [Configure](../configure)
 
