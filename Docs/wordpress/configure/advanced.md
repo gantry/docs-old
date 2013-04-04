@@ -5,19 +5,26 @@ title: Advanced
 
 Advanced
 ========
-The Advanced panel in the Gantry based template administration interface provides several options for configuring the menu options for the template. The following configuration options are available:
+The Advanced panel in the Gantry based template administration interface provides several options for configuring the advanced options for the template. The following configuration options are available:
 
 
-Display Component
------------------
-The Display Component option allows you to enable/disable the output of the Joomla component on the frontpage. This is useful for sites and templates that want to make use of a frontpage that consists entirely of modules, with only subpages showing the Joomla component output.
+Maintenance Mode
+----------------
+Maintenance Mode allows you to block the non logged in visitors from viewing your site for the time you're making changes to it. This way you can do modifications and test them without unnecessary rush. By default the front end will display the message specified in the **Message** field, but you can also create your own custom file called `maintenance.php` in the template root directory which will be used instead.
 
-![](assets/advanced-display-component.jpg)
+![](assets/advanced-maintenance-mode.jpg)
+
+
+Display Content
+---------------
+The Display Content option allows you to enable/disable the output of the WordPress content on the frontend. This is useful for sites and templates that want to make use of a page that consists entirely of widgets but preserving all mainbody widget positions.
+
+![](assets/advanced-display-content.jpg)
 
 
 Mainbody Enabled
 ----------------
-The Mainbody Enabled option allows you to enable/disable the entire mainbody section. This is useful for sites and templates that want to make use of a frontpage that consists entirely of modules, with only subpages showing the Joomla component output.
+The Mainbody Enabled option allows you to enable/disable the entire mainbody section. This is useful for sites and templates that want to make use of a page that consists entirely of widgets.
 
 ![](assets/advanced-mainbody.jpg)
 
@@ -29,11 +36,18 @@ RTL means “right-to-left” and is a key component when trying to deliver a we
 ![](assets/advanced-rtl.jpg)
 
 
-Page Suffix
------------
-The Page Suffix option allows you to enable/disable page suffix classes being appended to the body tag. With this option enabled, any page suffix classes used for particular pages in joomla will have that suffix added to the body tag to allow for styling and customization on a page by page basis.
+Disable Auto Paragraphs
+-----------------------
+Disable Auto Paragraphs option allows you to remove the WordPress filter responsible for automatic `<p>` tag content wrapping. This can be very useful when creating a complex content.
 
-![](assets/advanced-page-suffix.jpg)
+![](assets/advanced-disable-auto-paragraphs.jpg)
+
+
+Disable Texturize
+-----------------
+Disable Texturize option disables some text transformations like smart (curly) quotes, for content and comments. This can be very useful for example for placing code inside of your content.
+
+![](assets/advanced-disable-texturize.jpg)
 
 
 Template Typography

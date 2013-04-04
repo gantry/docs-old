@@ -6,63 +6,87 @@ title: Gizmos
 Gizmos
 ========
 
-> [![](../assets/g4-features.jpg)](http://youtube.com/embed/CiSkV5QVyhY)
+> [![](../assets/g4-gizmos.jpg)](http://youtube.com/embed/CiSkV5QVyhY)
 >
-> A quick way to see the power of Gantry features is to check out this short screencast. It covers some of the basics of features and how they work and how they can be easily integrated into your design.
+> A quick way to see the power of Gantry gizmos is to check out this short screencast. It covers some of the basics of gizmos and how they work and how they can be easily integrated into your design.
 
 
-Date
-----
-The Date feature controls the output of the current date display. From this option you can enable/disable the display of the date, enable/disable the use of client side date, choose from several different date format options and select a location for the date to display in using any of the available module positions in the template.
+Page Suffix
+-----------
+The Page Suffix gizmo allows you to add extra css classes to the `<body>` tag of your site. This allows you to apply your CSS styles on a per-page basis.
 
-![](assets/features-date.jpg)
+![](assets/gizmos-page-suffix.jpg)
 
 
-Font Sizer
+Feed Links
 ----------
-The Font Sizer feature controls the output of the front end font sizer controls allowing users to increase or decrease font size. From this option you can enable/disable the display of the front end font sizer controls, as well as select a location for the font sizer to display in using any of the available module positions in the template.
+The Feed Links gizmo decides wheter WordPress should add the feed links to the `<head>` tag allowing various feed readers to access them.
 
-![](assets/features-font-sizer.jpg)
+![](assets/gizmos-feed-links.jpg)
 
 
-Branding
+Custom Title Tag
+----------------
+The Custom Title Tag allows you to customize your sites `<title>` tag that would replace the default one in the head section. This combined with our Overrides system gives you a possibility to have a completely different site title for each element of your content. There are a number of tokens available for usage : 
+
+**Front Page / Home Page**
+
+* `%blog_title%` - displays the blog title (set in the WordPress Settings)
+* `%blog_description%` - displays the blog description (set in the WordPress Settings)
+
+**Static Page**
+
+* `%blog_title%` - displays the blog title (set in the WordPress Settings)
+* `%blog_description%` - displays the blog description (set in the WordPress Settings)
+* `%page_title%` - displays the title of currently viewed page
+* `%page_author_login%` - displays the login of the author of current page
+* `%page_author_nicename%` - displays the nicename of the author of current page (set in the WordPress user settings)
+* `%page_author_firstname%` - displays the first name of the author of current page
+* `%page_author_lastname%` - displays the last name of the author of current page
+
+**Category Pages**
+
+* `%blog_title%` - displays the blog title (set in the WordPress Settings)
+* `%blog_description%` - displays the blog description (set in the WordPress Settings)
+* `%category_title%` - displays the title of the currently browsed category
+* `%category_description%` - displays the description of the currently browsed category
+
+**Archive Pages**
+
+* `%blog_title%` - displays the blog title (set in the WordPress Settings)
+* `%blog_description%` - displays the blog description (set in the WordPress Settings)
+* `%date%` - displays the date of the currently browsed archive page
+
+**Tags Pages**
+
+* `%blog_title%` - displays the blog title (set in the WordPress Settings)
+* `%blog_description%` - displays the blog description (set in the WordPress Settings)
+* `%tag%` - displays the tag of the currently browsed tags page
+
+![](assets/gizmos-custom-title-tag.jpg)
+
+
+Shortcodes in Widgets
+---------------------
+The Shortcodes in Widgets gizmo allows you to use WordPress shortcodes in Widgets. When disabled shortcodes syntax placed in widgets won't get parsed.
+
+![](assets/gizmos-shortcodes-in-widgets.jpg)
+
+
+RokStyle
 --------
-The Branding feature controls the output of the Gantry branding on the frontend. From this option you can enable/disable the display of the branding image and selecting which module position it loads in..
+The RokStyle gizmo allows you to easily add inline css or js code to the `<head>` tag of your site by placing a shortcode syntax in your content. Example of use : 
 
-![](assets/features-branding.jpg)
+**CSS :** `[rokstyle type="css"].example {font-weight: bold;}[/rokstyle]`
 
+**JavaScript :** `[rokstyle type="js"]InputsExclusion.push('.example')[/rokstyle]`
 
-Copyright
----------
-The Copyright feature controls the output of the copyright text. From this option you can enable/disable the display of the copyright text, input custom copyright text to be displayed, as well as select a location for the copyright text to display in using any of the available module positions in the template.
-
-![](assets/features-copyright.jpg)
-
-
-To Top Scroller
----------------
-The To Top Scroller feature controls the output of a link/button that when clicked will smoothly scroll the page back to the top. From this option you can enable/disable the display of the to top button, input custom text to be displayed on the to top button, as well as select a location for the to top button to display in using any of the available module positions in the template.
-
-![](assets/features-totopscroller.jpg)
-
-
-System Messages
----------------
-The System Message feature controls the output of the Joomla system messages. Joomla outputs system messages for various events and as a feature, it's now possible to control the location of this output. From this option you can enable/disable the display of Joomla system messages, as well as select a location for the Joomla system messages to display in using any of the available module positions in the template.
-
-![](assets/features-system-messages.jpg)
-
-
-Reset Settings
---------------
-The Reset Settings feature controls the output of a link/button that when used will reset all of the stored cookies and return the front end site settings to default. From this option you can enable/disable the display of the Reset Settings button, control the text output, as well as select a location for the Reset Settings button to display in using any of the available module positions in the template.
-
-![](assets/features-reset-settings.jpg)
+![](assets/gizmos-rokstyle.jpg)
 
 
 Google Analytics
---------------
-The Google Analytics feature allows you to enable Google Analytics tracking on your site in a quick and easy way. Just enable the feature and input your UA Key assigned to you by Google in the field provided.
+----------------
+The Google Analytics gizmo allows you to enable Google Analytics tracking on your site in a quick and easy way. Just enable the feature and input your UA Key assigned to you by Google in the field provided.
 
-![](assets/features-google-analytics.jpg)
+![](assets/gizmos-google-analytics.jpg)
 

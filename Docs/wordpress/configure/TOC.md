@@ -13,7 +13,7 @@ WordPress
     - [Template Overrides]()
     - [Presets](presets.md)
     - [Style](style.md)
-    - [Features](features.md)
+    - [Gizmos](gizmos.md)
     - [Layouts](layouts.md)
     - [Advanced](advanced.md)
 

@@ -13,7 +13,7 @@ Note, when making modifications, remember to:
 
 1. Always edit the **.less** and not the **compiled .css** files that are output to `/css-compiled/` folder
 2. Ensure the `/less/`, `/css/`, and `/css-compiled/` directories for the template are writeable
-3. Clear the Joomla, Less, Gantry and Browser caches
+3. Clear the WordPress, Less, Gantry and Browser caches
 
 
 LESS: the Basics
@@ -170,9 +170,9 @@ The above outline is to introduce you to the basics of how LESS works, for a mor
 
 LESS in the Gantry Template
 ---------------------------
-All LESS files associated with the template are located in the `/templates/[TEMPLATE]/less/` directory. Gantry 4 utilizes a powerful PHP-based LESS compiler powered by [lessphp](lessphp). Gantry 4 outputs the processed LESS files into the `/templates/[TEMPLATE]/css-compiled/` directory.
+All LESS files associated with the template are located in the `/wp-content/themes/[TEMPLATE]/less/` directory. Gantry 4 utilizes a powerful PHP-based LESS compiler powered by [lessphp](lessphp). Gantry 4 outputs the processed LESS files into the `/wp-content/themes/[TEMPLATE]/css-compiled/` directory.
 
-Not all CSS files are compiled into a single file. Any CSS file that requires to be standalone, for purposes of template parameters, such as loading Fusion Menu instead of SplitMenu, will be independent of the main `/templates/[TEMPLATE]/css-compiled/[OUTPUT_CSSFILE]` file.
+Not all CSS files are compiled into a single file. Any CSS file that requires to be standalone, for purposes of template parameters, such as loading Fusion Menu instead of SplitMenu, will be independent of the main `/wp-content/themes/[TEMPLATE]/css-compiled/[OUTPUT_CSSFILE]` file.
 
 
 How are LESS files compiled?
@@ -183,7 +183,7 @@ When a change is detected, Gantry **automagically** recompiles your LESS files i
 $gantry->addLess('NAME.less');
 ~~~
 
-Where `NAME.less` is the name of your less file in your `/templates/[TEMPLATE]/less/` directory. The **addLess()** method takes several optional parameters:
+Where `NAME.less` is the name of your less file in your `/wp-content/themes/[TEMPLATE]/less/` directory. The **addLess()** method takes several optional parameters:
 
 ~~~ .php
 public function addLess([INPUT_LESSFILE], [OUTPUT_CSSFILE], [PRIORITY], [ARRAY_OF_VARIABLES]);
@@ -208,7 +208,7 @@ An alternative way to add LESS files is to simply create the file then add a ref
 
 // Core and Grid
 @import "gantry-core.less";
-@import "joomla-core.less";
+@import "wordpress-core.less";
 
 // Template core styling and layout
 @import "template.less";
@@ -217,7 +217,7 @@ An alternative way to add LESS files is to simply create the file then add a ref
 @import "prettify.less";
 ~~~
 
-Furthermore, for features that require a separate LESS file, you can use a variety of different techniques. The simplest is to insert the add LESS function into `/features/styledeclaration.php`, as noted in the example from the Gantry Template:
+Furthermore, for features that require a separate LESS file, you can use a variety of different techniques. The simplest is to insert the add LESS function into `/gizmos/styledeclaration.php`, as noted in the example from the Gantry Template:
 
 ~~~ .php
 if ($gantry->get('typography-enabled')) $gantry->addLess('typography.less');
@@ -228,7 +228,7 @@ This adds a conditional, where the parameter **typography-enabled** is active, t
 
 LESS Template Options
 ---------------------
-You can control CSS compression, Compile Wait Time and Debug Header, as well as manually clear the cache with the **Clear Cache** button at **Extensions → Template Manager → gantry → Advanced → Less Compiler**.
+You can control CSS compression, Compile Wait Time and Debug Header, as well as manually clear the cache with the **Clear Cache** button at **Admin Dashboard → Gantry Theme → Advanced → Less Compiler**.
 
 Additionally, CSS compression increases site performance and optimization by consolidating all the CSS into a single file, with none or negligible whitespace. This reduces the file size of the CSS file and making it quicker for a browser to load.
 

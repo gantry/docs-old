@@ -10,7 +10,7 @@ There are two main parts to Gantry, the framework and the template. Therefore, t
 
 Unsetting the Gantry Template as Default
 ----------------------------------------
-To uninstall the gantry template, you will first have to ensure that it's not activated. Go to **Appearance → Themes** and click on the **Activate** on any other template that is not gantry.
+To uninstall the gantry template, you will first have to ensure that it's not activated. Go to **Appearance → Themes** and click on the **Activate** on any other template that is not gantry. After that you can simply click on the **Delete** button next to the Gantry template.
 
 ![](assets/uninstall-template-default.jpg)
 

@@ -11,12 +11,12 @@ Gantry makes use of a powerful Preset system allowing developers and site builde
 >
 > Creating a custom preset is a very simple task with Gantry. Check out this short video on how to customize your layout then create a custom preset based on your configuration options.
 
-Gantry Presets are a combination of Gantry features and configuration settings which allow you to create predefined groupings for the entire template as well as on a per-menu item basis. Presets can consist of any Gantry configuration option such css style, link color, background and body graphic levels, font settings, and much more.
+Gantry Presets are a combination of Gantry features and configuration settings which allow you to create predefined groupings for the entire template as well as on a per-override basis. Presets can consist of any Gantry configuration option such css style, link color, background and body graphic levels, font settings, and much more.
 
 
 Creating a new Preset
 ---------------------
-To configure a new preset, go to **Extensions → Template Manager → gantry — Default (Master) → Style**. Configure any style settings for the template such as Link Color.
+To configure a new preset, go to **Admin Dashboard → Gantry Theme → Style**. Configure any style settings for the template such as Link Color.
 
 ![](assets/presets-configure.jpg)
 

@@ -34,7 +34,7 @@ Configure items, then click on the **Assignments** tab. All content type items a
 
 Override Examples
 -----------------
-Below is a simple example of an Override. The **Layouts → MainBody Positions** setting has been overridden. Therefore, in the screenshots below, you can see that the sidebar allocation can be either left or right of the mainbody, and not be applied globally. This is the same for other settings as well, such as Features or Styles.
+Below is a simple example of an Override. The **Layouts → MainBody Positions** setting has been overridden. Therefore, in the screenshots below, you can see that the sidebar allocation can be either left or right of the mainbody, and not be applied globally. This is the same for other settings as well, such as Gizmos or Styles.
 
 | ![][example1] | ![][example2] |
 |---------------|---------------|

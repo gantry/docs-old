@@ -25,7 +25,7 @@ The responsive grid system is designed for desktop, tablet and smartphone system
 
 Responsive Support Classes
 --------------------------
-Another useful available feature, via Bootstrap, is the collection of responsive utility classes that can be used to help tweak layouts by providing a simple method of showing or hiding modules. Insert the below support classes into your module settings to show/hide a module for a particular mode, or add to a specific element in your content.
+Another useful available feature, via Bootstrap, is the collection of responsive utility classes that can be used to help tweak layouts by providing a simple method of showing or hiding modules. Insert the below support classes into your widget custom variation to show/hide a widget for a particular mode, or add to a specific element in your content.
 
 ![](assets/responsive2.jpg)
 

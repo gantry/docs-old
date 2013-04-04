@@ -10,14 +10,13 @@ The **Style** panel in the Gantry based template administration interface provid
 
 Logo
 ----
-The Logo setting provides the ability to show/hide the logo, select its position or changes its type. By default, this is **Gantry Template** which allows you to load three different style options for **Logo Style**.
+The Logo setting provides the ability to change its type. By default, this is **Gantry Template** which loads the default template logo.
 
 ![](assets/style-logo-type-gantry.jpg)
 
 The second logo type option is **Custom**. This will load the **Custom Logo** field, where you can **Select** an image through the Media Manager.
 
 ![](assets/style-logo-type-custom.jpg)
-
 
 Link Color
 ----------
@@ -31,3 +30,24 @@ Font Settings
 The Font Settings option provides the ability to change the font size as well as the default font family used in the template. Many popular web fonts are included as options and some templates also include additional custom font options.
 
 ![](assets/style-font.jpg)
+
+
+Pagination
+-------------------
+The Pagination Settings allows you to decide how the pagination between content pages should look like. This parameter allows you to decide if user should be able to see total number of pages and how many side pages should be displayed next to the current page.
+
+![](assets/style-pagination-settings.jpg)
+
+
+Use WordPress Comments
+-------------------
+The Use WordPress Comments setting gives you ability to disable the WordPress core comments on the front-end in case if you'd like to use any of the 3rd party solutions.
+
+![](assets/style-use-wordpress-comments.jpg)
+
+
+Custom CSS
+-------------------
+The Custom CSS allows you to input your own, custom CSS code that will be added inline to the head section of the page. This way you can add custom styling (globally or per-override) to your page without modifying any of the template files.
+
+![](assets/style-custom-css.jpg)
