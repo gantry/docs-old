@@ -12,9 +12,9 @@ title: WordPress Documentation
 
   Gantry Installation
 
-* [![](assets/g4-features.jpg)](http://youtube.com/embed/CiSkV5QVyhY)
+* [![](assets/g4-gizmos.jpg)](http://youtube.com/embed/CiSkV5QVyhY)
 
-  Gantry Features
+  Gantry Gizmos
 
 
 * [![](assets/g4-module-positions.jpg)](http://youtube.com/embed/snZSUSWMnpM)
