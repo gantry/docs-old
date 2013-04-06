@@ -1,9 +1,9 @@
 ---
-breadcrumb: /joomla:Joomla/!tutorials:Tutorials
+breadcrumb: /wordpress:WordPress/!tutorials:Tutorials
 
 ---
 
-Joomla
+WordPress
 ------
 
 * [Basics](../basics)
@@ -16,7 +16,7 @@ Joomla
 
 * Tutorials
 
-    - [Overriding a Feature]()
+    - [Overriding a Gizmo]()
     - [Creating an Unsupported Page](creating_unsupported_page.md)
     - [Creating a Popup Login](creating_popup_login.md)
     - [Adding a Custom Mainbody Layout](custom_mainbody_layout.md)

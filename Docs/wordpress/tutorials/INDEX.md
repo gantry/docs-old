@@ -1,115 +1,115 @@
 ---
-title: Overriding a Feature
+title: Overriding a Gizmo
 
 ---
 
-Overriding a Feature
+Overriding a Gizmo
 ====================
-A fundamental principle of the Gantry Framework is its ability to be overridden, so it can be as flexible as possible to suit the needs of an individual site or template. Gantry allows you to override Module Layouts, Module Chromes, Layouts and provides a platform for extension overrides. The area of focus in this tutorial is that of Features.
+A fundamental principle of the Gantry Framework is its ability to be overridden, so it can be as flexible as possible to suit the needs of an individual site or template. Gantry allows you to override Widget Layouts, Widget Chromes, Layouts and provides a platform for extension overrides. The area of focus in this tutorial is that of Gizmos.
 
 
-What is a Feature?
+What is a Gizmo?
 ------------------
-A feature is a standalone element that adds a specific utility to the template. They extend the functionality of the template and can be configured, either generally or for specific menu items using the Gantry administrator interface.
+A gizmo is a standalone element that adds a specific utility to the template. They extend the functionality of the template and can be configured, either generally or for specific overrides using the Gantry administrator interface.
 
-Features are located at `/libraries/gantry/features/` and include a variety of different types such as Date, Copyright and Logo. There are many other default features that are included.
+Gizmos are located at `/wp-content/plugins/gantry/gizmos/` and include a variety of different types such as Google Analytics, Page Suffix and RokStyle. There are many other default gizmos that are included.
 
-Below is an example of the `/libraries/gantry/features/copyright.php` feature:
+Below is an example of the `/wp-content/plugins/gantry/gizmos/pagesuffix.php` gizmo:
 
 ~~~ .php
 <?php
-defined('JPATH_BASE') or die();
+defined('GANTRY_VERSION') or die();
 
-gantry_import('core.gantryfeature');
+gantry_import('core.gantrygizmo');
 
-class GantryFeatureCopyright extends GantryFeature
+/**
+ * @package     gantry
+ * @subpackage  features
+ */
+class GantryGizmoPageSuffix extends GantryGizmo
 {
-    var $_feature_name = 'copyright';
 
-    function render($position)
-    {
-        ob_start();
-        ?>
-    <div class="clear"></div>
-    <div class="rt-block">
-        <a href="http://www.rockettheme.com/" title="rockettheme.com" id="rocket"></a>
-        <?php echo $this->get('text'); ?>
-    </div>
-    <?php
-        return ob_get_clean();
-    }
+  var $_name = 'pagesuffix';
+
+  function query_parsed_init() {
+
+    /** @global $gantry Gantry */
+    global $gantry;
+
+    //add body class suffix
+    $gantry->addBodyClass($gantry->get('pagesuffix-class'));
+
+  }
+
 }
 ~~~
 
-There are several parts to a feature. First, the following sets the file as a Gantry Feature, importing the necessary functions:
+There are several parts to a gizmo. First, the following sets the file as a Gantry Gizmo, importing the necessary functions:
 
 ~~~ .php
 <?php
-defined('JPATH_BASE') or die();
+defined('GANTRY_VERSION') or die();
 
-gantry_import('core.gantryfeature');
+gantry_import('core.gantrygizmo');
 ~~~
 
-Next, the feature is then differentiated by a name, in this case **GantryFeature**___Copyright___ and **'copyright'**:
+Next, the feature is then differentiated by a name, in this case **GantryGizmo**___PageSuffix___ and **'pagesuffix'**:
 
 ~~~ .php
-class GantryFeatureCopyright extends GantryFeature
+class GantryGizmoPageSuffix extends GantryGizmo
 {
-   var $_feature_name = 'copyright';
+   var $_name = 'pagesuffix';
 ~~~
 
 Immediately following the naming of the feature, there is some additional processing code that should not be modified.
 
 ~~~ .php
-function render($position)
-{
-   ob_start();
+function query_parsed_init() {
    ?>
 ~~~
 
-The next area of the feature is the XHTML layout, which you can add your custom XHTML code to:
+The next area of the feature is the XHTML layout or code you want to execute :
 
-~~~ .html
-<div class="clear"></div>
-<div class="rt-block">
-   <a href="http://www.rockettheme.com/" title="rockettheme.com" id="rocket"></a>
-   <?php echo $this->get('text'); ?>
-</div>
+~~~ .php
+    /** @global $gantry Gantry */
+    global $gantry;
+
+    //add body class suffix
+    $gantry->addBodyClass($gantry->get('pagesuffix-class'));
 ~~~
 
-After the XHTML structure, you complete the feature with the following:
+After the above code, you complete the gizmo with the following:
 
 ~~~ .php
 <?php
-   return ob_get_clean();
    }
 }
 ~~~
 
 
-Overriding a Feature
+Overriding a Gizmo
 --------------------
-Gantry allows features to be overridden by either copying a feature directly from `/libraries/gantry/features/` or creating a new feature.php file at `/templates/[TEMPLATE]/features/`.
+Gantry allows gizmos to be overridden by either copying a gizmo directly from `/wp-content/plugins/gantry/gizmos/` or creating a new pagesuffix.php file at `/wp-content/themes/[TEMPLATE]/gizmos/`.
 
-A feature file must follow the format in the section above. There is, in effect, two areas of modification. The first is the name that must be unique. The second is the XHTML layout where you can construct the feature's structure to meet your ends.
+A gizmo file must follow the format in the section above. There is, in effect, two areas of modification. The first is the name that must be unique. The second is the XHTML layout or other PHP code where you can construct the gizmos to meet your ends.
 
 
-Features and the Administrator
+Gizmos and the Administrator
 ------------------------------
-Depending on the level of modification you plan for a particular feature, you may wish to edit the parameters for that feature. For this, you will need to edit the `/templates/[TEMPLATE]/template-options.xml` file.
+Depending on the level of modification you plan for a particular gizmo, you may wish to edit the parameters for that gizmo. For this, you will need to edit the `/wp-content/themes/[TEMPLATE]/templateDetails.xml` file.
 
 The relevant part of this XML file begins with:
 
 ~~~ .xml
-<fieldset name="features" label="FEATURES">
+<fieldset name="gizmos" label="GIZMOS">
 ~~~
 
-Here, you can locate the relevant **field(s)** for the feature you wish to modify such as **copyright**:
+Here, you can locate the relevant **field(s)** for the gizmo you wish to modify such as **pagesuffix**:
 
 ~~~ .xml
-<fields name="copyright" type="chain" label="COPYRIGHT" description="COPYRIGHT_DESC">
-   <field name="enabled" type="toggle" default="0" label="SHOW" />
-   <field name="position" type="position" default="copyright-a" label="POSITION" />
-   <field name="text" type="text" default="Designed by RocketTheme" label="TEXT" class="text-long" />
-</fields>
+<fields name="pagesuffix" type="chain" label="PAGESUFFIX" description="PAGESUFFIX_DESC">
+    <field name="enabled" type="toggle" default="0" label="ENABLED" enabler="true" />
+    <field name="class" type="text" default="" class="text-long" label="CLASS"/>
+    <field name="priority" type="hidden" default="2"/>
+  </fields>
 ~~~
