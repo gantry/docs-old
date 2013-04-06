@@ -12,49 +12,49 @@ This tutorial will take you through the steps needed to create an unsupported br
 
 Step 1: Unsupported Browser Redirect Feature
 --------------------------------------------
-The logic for this Unsupported Browser page is powered by a custom feature that we've called **unsupportedredirect.php** in this instance. This is a custom feature that we create and drop into the template's `features/` folder. The code is very simple as you can see below:
+The logic for this Unsupported Browser page is powered by a custom gizmo that we've called **unsupportedredirect.php** in this instance. This is a custom gizmo that we create and drop into the template's `gizmos/` folder. The code is very simple as you can see below:
 
 ~~~ .php
 <?php
 /**
- * @package     gantry
- * @subpackage  features
- * @version     ${project.version} ${build_date}
- * @author      RocketTheme http://www.rockettheme.com
- * @copyright   Copyright (C) 2007 - ${copyright_year} RocketTheme, LLC
- * @license     http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
- *
- * Gantry uses the Joomla Framework (http://www.joomla.org), a GNU/GPLv2 content management system
- *
+ * @version   ${project.version} ${build_date}
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - ${copyright_year} RocketTheme, LLC
+ * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
  */
 
-defined('JPATH_BASE') or die();
+defined('GANTRY_VERSION') or die();
 
-gantry_import('core.gantryfeature');
+gantry_import('core.gantrygizmo');
+
 /**
  * @package     gantry
  * @subpackage  features
  */
-class GantryFeatureUnsupportedRedirect extends GantryFeature {
-    var $_feature_name = 'unsupportedredirect';
+class GantryGizmoUnsupportedRedirect extends GantryGizmo {
+
+    var $_name = 'unsupportedredirect';
 
     function isEnabled() {
         return true;
     }
-    function isInPosition($position) {
-        return false;
-    }
-    function isOrderable(){
-        return true;
-    }
 
     function init() {
+        
         global $gantry;
-
-        if (JRequest::getString('tmpl')!='unsupported' && $gantry->browser->name == 'ie' && ($gantry->browser->shortversion == '6' || $gantry->browser->shortversion == '7')) {
-            header("Location: ".$gantry->baseUrl."?tmpl=unsupported");
+        
+        $request = basename($_SERVER['REQUEST_URI']);
+        
+        if ($request != 'unsupported.php' && $gantry->browser->name == 'ie' && ($gantry->browser->shortversion == '6' || $gantry->browser->shortversion == '7')) { 
+            add_filter('template_include', array(&$this, 'unsupported_redirect'));     
         }
+
     }
+    
+    static function unsupported_redirect($template) {
+        return locate_template(array('unsupported.php'));
+    }
+    
 }
 ~~~
 
@@ -63,48 +63,30 @@ The feature is actually very simple, but let's break it down into parts so you c
 
 #### isEnabled()
 
-The `isEnabled()` method is set to true because we are effectively forcing this feature to be enabled. We don't need any user interaction to toggle this functionality although that could easily be added by adding a simple bit of XML in the **templateDetails.xml** if needed.
-
-
-#### isInPosition()
-
-The `isInPosition()` method is set to false because this feature is not intended to be treated like a module and placed in a module position. It is purely some logic that just needs to run without any rendering output.
-
-
-#### isOrderable()
-
-As you can see `isOrderable()` is set to true. This is so that this feature will show up in the Advanced section of the template details in the Feature Order list. You probably want to drag the **ie6redirect** feature to the top of the list to ensure that it runs first and doesn't waste time processing other features if your going to be redirected anyway.
+The `isEnabled()` method is set to true because we are effectively forcing this gizmo to be enabled. We don't need any user interaction to toggle this functionality although that could easily be added by adding a simple bit of XML in the **templateDetails.xml** if needed.
 
 
 #### init()
 
-This is where the logic actually happens. This feature does not need to display anything, so the render() method is not implemented. The init() method is the better place for any non-rendering functionality and as you can see here, there is just a simple `if` statement to ensure that we are not already on the unsupported page, the viewing browser is `ie`, and the short version is `6` or `7`. This ensure that only IE6 and IE7 browsers will enter the `if` statement, and redirect the browser to the **?tmpl=unsupported**.
+This is where the logic actually happens. The init() method is the better place for any non-rendering functionality and as you can see here, there is just a simple `if` statement to ensure that we are not already on the unsupported page, the viewing browser is `ie`, and the short version is `6` or `7`. This ensure that only IE6 and IE7 browsers will enter the `if` statement, and load the **unsupported.php** page.
 
 
 Step 2: Unsupported tmpl file
 -----------------------------
-As you saw at the end of Step 1, we've redirected IE6 users to **?tmpl=unsupported**, but what does this mean? We are going to take advantage of a little-known feature in Joomla that allows you to change the 'index' file used when rendering a page. By default, Joomla looks for index.php inside your template folder, however if you pass another name in via the 'tmpl' request variable, for example, **?tmpl=unsupported**, Joomla will look for a file called **unsupported.php** and use this rather than index.php to render the page.
+As you saw at the end of Step 1, we've redirected IE6 and IE7 users to **unsupported.php**, but what does this mean? We are going to filter out the template_include WordPress filter and load our own file when browser conditions are met. By default, WordPress looks for index.php inside your template folder, however if we are going to use the mentioned previously filter, we can override this behavior, forcing WordPress to load different php file.
 
 The unsupported.php is basically a stripped down version of our existing index.php file as you can see below:
 
 ~~~ .php
 <?php
 /**
-* @version   $Id: index.php 2670 2012-08-23 17:38:47Z djamil $
- * @author RocketTheme http://www.rockettheme.com
+ * @version   ${project.version} ${build_date}
+ * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - ${copyright_year} RocketTheme, LLC
- * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
- *
- * Gantry uses the Joomla Framework (http://www.joomla.org), a GNU/GPLv2 content management system
- *
+ * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
  */
 // no direct access
-defined( '_JEXEC' ) or die( 'Restricted index access' );
-
-// load and inititialize gantry class
-require_once('lib/gantry/gantry.php');
-$gantry->init();
-
+defined('ABSPATH') or die('Restricted access');
 ?>
 <!doctype html>
 <html xml:lang="<?php echo $gantry->language; ?>" lang="<?php echo $gantry->language;?>" >
@@ -159,12 +141,12 @@ $gantry->finalize();
 ?>
 ~~~
 
-Basically we've removed all the extraneous module calls, and left the page in a basic hard-coded state. You could of course keep some of the module positions if needed, but we opted for the simple approach and kept the output as basic as possible while still offering the feel of the regular gantry-framework.org site.
+Basically we've removed all the extraneous widget calls, and left the page in a basic hard-coded state. You could of course keep some of the widget positions if needed, but we opted for the simple approach and kept the output as basic as possible while still offering the feel of the regular gantry-framework.org site.
 
 
 Step 3: Tweaking and Testing
 ----------------------------
-At this point you should have a fully functional feature. To test it out in your regular browser, you can just point it to **http://YOUR_SITE/?tmpl=unsupported**, and it should show you the new page based on the unsupported.php file you created. You should tweak and optimize this output to suit your needs. We kept ours pretty similar to our regular page, and even included our regular template.css and joomla.css files, but we also added a new unsupported.css file that has some styling that is only needed on this page. You can see these in the `addStyles()` method in the unsupported.php file listed above.
+At this point you should have a fully functional gizmo. You should tweak and optimize this output to suit your needs. We kept ours pretty similar to our regular page, and even included our regular template.css and wordpress.css files, but we also added a new unsupported.css file that has some styling that is only needed on this page. You can see these in the `addStyles()` method in the unsupported.php file listed above.
 
 After you are pretty happy with the way this looks the last step is to actually test and fix it so that it looks correct in IE6 an IE7. You should be able to point your IE6 or IE7 browser directly at your site: **http://YOUR_SITE** and it should redirect you automatically to the unsupported page you have been working on. Just tweak and adjust your css as needed to ensure that things look correct in IE6, as this is the only browser that really sees the page.
 

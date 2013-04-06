@@ -108,8 +108,8 @@ Here, you can locate the relevant **field(s)** for the gizmo you wish to modify 
 
 ~~~ .xml
 <fields name="pagesuffix" type="chain" label="PAGESUFFIX" description="PAGESUFFIX_DESC">
-    <field name="enabled" type="toggle" default="0" label="ENABLED" enabler="true" />
-    <field name="class" type="text" default="" class="text-long" label="CLASS"/>
-    <field name="priority" type="hidden" default="2"/>
-  </fields>
+  <field name="enabled" type="toggle" default="0" label="ENABLED" enabler="true" />
+  <field name="class" type="text" default="" class="text-long" label="CLASS"/>
+  <field name="priority" type="hidden" default="2"/>
+</fields>
 ~~~
