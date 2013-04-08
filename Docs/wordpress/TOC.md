@@ -60,7 +60,7 @@ WordPress
 
 * Tutorials
 
-    - [Overriding a Gizmo](tutorials/overriding_gizmo.md)
+    - [Overriding a Gizmo](tutorials/)
     - [Creating an Unsupported Page](tutorials/creating_unsupported_page.md)
     - [Creating a Popup Login](tutorials/creating_popup_login.md)
     - [Adding a Custom Mainbody Layout](tutorials/custom_mainbody_layout.md)
