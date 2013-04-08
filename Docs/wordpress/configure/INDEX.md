@@ -5,16 +5,16 @@ title: Template Overrides
 
 Template Overrides
 ==================
-Gantry offers the ability to override default template configurations for individual overrides. A frequent example is to have different layout configurations for your site's frontpage, versus subpages. Gantry makes this achievable in just a few clicks.
+Gantry offers users the ability to override default template configurations for individual overrides. A frequent example is to have a different layout configuration on your site's front page from its subpages. Gantry makes this achievable in just a few clicks. In fact, you can configure different layouts for each of your subpages individually.
 
 > [![](../assets/g4-overrides.jpg)](http://youtube.com/embed/8uiWjekdjfE)
 >
-> Discover the power of Gantry and it's ability to configure any parameter based on template overrides using custom template styles. Gantry adds the power of inheritance of settings to enable easier per-override custom configurations.
+> Discover the power of Gantry and its ability to configure any parameter based on template overrides using custom template styles. Gantry adds the power of inheritance of settings to enable easier per-override custom configurations.
 
 
 Creating an Override
 --------------------
-There are two methods of creating a new set of assignable configurations. The first is the **Save as Copy** method, which involves you editing the Gantry template at **Admin Dashboard → Theme Settings**. Configure your settings, select **Save as Copy** from the **Save** dropdown and finally change the override name from **Duplicate Override** to your own.
+There are two methods of creating a new set of assignable configurations. The first is the **Save as Copy** method which involves you editing the Gantry template at **Admin Dashboard → Theme Settings**. Configure your settings, select **Save as Copy** from the **Save** dropdown, and change the override name from **Duplicate Override** to your own.
 
 ![](assets/template-override-save-as-copy.jpg)
 
@@ -27,14 +27,14 @@ Once an **Override** has been created, you simply need to switch to it (if you w
 
 ![](assets/template-override-assigned-params.jpg)
 
-Configure items, then click on the **Assignments** tab. All content type items are listed here, so just check the items you wish this particular Override to apply to.
+Configure items, then click on the **Assignments** tab. All content type items are listed here, so just check the items you want this particular Override to apply to.
 
 ![](assets/template-override-assign-menus.jpg)
 
 
 Override Examples
 -----------------
-Below is a simple example of an Override. The **Layouts → MainBody Positions** setting has been overridden. Therefore, in the screenshots below, you can see that the sidebar allocation can be either left or right of the mainbody, and not be applied globally. This is the same for other settings as well, such as Gizmos or Styles.
+Below is an example of an Override. The **Layouts → MainBody Positions** setting has been overridden. Therefore, in the screenshots below, you can see that the sidebar allocation can be either left or right of the main body without being applied globally. This is the same for other settings like *Gizmos* or *Styles*, as well.
 
 | ![][example1] | ![][example2] |
 |---------------|---------------|
