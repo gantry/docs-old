@@ -7,7 +7,7 @@ Using Force Positions
 =====================
 There are times when you just don't want to have your widgets taking up all the room in a position no matter what the layout. For example you might want to have a widget on the left and a widget on the right, with nothing in the middle. In traditional WordPress templates you would have to resort to making two specific widget positions and using CSS, position them on the left and right sides of your design.
 
-> [![](../assets/g4-forcepos.jpg)](http://youtube.com/embed/Lfl4nQnduvo)
+> [![](../assets/g4-forcepos.jpg)](http://youtube.com/embed/ulsy2fkpyfA)
 >
 > Forcing the widget positions is a powerful layout control. This short screencast provides some insight in how to achieve this and also the layout control that can be attained using this technique.
 

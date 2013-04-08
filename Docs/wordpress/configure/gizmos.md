@@ -6,7 +6,7 @@ title: Gizmos
 Gizmos
 ========
 
-> [![](../assets/g4-gizmos.jpg)](http://youtube.com/embed/CiSkV5QVyhY)
+> [![](../assets/g4-gizmos.jpg)](http://youtube.com/embed/oQmpE_0OVro)
 >
 > A quick way to see the power of Gantry gizmos is to check out this short screencast. It covers some of the basics of gizmos and how they work and how they can be easily integrated into your design.
 

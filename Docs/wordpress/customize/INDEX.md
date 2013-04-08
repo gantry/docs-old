@@ -7,7 +7,7 @@ Adding Widget Positions
 =======================
 This section covers how to add a new widget position to the Gantry Framework and to your Gantry enabled template.
 
-> [![](../assets/g4-module-positions.jpg)](http://youtube.com/embed/snZSUSWMnpM)
+> [![](../assets/g4-module-positions.jpg)](http://youtube.com/embed/xYsB2VKmkFU)
 >
 > Check out this quick screencast on Widget Positions to get an overview of how widget positions work within WordPress and the Gantry Framework.
 
