@@ -35,10 +35,10 @@ WordPress
 
 * Customize
 
-    - [Adding Module Positions](customize/)
-    - [Moving Module Positions](customize/moving_module_positions.md)
-    - [Custom Module Layout](customize/custom_module_layout.md)
-    - [Custom Module Chrome](customize/custom_module_chrome.md)
+    - [Adding Widget Positions](customize/)
+    - [Moving Widget Positions](customize/moving_widget_positions.md)
+    - [Custom Widget Layout](customize/custom_widget_layout.md)
+    - [Custom Widget Chrome](customize/custom_widget_chrome.md)
     - [Custom Presets](customize/custom_presets.md)
     - [Using Force Positions](customize/using_force_positions.md)
 
@@ -47,7 +47,7 @@ WordPress
 * Advanced
 
     - [Creating a New Layout](advanced/)
-    - [Creating a New Feature](advanced/creating_new_feature.md)
+    - [Creating a New Gizmo](advanced/creating_new_gizmo.md)
     - [Built-In Ajax System](advanced/ajax_system.md)
     - [Per-Browser Specific Control](advanced/per_browser_control.md)
     - [Parameter Chaining](advanced/parameter_chaining.md)
@@ -60,7 +60,7 @@ WordPress
 
 * Tutorials
 
-    - [Overriding a Feature](tutorials/overriding_feature.md)
+    - [Overriding a Gizmo](tutorials/)
     - [Creating an Unsupported Page](tutorials/creating_unsupported_page.md)
     - [Creating a Popup Login](tutorials/creating_popup_login.md)
     - [Adding a Custom Mainbody Layout](tutorials/custom_mainbody_layout.md)
