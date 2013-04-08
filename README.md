@@ -4,7 +4,7 @@ This repository contains the source of the Gantry documentation, currently acces
 
 The documentation is contained in [Docs/](Docs) and is structured in folders, exactly as you see them on the main website.
 
-You can read all of the documentation within, as it's just in plain text files, marked up with [Markdown](http://daringfireball.net/projects/markdown/).
+You can read all of the documentation within (as it's just in plain text files) marked up with [Markdown](http://daringfireball.net/projects/markdown/).
 
 If you would like a local copy of the documentation, you can either [download it](https://github.com/gantry/docs/archive/master.zip) or you can clone the reopistory by running the follwing command:
 
