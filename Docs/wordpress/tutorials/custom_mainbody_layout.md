@@ -5,9 +5,9 @@ title: Adding a Custom Mainbody Layout
 
 Adding a Custom Mainbody Layout
 ===============================
-The Gantry Framework ships with 38 possible layout combinations for the mainbody area. The mainbody is considered to comprise of the mainbody itself (where the article or component is displayed) along with up to 3 additional sidebars for other modules.
+The Gantry Framework ships with 38 possible layout combinations for the mainbody area. The mainbody is considered to comprise of the mainbody itself (where the content is displayed) along with up to 3 additional sidebars for other widgets.
 
-For the 12 column layout variation, these layouts are controlled by two variables called `$gantry_default_pushpullschemas` and `$gantry_default_mainbodyschemacombos` that are found in the `libraries/gantry/gantry.config.php`. The 12 column part of this file looks like:
+For the 12 column layout variation, these layouts are controlled by two variables called `$gantry_default_pushpullschemas` and `$gantry_default_mainbodyschemacombos` that are found in the `wp-content/plugins/gantry/gantry.config.php`. The 12 column part of this file looks like:
 
 ~~~ .php
 $gantry_default_pushpullschemas = array(
@@ -63,7 +63,7 @@ $gantry_default_pushpullschemas = array(
 );
 ~~~
 
-This is actually quite readable, and you can translate **mbX** to equal **mainbody** occupying **X** column grids. **saX** means the **sidebar-a** module position occupies **X** column grids, etc. The stuff on the right side of the array relates to the push/pull classes that are needed to achieve this layout because even though you can change the column order in the layout, you aren't physically moving the columns, it's 100% css in order to ensure **source-ordering** and SEO optimization (unless using ordered mainbody layout).
+This is actually quite readable, and you can translate **mbX** to equal **mainbody** occupying **X** column grids. **saX** means the **sidebar-a** widget position occupies **X** column grids, etc. The stuff on the right side of the array relates to the push/pull classes that are needed to achieve this layout because even though you can change the column order in the layout, you aren't physically moving the columns, it's 100% css in order to ensure **source-ordering** and SEO optimization (unless using ordered mainbody layout).
 
 The second variable contains similar data but is laid out slightly differently, the 12 column part looks like:
 
@@ -133,9 +133,9 @@ Again this is pretty easy to break down. The key in the associative array relate
 
 Adding A new Custom Layout Combo
 --------------------------------
-We assume that you have a specific need for a new layout combination that is not provided in these variables, and therefore not available to you in the template Administrator. let's say for some reason you want a really large body on the right, and a very skinny sidebar-a on the left. That would translate into a sidebar-a of **2 columns**, and the mainbody with **10 columns** of space.
+We assume that you have a specific need for a new layout combination that is not provided in these variables, and therefore not available to you in the template settings. let's say for some reason you want a really large body on the right, and a very skinny sidebar-a on the left. That would translate into a sidebar-a of **2 columns**, and the mainbody with **10 columns** of space.
 
-Rather than adding these values directly into the Gantry framework core files, we can override these variables as you can with most things in Gantry. To do this simply open up your `gantry.config.php` file in your Gantry-powered template. In the case of the Gantry core template this would be located at `templates/[YOUR_TEMPLATE]/gantry.config.php`. Then merely copy the Gantry-core `$gantry_default_pushpullschemas` and `$gantry_default_mainbodyschemacombos` variables into the template's `gantry.config.php` file at the bottom.
+Rather than adding these values directly into the Gantry framework core files, we can override these variables as you can with most things in Gantry. To do this simply open up your `gantry.config.php` file in your Gantry-powered template. In the case of the Gantry core template this would be located at `wp-content/themes/[YOUR_TEMPLATE]/gantry.config.php`. Then merely copy the Gantry-core `$gantry_default_pushpullschemas` and `$gantry_default_mainbodyschemacombos` variables into the template's `gantry.config.php` file at the bottom.
 
 Next we will need to edit the two variables to add the appropriate layout:
 
@@ -170,4 +170,4 @@ $gantry_default_mainbodyschemascombos = array(
         .....snip....
 ~~~
 
-Save the file and your done! Now when you visit the template administrator, you will have a new option in your mainbody layout slider.
+Save the file and your done! Now when you visit the template settings, you will have a new option in your mainbody layout slider.
