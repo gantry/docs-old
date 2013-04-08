@@ -1,6 +1,6 @@
 ---
 title: Skeleton Title
-breadcrumb: /joomla:Joomla/!extensions:Extensions/
+breadcrumb: /joomla:Joomla/!wordpress:Wordpress/
 
 ---
 
