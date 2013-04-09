@@ -9,7 +9,7 @@ This section covers moving a widget position within your Gantry enabled template
 
 > [![](../assets/g4-module-positions.jpg)](http://youtube.com/embed/xYsB2VKmkFU)
 >
-> Check out this quick screencast on Widget Positions to get an overview of how widget positions work within Joomla and the Gantry Framework.
+> Check out this quick screencast on Widget Positions to get an overview of how this feature works within Joomla and the Gantry Framework.
 
 
 Step 1: Planning
@@ -32,4 +32,4 @@ Copy the Gantry widget position block of code you wish to move. It should look s
 <?php /** End Top **/ endif; ?>
 ~~~
 
-Move to area and paste the copied block of code into the new location.
+Move to the desired area and paste the copied block of code into the new location.
