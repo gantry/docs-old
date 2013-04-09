@@ -8,6 +8,7 @@ title: WordPress Documentation
 > ## Gantry 4 Introductory Video ##
 > This short 3 minute screencast will give you a taste of the power and flexibility of the Gantry framework for WordPress. The short videos below expand on many of these key features.
 
+
 * [![](assets/g4-install.jpg)](http://youtube.com/embed/W1GmZB2dgNE)
 
   Gantry Installation
