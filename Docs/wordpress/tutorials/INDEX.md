@@ -93,7 +93,7 @@ Gantry allows gizmos to be overridden by either copying a gizmo directly from `/
 
 A gizmo file must follow the format listed in the section above. There are, in effect, just two areas of modification. 
 
-The first is the name. This must be unique in order to avoid conflicts elsewhere on the page.
+The first is the name. This must be unique in order to avoid conflicts.
 
 The second is the XHTML layout or other PHP code where you can construct the gizmos to meet your needs.
 
