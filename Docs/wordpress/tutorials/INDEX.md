@@ -5,14 +5,14 @@ title: Overriding a Gizmo
 
 Overriding a Gizmo
 ====================
-A fundamental principle of the Gantry Framework is its ability to be overridden, so it can be as flexible as possible to suit the needs of an individual site or template. Gantry allows you to override Widget Layouts, Widget Chromes, Layouts and provides a platform for extension overrides. The area of focus in this tutorial is that of Gizmos.
+A fundamental principle of *Gantry Framework* is its ability to be overridden so it can be as flexible as possible to suit the needs of an individual site or template. Gantry allows you to override Widget Layouts, Widget Chromes, Layouts, and provides a platform for extension overrides. The area of focus in this tutorial is that of *Gizmos*.
 
 
 What is a Gizmo?
 ------------------
-A gizmo is a standalone element that adds a specific utility to the template. They extend the functionality of the template and can be configured, either generally or for specific overrides using the Gantry administrator interface.
+A gizmo is a standalone element that adds a specific utility to the template. It extends†the functionality of the template and can be configured, either generally or for specific overrides, using the Gantry administrator interface.
 
-Gizmos are located at `/wp-content/plugins/gantry/gizmos/` and include a variety of different types such as Google Analytics, Page Suffix and RokStyle. There are many other default gizmos that are included.
+Gizmos are located at `/wp-content/plugins/gantry/gizmos/` and include a variety of different types such as Google Analytics, Page Suffix and RokStyle. There are many other default gizmos†included.
 
 Below is an example of the `/wp-content/plugins/gantry/gizmos/pagesuffix.php` gizmo:
 
@@ -78,7 +78,7 @@ The next area of the feature is the XHTML layout or code you want to execute :
     $gantry->addBodyClass($gantry->get('pagesuffix-class'));
 ~~~
 
-After the above code, you complete the gizmo with the following:
+After the above code, the following completes the gizmo:
 
 ~~~ .php
 <?php
@@ -89,14 +89,18 @@ After the above code, you complete the gizmo with the following:
 
 Overriding a Gizmo
 --------------------
-Gantry allows gizmos to be overridden by either copying a gizmo directly from `/wp-content/plugins/gantry/gizmos/` or creating a new pagesuffix.php file at `/wp-content/themes/[TEMPLATE]/gizmos/`.
+Gantry allows gizmos to be overridden by either copying a gizmo directly from `/wp-content/plugins/gantry/gizmos/` or creating a new `pagesuffix.php` file at `/wp-content/themes/[TEMPLATE]/gizmos/`.
 
-A gizmo file must follow the format in the section above. There is, in effect, two areas of modification. The first is the name that must be unique. The second is the XHTML layout or other PHP code where you can construct the gizmos to meet your ends.
+A gizmo file must follow the format listed in the section above. There are, in effect, just two areas of modification. 
+
+The first is the name. This must be unique in order to avoid conflicts.
+
+The second is the XHTML layout or other PHP code where you can construct the gizmos to meet your needs.
 
 
 Gizmos and the Administrator
 ------------------------------
-Depending on the level of modification you plan for a particular gizmo, you may wish to edit the parameters for that gizmo. For this, you will need to edit the `/wp-content/themes/[TEMPLATE]/templateDetails.xml` file.
+Depending on the level of modification you plan for a particular gizmo, you may wish to edit its parameters. For this, you will need to edit the `/wp-content/themes/[TEMPLATE]/templateDetails.xml` file.
 
 The relevant part of this XML file begins with:
 
