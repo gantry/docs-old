@@ -5,7 +5,7 @@ title: Custom Widget Chrome
 
 Custom Widget Chrome
 ====================
-This section covers the creation of a Chrome custom widget layout and how to link it into your Gantry enabled template.
+This section covers the creation of a *Chrome* custom widget layout and how to link it into your Gantry enabled template.
 
 Step 1: Planning
 ----------------
@@ -13,9 +13,9 @@ Determine the name of your custom widget position. In this case we will be using
 
 Step 2: Editing html/layouts/chrome_example.php
 -----------------------------------------------
-The files are located under `YOUR_SITE/wp-content/plugins/gantry/html/layouts/`. However you do not want to modify the core gantry files. Instead copy the new chrome file to `YOUR_SITE/wp-content/themes/YOUR_TEMPLATE/html/layouts`. In this case use `chrome_example.php` Each custom chrome layout requires a `function render()` this is what will be called by Gantry to display the widget. In this case since we have copied an existing chrome this will already be provided.
+The files are located under `YOUR_SITE/wp-content/plugins/gantry/html/layouts/`, however, you do not want to modify the core Gantry files. Instead, copy the new Chrome file to `YOUR_SITE/wp-content/themes/YOUR_TEMPLATE/html/layouts`. In this case, use `chrome_example.php`. Each custom chrome layout requires a `function render()`. This is what will be called by Gantry to display the widget. Since we have copied an existing Chrome, this will already be provided.
 
-Example :
+Example:
 
 ~~~ .php
 function render($params = array()) {
@@ -129,18 +129,20 @@ class GantryLayoutChrome_Standard extends GantryLayout {
 }
 ~~~
 
-Upon saving this custom widget chrome will now be available to use in Gantry.
+Upon saving this custom widget, Chrome will be available to use in Gantry.
 
 
 Step 3: Adding Custom Widget Chrome to Gantry
 ---------------------------------------------
-Open up the templates index.php file and find the Gantry widget position you wish to apply your custom widget layout too. In the third function parameter add the name you gave to your Chrome widget after the _ which in the case of the example is "example". See example below: 
+Open up the templates **index.php** file and find the Gantry widget position you wish to apply your custom widget layout too. In the third function parameter, add the name you gave to your Chrome widget after the "_" which, in the case of this demonstration, is "example." 
+
+Example: 
 
 ~~~ .php
 <?php echo $gantry->displayModules('top','standard','example'); ?>
 ~~~
 
-If you wish to apply this to the main body side bars the layout will look like the following:
+If you wish to apply this to the main body sidebars, the layout will look like the following:
 
 ~~~ .php
 <?php echo $gantry->displayMainbody('mainbody','sidebar', sidebarchromelayout, contenttoplayoutname, contenttopchromename, contentbottomlayoutname, contentbottomchromename); ?>
