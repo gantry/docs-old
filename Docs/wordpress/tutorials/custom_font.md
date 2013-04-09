@@ -5,7 +5,7 @@ title: Adding a Custom Font
 
 Adding a Custom Font
 ====================
-This tutorial will take you through the steps needed to add a custom font to your Gantry template and make it available on the Font Settings dropdown in the template parameters.
+This tutorial will take you through the steps needed to add a custom font to your Gantry template and make it available on the Font Settings dropdown in the template settings.
 
 In this example we will explain how you can add the custom free font **Bloody** to your Gantry template.
 
@@ -16,7 +16,7 @@ Step 1: Adding Your Custom Font Files
 --------------------------------------
 Bloody is a free font that you can download at [FontSquirrel](http://www.fontsquirrel.com/fonts/Bloody). Please ensure you download the @font-face Kit.
 
-Unzip the package and move the following files to `/templates/[TEMPLATE]/fonts/`:
+Unzip the package and move the following files to `/wp-content/themes/[TEMPLATE]/fonts/`:
 
 * BLOODY-webfont.eot
 * BLOODY-webfont.svg
@@ -28,7 +28,7 @@ Unzip the package and move the following files to `/templates/[TEMPLATE]/fonts/`
 
 Step 2: Adding the Necessary CSS
 --------------------------------
-[Create your custom stylesheet file](custom_stylesheet.md), __gantry-custom.css__, and add it to `/templates/[TEMPLATE]/css/`. Add the following to the custom css file.
+[Create your custom stylesheet file](custom_stylesheet.md), __rt_gantry_wp-custom.css__, and add it to `/wp-content/themes/[TEMPLATE]/css/`. Add the following to the custom css file.
 
 ~~~ .css
 /* Adding Font BLOODY */
@@ -52,22 +52,22 @@ Step 2: Adding the Necessary CSS
 
 Step 3: Adding the Info to the Font Settings Dropdown
 -----------------------------------------------------
-With your text/code editor, open `/templates/[TEMPLATE]template-options.xml` and add the custom font option (line 9 in the below example):
+With your text/code editor, open `/wp-content/themes/[TEMPLATE]/templateDetails.xml` and add the custom font option (line 9 in the below example):
 
 ~~~ .xml
-<field name='family' type='fonts' default='s:helvetica' primary='helvetica' label='FONT_FAMILY' isbodyclass='true' setbyurl='true' setinsession='true' setbysession='true' setincookie='true' setbycookie='true'>
-    <option value='geneva'>Geneva</option>
-    <option value='georgia'>Georgia</option>
-    <option value='helvetica'>Helvetica</option>
-    <option value='lucida'>Lucida</option>
-    <option value='optima'>Optima</option>
-    <option value='palatino'>Palatino</option>
-    <option value='trebuchet'>Trebuchet</option>
-    <option value='bloody'>Bloody</option>
+<field name="family" type="fonts" default="s:helvetica" primary="helvetica" label="FONT_FAMILY" isbodyclass="true" setbyurl="true" setinsession="true" setbysession="true" setincookie="true" setbycookie="true">
+    <option value="geneva">Geneva</option>
+    <option value="georgia">Georgia</option>
+    <option value="helvetica">Helvetica</option>
+    <option value="lucida">Lucida</option>
+    <option value="optima">Optima</option>
+    <option value="palatino">Palatino</option>
+    <option value="trebuchet">Trebuchet</option>
+    <option value="bloody">Bloody</option>
 </field>
 ~~~
 
-Go to your template manager and confirm that the new font option is now available.
+Go to your template settings and confirm that the new font option is now available.
 
 ![](assets/custom-font-setting.jpg)
 
@@ -84,7 +84,7 @@ You can add as many custom fonts as you wish and set the multiple option for the
 
 Font Usage on Specific Elements
 -------------------------------
-In addition to adding the **Bloody** font generally, as outlined above, you can also add it to specific elements such as component title and module title. In this example, we add the following to the custom CSS file mentioned above.
+In addition to adding the **Bloody** font generally, as outlined above, you can also add it to specific elements such as content title and widget title. In this example, we add the following to the custom CSS file mentioned above.
 
 ~~~ .css
 /* Adding Font BLOODY */
