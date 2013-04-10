@@ -5,18 +5,18 @@ title: Adding a Custom Font
 
 Adding a Custom Font
 ====================
-This tutorial will take you through the steps needed to add a custom font to your Gantry template and make it available on the Font Settings dropdown in the template settings.
+This tutorial will take you through the steps needed to add a custom font to your Gantry template and make it available on the Font Settings dropdown within template settings.
 
-In this example we will explain how you can add the custom free font **Bloody** to your Gantry template.
+In this example, we will explain how you can add the custom free font **Bloody** to your Gantry template.
 
 ![](assets/custom-font-setting.jpg)
 
 
 Step 1: Adding Your Custom Font Files
 --------------------------------------
-Bloody is a free font that you can download at [FontSquirrel](http://www.fontsquirrel.com/fonts/Bloody). Please ensure you download the @font-face Kit.
+**Bloody** is a free font that you can download at [FontSquirrel](http://www.fontsquirrel.com/fonts/Bloody). Make sure you've downloaded the **@font-face Kit**.
 
-Unzip the package and move the following files to `/wp-content/themes/[TEMPLATE]/fonts/`:
+Unzip the package, and move the following files to `/wp-content/themes/[TEMPLATE]/fonts/`:
 
 * BLOODY-webfont.eot
 * BLOODY-webfont.svg
@@ -28,7 +28,9 @@ Unzip the package and move the following files to `/wp-content/themes/[TEMPLATE]
 
 Step 2: Adding the Necessary CSS
 --------------------------------
-[Create your custom stylesheet file](custom_stylesheet.md), __rt_gantry_wp-custom.css__, and add it to `/wp-content/themes/[TEMPLATE]/css/`. Add the following to the custom css file.
+[Create your custom stylesheet file](custom_stylesheet.md), __rt_gantry_wp-custom.css__, and add it to `/wp-content/themes/[TEMPLATE]/css/`. 
+
+Add the following to the custom CSS file:
 
 ~~~ .css
 /* Adding Font BLOODY */
@@ -52,7 +54,7 @@ Step 2: Adding the Necessary CSS
 
 Step 3: Adding the Info to the Font Settings Dropdown
 -----------------------------------------------------
-With your text/code editor, open `/wp-content/themes/[TEMPLATE]/templateDetails.xml` and add the custom font option (line 9 in the below example):
+With your text/code editor, open `/wp-content/themes/[TEMPLATE]/templateDetails.xml`, and add the custom font option (line 9 in the below example):
 
 ~~~ .xml
 <field name="family" type="fonts" default="s:helvetica" primary="helvetica" label="FONT_FAMILY" isbodyclass="true" setbyurl="true" setinsession="true" setbysession="true" setincookie="true" setbycookie="true">
@@ -67,24 +69,24 @@ With your text/code editor, open `/wp-content/themes/[TEMPLATE]/templateDetails.
 </field>
 ~~~
 
-Go to your template settings and confirm that the new font option is now available.
+Now, go to your template settings, and confirm that the new font option is available.
 
 ![](assets/custom-font-setting.jpg)
 
-The Gantry template default font is Helvetica and the frontend will look like the following.
+The Gantry template default font is **Helvetica**. The frontend will look like the following:
 
 ![](assets/helvetica-font.jpg)
 
-Now set the default font to **Bloody** in the Font Settings parameter, and reload the frontend to check the result.
+Now, set the default font to **Bloody** in the Font Settings parameter. Reload the frontend to check the result.
 
 ![](assets/bloody-font.jpg)
 
-You can add as many custom fonts as you wish and set the multiple option for the font settings.
+You can add as many custom fonts as you wish, and set the multiple option for the font settings.
 
 
 Font Usage on Specific Elements
 -------------------------------
-In addition to adding the **Bloody** font generally, as outlined above, you can also add it to specific elements such as content title and widget title. In this example, we add the following to the custom CSS file mentioned above.
+In addition to adding the **Bloody** font, as outlined above, you can also add it to specific elements such as the content and widget titles. In this example, we'll add the following to the custom CSS file mentioned above:
 
 ~~~ .css
 /* Adding Font BLOODY */
@@ -105,6 +107,6 @@ In addition to adding the **Bloody** font generally, as outlined above, you can 
 }
 ~~~
 
-Reload the frontend and check the result. Only the component title and module title will use the `Bloody` font and the rest of the content will use the default font `Helvetica`.
+Reload the front end and check the result. Only the component title and module title will use the **Bloody** font. The rest of the content will use the default font **Helvetica**.
 
 ![](assets/bloody-font-specific.jpg)
