@@ -14,7 +14,7 @@ This tutorial details how to create a custom widget that will utilize RokBox to 
 
 Step 1: Creating the Custom Widget
 ----------------------------------
-The login form used in our site will be contained in a new file that named `loginform.php`. This is a custom widget created for this example and dropped into the theme's `widgets/` directory. Create this new php file with the following code: 
+The login form used in our site will be contained in a new file named `loginform.php`. This is a custom widget created for this example and dropped into the theme's `widgets/` directory. Create this new php file with the following code: 
 
 ~~~ .php
 <?php
