@@ -5,16 +5,16 @@ title: Creating a Popup Login
 
 Creating a Popup Login
 =============================
-This tutorial details how to create a custom widget that will utilize RokBox to present a modal popup box that will be triggered by a link/button on the frontend. For this tutorial we will be making a login widget popup.
+This tutorial details how to create a custom widget that will utilize RokBox to present a modal popup box triggered by a link/button on the frontend. For this tutorial, we will be making a login widget popup.
 
 ![](assets/popup-login.jpg)
 
->> NOTE: The login popup functionality requires the [RokBox Plugin][rokbox-download] to be installed on your site. Before beginning, please ensure that you have downloaded and installed the [latest version of RokBox][rokbox-download].
+>> NOTE: The login popup functionality requires that the [RokBox Plugin][rokbox-download] be installed on your site. Before beginning, please ensure that you have downloaded and installed the [latest version of RokBox][rokbox-download].
 
 
 Step 1: Creating the Custom Widget
 ----------------------------------
-The login form used in our site will be contained in a new file that we will create named `loginform.php`. This is a custom widget that we create for this example and drop into the theme's `widgets/` directory. Create this new php file with the following code: 
+The login form used in our site will be contained in a new file that named `loginform.php`. This is a custom widget created for this example and dropped into the theme's `widgets/` directory. Create this new php file with the following code: 
 
 ~~~ .php
 <?php
@@ -117,7 +117,7 @@ class GantryWidgetLoginForm extends GantryWidget {
 }
 ~~~
 
-Also the very important part is xml definition file. Create new file loginform.xml with following code:
+The xml definition file is also a critical component. Create the new file `loginform.xml` with following code:
 
 ~~~ .xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -132,13 +132,13 @@ Also the very important part is xml definition file. Create new file loginform.x
 </form>
 ~~~
 
-Essentially when this widget is placed in a position, it will render the login form that we want to appear in the popup.
+When this widget is placed in a position, it will render the login form we want to appear in the popup.
 
 
 Step 2: Creating Login Button Widget
 ------------------------------------
 
-The link/button that triggers the popup widget will be contained in a new file that we will create named `loginbutton.php`. This is a custom widget that we create for this example and drop into the theme's `widgets/` directory. Create this new php file with the following code:
+The link/button that triggers the popup widget will be contained in a new file that named `loginbutton.php`. This is a custom widget created for this example and dropped into the theme's `widgets/` directory. Create this new php file with the following code:
 
 ~~~ .php
 <?php
@@ -214,7 +214,7 @@ class GantryWidgetLoginButton extends GantryWidget {
 }
 ~~~
 
-While this code consists mostly of a standard set of divs to provide styling potential, there are some key RokBox syntax items as well as the reference for some dynamic text that we will breakdown in more detail below:
+This code consists mostly of a standard set of divs to provide styling potential. There are also some key RokBox syntax items, as well as the reference for some dynamic text that we will breakdown in more detail below:
 
 
 RokBox Syntax
@@ -245,9 +245,11 @@ XML definition file goes here as well :
 
 Step 3: Creating the Widget Layout
 ----------------------------------
-Next, we will be creating a custom chrome taking advantage of Gantry's ability to define custom layouts for positions which allows for greater flexibility and much cleaner code in the index.
+Next, we will be creating a custom chrome that takes advantage of Gantry's ability to define custom layouts for positions. This allows for greater flexibility and significantly cleaner code in the index.
 
-We will be creating a new file named `widget_login.php` and placing it into the `/html/layouts` directory of the template. (If /html/layouts doesn't exist in your template, you can create this directory.) Paste the following code into your new file:
+We will be creating a new file named `widget_login.php` and placing it into the `/html/layouts` directory of the template. If `/html/layouts` doesn't exist in your template, you can create this directory. 
+
+Paste the following code into your new file:
 
 ~~~ .php
 <?php
@@ -307,12 +309,14 @@ class GantryLayoutWidget_Login extends GantryLayout {
 }
 ~~~
 
-This custom layout allows us to reference it in our `index.php` using the name following the **widget_** which is simply **login**, after which it will render all of the html inside around the entire position, allowing us to keep the index.php much more concise. For this example we've used just a single wrapper div `#rt-popuplogin`, but you can add as many elements as you need for any design considerations you have.
+This custom layout allows us to reference it in our `index.php` using the name following the **widget_** which is simply **login**. Once it is done, it will render all of the html inside around the entire position allowing us to keep the `index.php` much more concise. For this example, we've used just a single wrapper div `#rt-popuplogin`, but you can add as many elements as you need for any design considerations you have.
 
 
 Step 4: Creating the Widget Chrome
 ----------------------------------
-You can also setup a widget chrome for the login widget, as defined in the above part. For this, create the `/html/layouts/chrome_login.php` file (if it doesn't exist). Insert the following:
+You can also set up a widget chrome for the login widget as defined in the part above. For this, you'll need to create the `/html/layouts/chrome_login.php` file (if it doesn't exist). 
+
+Insert the following:
 
 ~~~ .php
 <?php
@@ -437,9 +441,9 @@ class GantryLayoutChrome_Login extends GantryLayout {
 
 Step 5: Defining the position in the index.php
 ----------------------------------------------
-Now we want to add the new widget position which will be called into the RokBox popup. It is important to create a new widget position for this purpose as it will be hidden by CSS until it is triggered, so we want it to be out of the normal flow of the page.
+Now, we want to add the new widget position to be called into the RokBox popup. It is important to create a new widget position for this purpose. It will be hidden by CSS until it is triggered, and we want it to be out of the normal flow of the page.
 
-For this example we are creating a position simply called **login**. So we are going to add the following code near the very end of our template's `index.php` file immediately before the closing body tag:
+For this example, we are creating a position simply called **login**. We are going to add the following code near the very end of our template's `index.php` file, immediately before the closing body tag:
 
 ~~~ .php
 <?php /** Begin Popup **/
@@ -447,17 +451,19 @@ echo $gantry->displayModules('login','login','login');
 /** End Popup **/ ?>
 ~~~
 
-Inside of the **displayModules** function we are making three references. The first, refers to the name of the widget position, the second refers to the layout we wish to use for this position (this is now referencing our widget_login.php layout we created in the Step 3), the third refers to the widget chrome to be applied to each rendering of the widget (this references your login chrome located in `/html/layouts/chrome_login.php`, for this example we are simply using the standard style).
+Inside of the **displayModules** function, we are making three references. The first refers to the name of the widget position. The second refers to the layout we wish to use for this position. 
+
+This is now referencing our widget_login.php layout we created in the Step 3), the third refers to the widget chrome to be applied to each rendering of the widget (this references your login chrome located in `/html/layouts/chrome_login.php`. For this example, we are simply using the standard style.
 
 
 Step 6: Setting up the Parameters
 ---------------------------------
-Now it's time to set up the parameters for our widget as well as define our new widget position in the administration. This extra setup allows us to utilize the popup position as well as have the ability to customize the link text, enable/disable our popup login button, and even define which individual pages the widget will appear on. All of this is now possible from the Wordpress administrator without having to revisit editing our code.
+Now, it's time to set up the parameters for our widget, as well as define our new widget position in the administration. This extra setup allows us to utilize the popup position in addition to having the ability to customize the link text, enable/disable our popup login button, and even define which individual pages the widget will appear on. All of this is now possible from the WordPress administrator without having to edit the code.
 
 
 #### templateDetails.xml
 
-First, we want to open up the template's `templateDetails.xml` file. Inside, the first area we will want to add a line to is the positions section. Look for the listing of widget positions that begins with the tag `<position>` and at the bottom of the list, immediately before the `</position>` tag, add the following :
+First, we want to open up the template's `templateDetails.xml` file. Inside the first area, we want to add a line to the positions section. Look for the listing of widget positions that begins with the tag `<position>`. At the bottom of the list, immediately before the `</position>` tag, add the following:
 
 Next, we want to add the parameters for the feature itself in the **FEATURES** section. Find the following line in `template-options.xml`, which indicates the start of the Features panel:
 
@@ -465,24 +471,24 @@ Next, we want to add the parameters for the feature itself in the **FEATURES** s
 <position id="login" name="Login" max_positions="1">Login</position>
 ~~~
 
-This code adds the `login` position to the Gantry and WordPress. It allows the WordPress to render the `Login` position in the widgets manager, allowing you to place any widgets (that you want to appear in the popup) inside of it.
+This code adds the `login` position to Gantry and WordPress. It allows the WordPress to render the `Login` position in the widgets manager, so you can place any widgets (that you want to appear in the popup) inside.
 
 
 Step 7: Adding the CSS
 ----------------------
-Lastly, in terms of coding, CSS will need to be added to style the widget position. Place the CSS in the most appropriate file, if you are using LESS, this will be `/less/template.less`, and if you are just using CSS, then `/css/template.css`. The following is required for the login to function:
+Lastly, in terms of coding, CSS will need to be added to style the widget position. Place the CSS in the most appropriate file. If you are using LESS, this will be `/less/template.less`. If you are just using CSS, then `/css/template.css` is where you want to go. The following is required for the login to function:
 
 ~~~ .css
 #rt-popuplogin { display: none; }
 ~~~
 
-You will most likely want to add additional CSS, which you can do by use the **#rt-popuplogin** ID, and this will apply strictly to the popup login.
+You will most likely want to add additional CSS, which you can do by using the **#rt-popuplogin** ID. This will apply strictly to the popup login.
 
 
 Step 8: Putting it all together
 -------------------------------
-Now all of our logic and core items are in place. We are ready to place the **Login Form** widget in the `Login` position, and the **Login Button** in any other position where you want it to appear.
+Now, all of our logic and core items are in place. We are ready to place the **Login Form** widget in the `Login` position, and the **Login Button** in any other position you want it to appear.
 
-You can modify the settings of the widgets to match your personal preferences then **Save**. Refresh your site to review the changes.
+You can modify the settings of the widgets to match your personal preferences. Once you are done, **Save**, then refresh your site to review the changes.
 
 [rokbox-download]: http://www.rockettheme.com/wordpress-downloads/2565-plugins
