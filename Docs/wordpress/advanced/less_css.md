@@ -5,7 +5,7 @@ title: LESS CSS
 
 LESS CSS
 ========
-**LESS** is a dynamic stylesheet language that extends CSS with dynamic behaviours such as variables, mixins, operations and functions. LESS allows your code to be cleaner, optimized whilst also reducing the overall time to create and maintain your code base.
+**LESS** is a dynamic stylesheet language that extends CSS with dynamic behaviours such as variables, mixins, operations and functions. LESS allows your code to be cleaner and optimized, while also reducing the overall time to create and maintain your code base.
 
 Gantry supports LESS, rooting the compiler and core processes into the Framework itself. Furthermore, the administrator and frontend template are constructed with LESS files that are then outputted as CSS files to the browser. Gantry handles all the complex processing, so you can concentrate purely on the styling.
 
@@ -13,17 +13,17 @@ Note, when making modifications, remember to:
 
 1. Always edit the **.less** and not the **compiled .css** files that are output to `/css-compiled/` folder
 2. Ensure the `/less/`, `/css/`, and `/css-compiled/` directories for the template are writeable
-3. Clear the WordPress, Less, Gantry and Browser caches
+3. Clear the WordPress, Less, Gantry, and browser caches
 
 
 LESS: the Basics
 ----------------
-LESS is designed to extend CSS, so you start with the basic principles and attributes that are associated with CSS, IDs, classes and others. Therefore, the format will look familiar. In terms of examples, the `/LESS` files will be shown first, followed by the **Compiled CSS** files which are the outputted files that appear in the `/css-compiled/` directory.
+LESS is designed to extend CSS so you start with the basic principles and attributes that are associated with CSS, IDs, classes and others. Therefore, the format will look familiar. In terms of examples, the `/LESS` files will be shown first, followed by the **Compiled CSS** files, which are the outputted files that appear in the `/css-compiled/` directory.
 
 
 Variables
 ---------
-These are standard values that can be repeated throughout your stylesheets, and thus, one line change will generate a global change, rather than having to change each instant manually. An example from the Gantry template is below:
+These are standard values that can be repeated throughout your stylesheets. As a result, one line change will generate a global change rather than having to change each instant manually. An example from the Gantry template is below:
 
 ~~~ .css
 //LESS
@@ -47,12 +47,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 ~~~
 
-As you can see in the above example, anywhere **@bodytitle** is used in the LESS files, it will be changed to **#303030** in the compiler.
+As you can see in the above example, anywhere **@bodytitle** is used in the LESS files, the value is changed to **#303030** in the compiler.
 
 
 Mixins
 ------
-**Mixins** combine **Variables** with **Functions**, by allowing you to include all the properties associated with a class into another class. These class injections can include functions, as shown in the example extracted from [LessCSS.org][lesscss] below:
+**Mixins** combine **Variables** with **Functions** by allowing you to include all the properties associated with a class into another class. These class injections can include functions, as shown in the example extracted from [LessCSS.org][lesscss] below:
 
 ~~~ .css
 //LESS
@@ -88,7 +88,7 @@ Mixins
 
 Nested Rules
 ------------
-**Nested Rules** are for inheritance, allowing your style sheets to be cleaner and shorter, by placing selector groups within one another, rather than specifying each instant each time. See a Gantry Template example below:
+**Nested Rules** are for inheritance. These allow your style sheets to be cleaner and shorter by placing selector groups within one another, rather than specifying each instant each time. See a Gantry Template example below:
 
 ~~~ .css
 //LESS
@@ -131,9 +131,9 @@ ul.menu li a, ul.menu li .item, ul.menu li .separator {
 ~~~
 
 
-Functions & Operations
+Functions and Operations
 ----------------------
-**Functions & Operations** allow you to perform mathematical operations to CSS values as well as manipulate values through functions, as is available with JavaScript. See the below example extracted from [LessCSS.org][lesscss]:
+**Functions & Operations** allow you to perform mathematical operations to CSS values as well as manipulate values through functions, as is available with JavaScript. See the example below, extracted from [LessCSS.org][lesscss]:
 
 ~~~ .css
 //LESS
@@ -165,7 +165,7 @@ Functions & Operations
 }
 ~~~
 
-The above outline is to introduce you to the basics of how LESS works, for a more detailed overview of how variables, mixins, functions and operations work, please visit: [LessCSS.org][lesscss].
+The above outline introduces you to the basics of how LESS works. For a more detailed overview of how variables, mixins, functions, and operations, please visit: [LessCSS.org][lesscss].
 
 
 LESS in the Gantry Template
@@ -175,7 +175,7 @@ All LESS files associated with the template are located in the `/wp-content/them
 Not all CSS files are compiled into a single file. Any CSS file that requires to be standalone, for purposes of template parameters, such as loading Fusion Menu instead of SplitMenu, will be independent of the main `/wp-content/themes/[TEMPLATE]/css-compiled/[OUTPUT_CSSFILE]` file.
 
 
-How are LESS files compiled?
+How are LESS Files Compiled?
 ----------------------------
 When a change is detected, Gantry **automagically** recompiles your LESS files into CSS files. To add a LESS file, you have two options. You can insert the following function into your PHP code:
 
@@ -189,17 +189,17 @@ Where `NAME.less` is the name of your less file in your `/wp-content/themes/[TEM
 public function addLess([INPUT_LESSFILE], [OUTPUT_CSSFILE], [PRIORITY], [ARRAY_OF_VARIABLES]);
 ~~~
 
-An example of this as used in the default gantry template is:
+Here's an example as used in the default gantry template:
 
 ~~~ .php
 $gantry->addLess('global.less', $gantry->templateName . '-compiled.css', 8, array('headerstyle'=>'"header-'.$gantry->get('headerstyle','dark').'.less"'));
 ~~~
 
-You can see in this example that `global.less` is the source LESS file, and the output is going to be `gantry-compiled.css`. Priority has been harcoded as **8**, and the last parameter is an array of a single item **headerstyle** passed to the LESS compilation. The ability to pass variables makes less compilation very powerful and flexible.
+You can see from this example that `global.less` is the source LESS file, and the output is going to be `gantry-compiled.css`. Priority has been harcoded as **8**, and the last parameter is an array of a single item **headerstyle** passed to the LESS compilation. The ability to pass variables makes LESS compilation both powerful and flexible.
 
-When you pass variables to less compilation your output will take the format of `[TEMPLATE]-compiled-[MD5_VARIALBLE_NAME_VALUES]`, for example: `gantry-compiled-845729384248h3hf4haeioh.css`.
+When you pass variables to less compilation, your output will take the format of `[TEMPLATE]-compiled-[MD5_VARIALBLE_NAME_VALUES]`. For example: `gantry-compiled-845729384248h3hf4haeioh.css`.
 
-An alternative way to add LESS files is to simply create the file then add a reference in the `/less/global.less` master LESS file. The `global.less` file imports the other LESS files via the **@import** function, see the example below:
+An alternative way to add LESS files is to simply create the file and add a reference in the `/less/global.less` master LESS file. The `global.less` file imports the other LESS files via the **@import** function. See the example below:
 
 ~~~ .css
 // Core variables and mixins
@@ -217,7 +217,7 @@ An alternative way to add LESS files is to simply create the file then add a ref
 @import "prettify.less";
 ~~~
 
-Furthermore, for features that require a separate LESS file, you can use a variety of different techniques. The simplest is to insert the add LESS function into `/gizmos/styledeclaration.php`, as noted in the example from the Gantry Template:
+Furthermore, for features that require a separate LESS file, you can use a variety of different techniques. The simplest is to insert the add the `addLess` function into `/gizmos/styledeclaration.php`, as noted in the example from the Gantry Template:
 
 ~~~ .php
 if ($gantry->get('typography-enabled')) $gantry->addLess('typography.less');
@@ -228,17 +228,17 @@ This adds a conditional, where the parameter **typography-enabled** is active, t
 
 LESS Template Options
 ---------------------
-You can control CSS compression, Compile Wait Time and Debug Header, as well as manually clear the cache with the **Clear Cache** button at **Admin Dashboard → Gantry Theme → Advanced → Less Compiler**.
+You can control CSS compression, compile wait time and debug header, as well as manually clear the cache with the **Clear Cache** button at **Admin Dashboard → Gantry Theme → Advanced → Less Compiler**.
 
-Additionally, CSS compression increases site performance and optimization by consolidating all the CSS into a single file, with none or negligible whitespace. This reduces the file size of the CSS file and making it quicker for a browser to load.
+Additionally, CSS compression increases site performance and optimization by consolidating all the CSS into a single file, with none or negligible whitespace. This reduces the file size of the CSS file and reduces browser load time.
 
 ![](assets/advanced-less.jpg)
 
 Custom LESS files
 -----------------
-Often you will have a need to add some custom CSS to override a particular style in the template. You may not want to edit the provided LESS or CSS files as this could potentially cause problems with updates of the template. With Gantry 4 you can create custom LESS files of the format: `/less/[LESS_FILE_NAME]-custom.less` and these will get picked up and compiled into the main compiled CSS file.
+Often, you will have a need to add some custom CSS to override a particular style in the template. You may not want to edit the provided LESS or CSS files. This could potentially cause problems with updates of the template. With Gantry 4, you can create custom LESS files of the format: `/less/[LESS_FILE_NAME]-custom.less`. These will get picked up and compiled into the main compiled CSS file.
 
-For example in the default Gantry template, there is a file `less/template.less`. If you were to create a new file called `less/template-custom.less`, you could add your own custom LESS elements in here and they would automatically be pulled in to your compiled CSS file.
+For example, within the default Gantry template, there is a file `less/template.less`. If you were to create a new file called `less/template-custom.less`, you could add your own custom LESS elements in it. They would automatically be pulled in to your compiled CSS file.
 
 
 
