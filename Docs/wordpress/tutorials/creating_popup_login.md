@@ -456,16 +456,14 @@ Inside of the **displayModules** function, we are making three references. The f
 This is now referencing our widget_login.php layout we created in the Step 3), the third refers to the widget chrome to be applied to each rendering of the widget (this references your login chrome located in `/html/layouts/chrome_login.php`. For this example, we are simply using the standard style.
 
 
-Step 6: Setting up the Parameters
----------------------------------
-Now, it's time to set up the parameters for our widget, as well as define our new widget position in the administration. This extra setup allows us to utilize the popup position in addition to having the ability to customize the link text, enable/disable our popup login button, and even define which individual pages the widget will appear on. All of this is now possible from the WordPress administrator without having to edit the code.
+Step 6: Adding the Widget Position
+----------------------------------
+Now, it's time to define our new widget position in the administration. All of the widgets placed in that position will be displayed in the RokBox popup.
 
 
 #### templateDetails.xml
 
-First, we want to open up the template's `templateDetails.xml` file. Inside the first area, we want to add a line to the positions section. Look for the listing of widget positions that begins with the tag `<position>`. At the bottom of the list, immediately before the `</position>` tag, add the following:
-
-Next, we want to add the parameters for the feature itself in the **FEATURES** section. Find the following line in `template-options.xml`, which indicates the start of the Features panel:
+We want to open up the template's `templateDetails.xml` file. Inside the first area, we want to add a line to the positions section. Look for the listing of widget positions that begins with the tag `<positions>`. At the bottom of the list, immediately before the `</positions>` tag, add the following:
 
 ~~~ .xml
 <position id="login" name="Login" max_positions="1">Login</position>
