@@ -5,18 +5,18 @@ title: Customize the Error Page
 
 Customize the Error Page
 ========================
-WordPress doesn't come with a default 404 Error Page so we can create it at `/wp-content/themes/[TEMPLATE]/404.php`.
+WordPress doesn't come with a default **404 Error Page**. We can, however, create one at `/wp-content/themes/[TEMPLATE]/404.php`.
 
-We can customize the Gantry error page by directly editing the `404.php` file. In this tutorial we will explain how to customize the error page with a simple design.
+We can customize the Gantry error page by directly editing the `404.php` file. In this tutorial we will explain how to build a custom error page with a simple design.
 
-In this example, we will customize the error page to look like the following.
+In this example, we will create a custom error page with this design:
 
 ![](assets/custom-404.jpg)
 
 
 Step 1: Edit the Error Page
 ---------------------------
-Edit the `rt-error-body` area in `/wp-content/themes/[TEMPLATE]/404.php` to reflect the following.
+Edit the `rt-error-body` area in `/wp-content/themes/[TEMPLATE]/404.php` to reflect the following:
 
 ~~~ .html
 <div id="rt-error-body">
@@ -60,7 +60,7 @@ Step 2: Adding Custom CSS
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/gantry-custom.css" type="text/css" />
 ~~~
 
-Add the following rules and properties to our custom stylesheet, `gantry-custom.css`.
+Next, you'll need to add the following rules and properties to your custom stylesheet, `gantry-custom.css`.
 
 ~~~ .css
 /* Custom Error */
@@ -69,3 +69,5 @@ Add the following rules and properties to our custom stylesheet, `gantry-custom.
 .custom-404 h1 {font-size: 8.0em; text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);}
 .custom-404 h2 {font-size: 2.0em; line-height: 2.0em;}
 ~~~
+
+That's it! You should now have a custom error page live on your site.
