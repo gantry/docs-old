@@ -5,14 +5,14 @@ title: Creating an Unsupported Page
 
 Creating an Unsupported Page
 ============================
-This tutorial will take you through the steps needed to create an unsupported browser page functionality as used here on gantry-framework.org. You can see what this looks like by pointing your browser to: <http://www.gantry-framework.org/?tmpl=unsupported>. Users of unsupported browsers (IE6 and IE7) are automatically taken to this page whenever they try to access a page on gantry-framework.org.
+This tutorial will take you through the steps needed to create an unsupported browser page functionality as used here on gantry-framework.org. You can see what this looks like by pointing your browser to: <http://www.gantry-framework.org/?tmpl=unsupported>. Users of unsupported browsers (IE6 and IE7) are automatically taken to this page whenever they try to access a page on <http://gantry-framework.org>.
 
 ![](assets/unsupported-browser.jpg)
 
 
 Step 1: Unsupported Browser Redirect Feature
 --------------------------------------------
-The logic for this Unsupported Browser page is powered by a custom gizmo that we've called **unsupportedredirect.php** in this instance. This is a custom gizmo that we create and drop into the template's `gizmos/` folder. The code is very simple as you can see below:
+The logic for this unsupported browser page is powered by a custom gizmo that we'll call **unsupportedredirect.php**. This is a custom gizmo that we will create and drop into the template's `gizmos/` folder. The code is very simple, as you can see below:
 
 ~~~ .php
 <?php
@@ -58,24 +58,24 @@ class GantryGizmoUnsupportedRedirect extends GantryGizmo {
 }
 ~~~
 
-The feature is actually very simple, but let's break it down into parts so you can get a feel for how it works:
+This feature is fairly straightforward, but we'll break it down into parts so you can see how it works.
 
 
 #### isEnabled()
 
-The `isEnabled()` method is set to true because we are effectively forcing this gizmo to be enabled. We don't need any user interaction to toggle this functionality although that could easily be added by adding a simple bit of XML in the **templateDetails.xml** if needed.
+The `isEnabled()` method is set to true because we are effectively forcing this gizmo to be enabled. We don't need any user interaction to toggle this functionality, though that could easily be added by adding a simple bit of XML in the **templateDetails.xml** if needed.
 
 
 #### init()
 
-This is where the logic actually happens. The init() method is the better place for any non-rendering functionality and as you can see here, there is just a simple `if` statement to ensure that we are not already on the unsupported page, the viewing browser is `ie`, and the short version is `6` or `7`. This ensure that only IE6 and IE7 browsers will enter the `if` statement, and load the **unsupported.php** page.
+This is where the logic actually happens. The `init()` method is the better place for any non-rendering functionality. As you can see here, a simple `if` statement ensures that we are not already on the unsupported page, the viewing browser is `ie`, and the short version is `6` or `7`. This ensures that only IE6 and IE7 browsers will enter the `if` statement and load the **unsupported.php** page.
 
 
-Step 2: Unsupported tmpl file
+Step 2: Unsupported TMPL File
 -----------------------------
-As you saw at the end of Step 1, we've redirected IE6 and IE7 users to **unsupported.php**, but what does this mean? We are going to filter out the template_include WordPress filter and load our own file when browser conditions are met. By default, WordPress looks for index.php inside your template folder, however if we are going to use the mentioned previously filter, we can override this behavior, forcing WordPress to load different php file.
+As you saw at the end of Step 1, we've redirected IE6 and IE7 users to **unsupported.php**, but what does this mean? We are going to filter out the **template_include** WordPress filter and load our own file when browser conditions are met. By default, WordPress looks for **index.php** inside your template folder, however, if we are going to use the mentioned previously filter, we can override this behavior. This forces WordPress to load different php file.
 
-The unsupported.php is basically a stripped down version of our existing index.php file as you can see below:
+The **unsupported.php** is basically a stripped down version of our existing index.php file as you can see below:
 
 ~~~ .php
 <?php
@@ -141,13 +141,15 @@ $gantry->finalize();
 ?>
 ~~~
 
-Basically we've removed all the extraneous widget calls, and left the page in a basic hard-coded state. You could of course keep some of the widget positions if needed, but we opted for the simple approach and kept the output as basic as possible while still offering the feel of the regular gantry-framework.org site.
+Basically, we've removed all the extraneous widget calls and left the page in a basic hard-coded state. You could, of course, keep some of the widget positions (if needed), but we opted for the simple approach and kept the output as basic as possible. This is done while still offering the feel of the regular <http://gantry-framework.org> site.
 
 
 Step 3: Tweaking and Testing
 ----------------------------
-At this point you should have a fully functional gizmo. You should tweak and optimize this output to suit your needs. We kept ours pretty similar to our regular page, and even included our regular template.css and wordpress.css files, but we also added a new unsupported.css file that has some styling that is only needed on this page. You can see these in the `addStyles()` method in the unsupported.php file listed above.
+At this point, you should have a full, functional gizmo. You should be able to tweak and optimize this output to suit your individual needs. We kept ours pretty similar to our regular page, but also included our regular **template.css** and **wordpress.css** files, as well as a new **unsupported.css** file which has some styling that is only needed on this particular page. You can see these in the `addStyles()` method in the **unsupported.php** file, listed above.
 
-After you are pretty happy with the way this looks the last step is to actually test and fix it so that it looks correct in IE6 an IE7. You should be able to point your IE6 or IE7 browser directly at your site: **http://YOUR_SITE** and it should redirect you automatically to the unsupported page you have been working on. Just tweak and adjust your css as needed to ensure that things look correct in IE6, as this is the only browser that really sees the page.
+After you are pretty happy with the way this looks, the final step is to test it against IE6 an IE7. 
 
-That's it! Pretty easy right?
+You should be able to point your IE6 or IE7 browser directly at your site: **http://YOUR_SITE**, and it should redirect you automatically to the unsupported page. Just tweak and adjust your CSS as needed to ensure that things look correct in IE6, as this is the only browser that really sees it.
+
+That's it! Pretty easy, right?
