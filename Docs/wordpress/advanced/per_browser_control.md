@@ -5,21 +5,21 @@ title: Per-Browser Specific Control
 
 Per-Browser Specific Control
 ============================
-The Gantry Framework has the ability to load different css files based upon which browser and operating system is viewing the template. This allows complete control over how a site is displayed to even the pickiest browser!
+The Gantry framework has the ability to load different CSS files based on which browser and operating system is viewing the template. This allows complete control over how a site is displayed to even the pickiest of browsers!
 
-Every CSS file can be customized for different browser and operating system combinations with the Gantry Framework. This is handy for targeting specific browser issues, such as IE6 compatibility. Each file is automatically loaded by the framework depending on which browser/operating system is viewing the template.
+Every CSS file can be customized for different browser and operating system combinations with Gantry. This is handy for targeting specific browser issues, including IE6 compatibility. Each file is automatically loaded by the framework, depending on which browser/operating system is viewing the template.
 
 
 How It Works
 ------------
 Gantry looks for filenames based on the following mini-legend:
 
-* __file__: basename of css
-* __browser__: [firefox, chrome, safari, opera, iphone (works for both iphone/ipod), ipad, android, unknown]
-* __engine__: [trident, gecko, webkit, presto, unknown]
-* __longver__: the real long version of the browser (example, IE => 9.0, Safari 5 => 5.0.4, Firefox 5 => 5.0.0.20)
-* __shortver__: the major version of the browser (example, if i'm running Safari 5.0.4 would be 5, if i'm running IE 9.0, would be 9)
-* __platform__: [iphone (worths for both iphone/ipod), ipad, android, mobile, win, mac, linux, unknown]
+* __file__: Basename of CSS
+* __browser__: [Firefox, Chrome, Safari, Opera, iPhone (works for both iPhone/iPod), iPad, Android, unknown]
+* __engine__: [Trident, Gecko, WebKit, Presto, unknown]
+* __longver__: The real long version of the browser (example, IE => 9.0, Safari 5 => 5.0.4, Firefox 5 => 5.0.0.20)
+* __shortver__: The major version of the browser (example, if i'm running Safari 5.0.4 would be 5, if i'm running IE 9.0, would be 9)
+* __platform__: [iPhone (worths for both iPhone/iPod), iPad, Android, mobile, Windows, OS X, Linux, unknown]
 
 
 Possible Combinations
@@ -37,14 +37,14 @@ Possible Combinations
 
 Real World Usage
 ----------------
-Per-Browser specific control works for **CSS files** only. For Gantry to lookup a specific file based on your browser, there must be a reference to the base CSS file using the Gantry `$gantry->addStyle();` or the output CSS file of the `$gantry->addLess();` method. In pre-Gantry 4 templates, there was always a reference to load `template.css` so you could use `template-ie8.css` to target **IE8** or `template-chrome-win.css` if you needed to target **chrome on windows** file.
+Per-browser specific control works for **CSS files** only. For Gantry to lookup a specific file based on your browser, there must be a reference to the base CSS file using the Gantry `$gantry->addStyle();` or the output CSS file of the `$gantry->addLess();` method. In pre-Gantry 4 templates, there was always a reference to load `template.css`. So, you could use `template-ie8.css` to target **IE8** or `template-chrome-win.css` if you needed to target **Chrome on Windows** file.
 
-In Gantry 4 templates there is a special case that enables a custom CSS file to be manually created: `[TEMPLATE]/css/[TEMPLATE]-custom.css`. This file, if found, will automatically get added. You can also use per-browser options on this file, for example `[TEMPLATE]/css/[TEMPLATE]-custom-trident.css`.
+In Gantry 4 templates, there is a special case that enables a custom CSS file to be manually created: `[TEMPLATE]/css/[TEMPLATE]-custom.css`. This file, if found, will automatically be added. You can also use per-browser options on this file. For example: `[TEMPLATE]/css/[TEMPLATE]-custom-trident.css`.
 
 
-Real World Example
+Real-World Example
 ------------------
-In the **default gantry template** there is a `global.less` file that is compiled and out to a `master.css` file. If you were using Chrome v21 on a Mac, Gantry would automatically look for the following files in your `[TEMPLATE]/css/` folder:
+In the **default gantry template**, there is a `global.less` file that is compiled and output to a `master.css` file. If you were using Chrome v.21 on OS X, Gantry would automatically look for the following files in your `[TEMPLATE]/css/` folder:
 
 * master.css
 * master-chrome.css
