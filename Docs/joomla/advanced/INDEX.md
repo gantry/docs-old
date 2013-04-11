@@ -5,47 +5,49 @@ title: Creating New Layout
 
 Creating a New Layout
 =====================
-Layouts are blocks of code that control the HTML structure of a particular section of the template rendering. By default, Gantry comes with several built-in layout files, those are all located in the `libraries/gantry/html/layouts/` folder:
+Layouts are blocks of code that control the HTML structure of a particular section of the template rendering. By default, Gantry comes with several built-in layout files. These are located in the `libraries/gantry/html/layouts/` folder.
+
+Here is a list of included layout files:
 
 | Layouts                  | Description
 |:-------------------------|:----------------------------------------------------------
-| body_debugmainbody.php   | a layout used for debugging mainbody layout configurations
-| body_iphonemainbody.php  | **Deprecated** a layout used for iphone mainbody layout configurations
-| body_mainbody.php        | the default mainbody layout. This is the layout that controls the mainbody in relation to the sidebars
-| doc_body.php             | a layout to render the body tag, used in `displayBodyTag()`
-| doc_tag.php              | a layout used in the generic rendering of a tag output by the `displayClassesByTag()` method
-| feature_basic.php        | layout used for generic outputting of feature contents
-| mod_basic.php            | a basic layout for modules
-| mod_sidebar.php          | the layout for the sidebars
-| mod_standard.php         | the standard layout for modules
-| orderedbody_mainbody.php | renders mainbody and sidebars in order for use with CSS tables
+| body_debugmainbody.php   | Used for debugging mainbody layout configurations
+| body_iphonemainbody.php  | **Deprecated** Used for iPhone mainbody layout configurations
+| body_mainbody.php        | The default mainbody layout. This is the layout that controls the mainbody in relation to the sidebars.
+| doc_body.php             | Used to render the body tag, used in `displayBodyTag()`
+| doc_tag.php              | Used in the generic rendering of a tag output by the `displayClassesByTag()` method
+| feature_basic.php        | Used for generic outputting of feature contents
+| mod_basic.php            | A basic layout for modules
+| mod_sidebar.php          | Layout used for sidebars
+| mod_standard.php         | The stanndard layout for modules.
+| orderedbody_mainbody.php | Renders mainbody and sidebars in order for use with CSS tables
 
 
 Step 1: Purpose
 ---------------
-The default layouts that ship with the Gantry framework are designed to be flexible enough to handle the needs of 99% of all possible implementations. However there are occasions when the default HTML structure does not contain all the blocks elements or class names required to realize a particular design.
+The default layouts that ship with the Gantry framework are designed to be flexible enough to handle the needs of 99% of all possible implementations. However, there are occasions when the default HTML structure does not contain all of the block elements or class names required to realize a particular design.
 
-In these rare cases you can utilize the power of the Gantry framework to override the default layout with your own, template-provided layout. Also certain layouts such as the module layouts are flexible enough to support your own custom layouts, and you can call them in the same way the default layouts are called.
+In these rare cases, you can utilize the power of the Gantry framework to override the default layout with your own template-provided layout. Also, certain layouts, such as the ones used with modules, are flexible enough to support your own custom layouts, and you can call them in the same way the default ones are called.
 
 
 Step 2: Create/Copy New Layout Files
 ------------------------------------
-The simplist way to do this is to copy an existing layout. In this example we'll copy the body_mainbody.php layout, and modifying it after. The files are located under:
+The simplist way to do this is to copy an existing layout. In this example, we'll copy the **body_mainbody.php** layout and modify it. These files are located here:
 
 `[YOUR_SITE]/libraries/gantry/html/layouts/`
 
-However you do not want to modify the core gantry files. Instead copy the new layout file to:
+However, you do not want to modify the core Gantry files. Instead, copy the new layout file to:
 
 `[YOUR_SITE]/templates/YOUR_TEMPLATE/html/layouts/`
 
-You may have to create this `layouts/` folder if it does not already exist
+You may have to create the `layouts/` folder, if it does not already exist
 
-In this case, copy the `body_mainbody.php` from the core layouts location into the template layouts location.
+In this case, copy the `body_mainbody.php` from the core layouts location to the template layouts location.
 
 
 Step 3: File Structure
 ----------------------
-After you have copied the `body_mainbody.php` file, you can open it up and edit it to suit your needs. By default it looks like this:
+After you have copied the `body_mainbody.php` file, you can open it up and edit it to suit your needs. By default, it looks like this:
 
 ~~~ .php
 <?php
