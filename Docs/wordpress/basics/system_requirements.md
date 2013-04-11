@@ -5,16 +5,16 @@ title: System Requirements
 
 System Requirements
 ===================
-The Gantry Framework does have some system requirements, listed below are those requirements broken down into their distinct groups:
+Gantry Framework has some system requirements you should be aware of prior to installing. You'll find these requirements listed below, broek ndown into their distinct groups.
 
 WordPress Requirements
 -------------------
-It is strongly recommended that you always use the latest stable version of WordPress to ensure all known bugs and security fixes are addressed. At the time of this writing the current **stable version is 3.5.1**. We encourage you to update your WordPress install if you are running anything less than this version.
+It is strongly recommended that you always use the latest stable version of WordPress to ensure all known bugs and security issues are addressed. At the time this guide was written, the current stable version of WordPress is: **3.5.1**. We encourage you to update your WordPress install if you are running an older version than this.
 
 
 Server Requirements
 -------------------
-We try to ensure that any Gantry template and the Gantry Library specifically will work with any modern and secure server environment. The recommended minimum requirements are:
+We try to ensure that any Gantry template (and the Gantry Library specifically) will work with any modern and secure server environment. The recommended minimum requirements are:
 
 * PHP 5.2.17+ (5.3+ recommended)
 * MySQL 3.23 (5+ recommended)
@@ -34,11 +34,11 @@ The back-end administration requirements of Gantry in order of preference are as
 * Opera 10+
 * Internet Explorer 8+
 
->> NOTE: For Gantry administration, please note that Internet Explorer 7 and even Internet Explorer 8 have very slow JavaScript implementations and cannot be recommended.
+>> NOTE: For Gantry administration, please note that Internet Explorer 7, and even Internet Explorer 8 have very slow JavaScript implementations, and as such are not currently recommended.
 
 Development Environments
 ------------------------
-Local development is the preferred method of working with any Gantry based template as it allows for the fastest development iterations due to flat out performance and convenience. The following is a list of suitable server setups that can be installed locally on your computer:
+Local development is the preferred method of working with any Gantry-based template as it allows for the fastest development iterations due to flat out performance and convenience. The following is a list of suitable server setups that can be installed locally on your computer:
 
 
 | Mac OS X                              | Windows                               | Linux                                 |
