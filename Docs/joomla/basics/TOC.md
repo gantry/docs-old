@@ -25,9 +25,3 @@ Joomla
 * [Tutorials](../tutorials)
 
 * [Back...](../)
-
-<!-- -->
-
-* Unit Test
-
-    - [Skeleton](Skeleton.md)
