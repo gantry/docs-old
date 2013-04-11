@@ -29,7 +29,7 @@ If you don't have WordPress installed on your server yet, you can use the **Rock
 [Download](http://www.gantry-framework.org/download#wordpress)
 
 Installing the Gantry Framework for WordPress
------------------
+---------------------------------------------
 To install the Gantry template, you'll need to navigate to **Plugins → Add New** in the admin area of WordPress. From here, select the **Browse** button, locate the downloaded ZIP file, and click **Install Now** to begin installation.
 
 ![](assets/install-upload.jpg)
@@ -37,7 +37,7 @@ To install the Gantry template, you'll need to navigate to **Plugins → Add New
 The Gantry template will appear in **Themes**, the Gantry plugins will appear in **Plugins**.
 
 Activating the Gantry Theme for WordPress
---------------------------------------
+-----------------------------------------
 If you are using the Gantry framework, you'll want to use a Gantry-compatible template. After uploading your template, simply go to the **Appearance → Themes** area in the admin area of WordPress and click **Activate** next to your template.
 
 ![](assets/install-template-default.jpg)
