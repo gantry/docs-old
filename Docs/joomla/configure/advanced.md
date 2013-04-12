@@ -5,19 +5,19 @@ title: Advanced
 
 Advanced
 ========
-The Advanced panel in the Gantry based template administration interface provides several options for configuring the menu options for the template. The following configuration options are available:
+The **Advanced** panel in the Gantry-based template administration interface provides several settings for configuring the menu options for the template. The following configuration options are available:
 
 
 Display Component
 -----------------
-The Display Component option allows you to enable/disable the output of the Joomla component on the frontpage. This is useful for sites and templates that want to make use of a frontpage that consists entirely of modules, with only subpages showing the Joomla component output.
+The **Display Component** option allows you to enable/disable the output of the Joomla component on the front page. This is useful for sites and templates that want to make use of a front page that consists entirely of modules, with only subpages showing the Joomla component output.
 
 ![](assets/advanced-display-component.jpg)
 
 
 Mainbody Enabled
 ----------------
-The Mainbody Enabled option allows you to enable/disable the entire mainbody section. This is useful for sites and templates that want to make use of a frontpage that consists entirely of modules, with only subpages showing the Joomla component output.
+The **Mainbody Enabled** option allows you to enable/disable the entire mainbody section. This is useful for sites and templates that want to make use of a front page that consists entirely of modules with only subpages showing the Joomla component output.
 
 ![](assets/advanced-mainbody.jpg)
 
@@ -52,6 +52,6 @@ Enable or disable Selectivizr support for IE8 providing support for additional C
 
 Less Compiler
 -------------
-Less is used for all the CSS, which is a server side compiler. These options allow you to determine the delay on that compiling process, whether CSS compression is also infused within it and if you wish to debug the header. There is also a button to clear the LESS cache.
+Less is used for all the CSS, which is a server side compiler. These options allow you to determine the delay on that compiling process, whether CSS compression is also infused within it, or if you wish to debug the header. There is also a button to clear the LESS cache.
 
 ![](assets/advanced-less.jpg)

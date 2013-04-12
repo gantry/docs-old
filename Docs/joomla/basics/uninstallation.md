@@ -5,12 +5,12 @@ title: Uninstallation
 
 Uninstallation
 ==============
-There are two main parts to Gantry, the framework and the template. Therefore, there are two parts to uninstalling. If you intend to uninstall only the template portion, then follow the instructions for removing the template only. Keeping the Gantry library installed really does not harm as it is only used by a Gantry-enabled template, but if you wish to uninstall the library, you can follow those steps also.
+There are two main parts to Gantry -- the framework and the template. Therefore, there are two main parts to the uninstallation process. If you intend to uninstall only the template portion, then follow the instructions for removing the template only. Keeping the Gantry library installed really does cause any harm or reduced performance as it is only used by a Gantry-enabled template. If you wish to uninstall the library, you can follow those steps.
 
 
 Unsetting the Gantry Template as Default
 ----------------------------------------
-To uninstall the gantry template, you will first have to ensure that it is not set as the default template. Go to **Extensions → Template Manager**, select the checkbox to any other Site template that is not gantry, then click **Default** in the button toolbar.
+To uninstall the gantry template, you will first have to ensure that it is not set as the default template. Go to **Extensions → Template Manager**, select the checkbox to any other site template that is not gantry, and click **Default** in the button toolbar.
 
 ![](assets/uninstall-template-default.jpg)
 
