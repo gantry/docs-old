@@ -1,20 +1,20 @@
 ---
-title: Template Overrides
+title: Theme Overrides
 
 ---
 
-Template Overrides
+Theme Overrides
 ==================
-Gantry offers users the ability to override default template configurations for individual overrides. A frequent example is to have a different layout configuration on your site's front page from its subpages. Gantry makes this achievable in just a few clicks. In fact, you can configure different layouts for each of your subpages individually.
+Gantry offers users the ability to override default theme configurations for individual overrides. A frequent example is to have a different layout configuration on your site's front page from its subpages. Gantry makes this achievable in just a few clicks. In fact, you can configure different layouts for each of your subpages individually.
 
 > [![](../assets/g4-overrides.jpg)](http://youtube.com/embed/8uiWjekdjfE)
 >
-> Discover the power of Gantry and its ability to configure any parameter based on template overrides using custom template styles. Gantry adds the power of inheritance of settings to enable easier per-override custom configurations.
+> Discover the power of Gantry and its ability to configure any parameter based on theme overrides using custom theme styles. Gantry adds the power of inheritance of settings to enable easier per-override custom configurations.
 
 
 Creating an Override
 --------------------
-There are two methods of creating a new set of assignable configurations. The first is the **Save as Copy** method which involves you editing the Gantry template at **Admin Dashboard → Theme Settings**. Configure your settings, select **Save as Copy** from the **Save** dropdown, and change the override name from **Duplicate Override** to your own.
+There are two methods of creating a new set of assignable configurations. The first is the **Save as Copy** method which involves you editing the Gantry theme at **Admin Dashboard → Theme Settings**. Configure your settings, select **Save as Copy** from the **Save** dropdown, and change the override name from **Duplicate Override** to your own.
 
 ![](assets/template-override-save-as-copy.jpg)
 
