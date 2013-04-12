@@ -5,7 +5,7 @@ title: Moving Module Positions
 
 Moving Module Positions
 =======================
-This section covers moving a set of module positions within your Gantry enabled template.
+This section covers moving a set of module positions within your Gantry-enabled template.
 
 > [![](../assets/g4-module-positions.jpg)](http://youtube.com/embed/snZSUSWMnpM)
 >
@@ -14,7 +14,7 @@ This section covers moving a set of module positions within your Gantry enabled 
 
 Step 1: Planning
 ----------------
-Determine which module you want to move and where it needs to go within the `index.php` file of the template.
+Determine which module you want to move, and where it needs to go within the `index.php` file of the template.
 
 
 Step 2: Moving Module
