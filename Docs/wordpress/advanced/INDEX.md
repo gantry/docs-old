@@ -9,7 +9,7 @@ Layouts are blocks of code that control the HTML structure of a particular secti
 
 | Layouts                  | Description
 |:-------------------------|:----------------------------------------------------------
-| body_iphonemainbody.php  | **Deprecated** a layout used for iphone mainbody layout configurations
+| ~~body_iphonemainbody.php~~  | **Deprecated** - Used for iPhone mainbody layout configurations
 | body_mainbody.php        | the default mainbody layout. This is the layout that controls the mainbody in relation to the sidebars
 | doc_body.php             | a layout to render the body tag, used in `displayBodyTag()`
 | doc_tag.php              | a layout used in the generic rendering of a tag output by the `displayClassesByTag()` method
