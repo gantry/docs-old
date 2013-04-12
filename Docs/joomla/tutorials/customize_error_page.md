@@ -9,7 +9,7 @@ Joomla comes with a default 404 Error Page which Gantry can override at `/templa
 
 ![](assets/default-404.jpg)
 
-We can customize the Gantry error page by directly editing the `error.php` file. In this tutorial we will explain how to customize the error page with a simple design.
+We can customize the Gantry error page by directly editing the `error.php` file. In this tutorial, we will explain how to customize the error page with a simple design.
 
 In this example, we will customize the error page to look like the following.
 
