@@ -12,7 +12,7 @@ Here is a list of included layout files:
 | Layouts                  | Description
 |:-------------------------|:----------------------------------------------------------
 | body_debugmainbody.php   | Used for debugging mainbody layout configurations
-| body_iphonemainbody.php  | **Deprecated** Used for iPhone mainbody layout configurations
+| ~~body_iphonemainbody.php~~  | **Deprecated** - Used for iPhone mainbody layout configurations
 | body_mainbody.php        | The default mainbody layout. This is the layout that controls the mainbody in relation to the sidebars.
 | doc_body.php             | Used to render the body tag, used in `displayBodyTag()`
 | doc_tag.php              | Used in the generic rendering of a tag output by the `displayClassesByTag()` method
