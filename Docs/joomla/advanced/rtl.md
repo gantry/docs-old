@@ -5,9 +5,9 @@ title: RTL Support and Limitations
 
 RTL Support and Limitations
 ===========================
-RTL stands for “right-to-left” and this a key component when delivering a website in an RTL language such as Hebrew, Arabic, Urdu, etc. Gantry has built in RTL support which will automatically “flip” the content layouts and ordering to support RTL. We’ve also provided an override in the advanced section of the template details, so you can turn this default behavior off if you like. However, by default, if the language file supports it, RTL will be enabled.
+RTL stands for “right-to-left", a key component when delivering a website in an RTL language such as Hebrew, Arabic, Urdu, etc. Gantry has built-in RTL support which will automatically “flip” the content layouts and ordering to support RTL. We’ve also provided an override in the advanced section of the template details, so you can turn this default behavior off if you like. However, if the language file supports it, RTL will be enabled by default.
 
-The toggle to tell Joomla that a language should be displayed in RTL format is located in the language's XML file. In the case of the default en-GB language, there is a configuration file located:
+The toggle to tell Joomla that a language which should be displayed in RTL format is located in the language's XML file. In the case of the default en-GB language, there is a configuration file located here:
 
 `YOUR_SITE/languages/en-GB/en-GB.xml`
 
@@ -51,14 +51,18 @@ A visual example of how this looks/works can be seen below. The first image is i
 
 RTL Limitations
 ---------------
-Gantry provides a great deal of functionality to support RTL right out of the box. However, RTL is complicated and your specific layout will need extensive RTL support in your CSS files to properly handle the needs of your design when in RTL mode. For example if you have a module header that is shaped like a ribbon that comes in on the left side of the module in regular LTR mode, then you must create a special version of this ribbon that comes in from the right for RTL mode. Also you will have to provide the specific changes to the layout in your CSS file to ensure this image is rendered correctly.
+Gantry provides a great deal of functionality to support RTL right out of the box. However, RTL is complicated and your specific layout will need extensive RTL support in your CSS files to properly handle the needs of your design when in RTL mode. 
 
-To help out with this process we have created a special feature that detects the RTL mode, and then inserts a class called **rtl** in the body tag. That way you can add specific rules such as:
+For example, if you have a module header that is shaped like a ribbon that comes in on the left side of the module in regular LTR mode, then you must create a special version of this ribbon that comes in from the right for RTL mode. Also, you will have to provide the specific changes to the layout in your CSS file to ensure this image is rendered correctly.
+
+To help out with this process, we have created a special feature that detects the RTL mode and inserts a class called **rtl** in the body tag. That way, you can add specific rules such as:
 
 ~~~ .css
 body.rtl .module .ribbon { float: right; }
 ~~~
 
-to just target the .ribbon class in RTL mode.
+to just target the **.ribbon** class in RTL mode.
 
-Other limitations are entirely based on the browsers. Some browsers support RTL mode very well. Not surprisingly these are the mozilla and webkit based browsers: Firefox, Safari, Chrome, etc. Internet Explorer, even the latest version 9.0 release does a very poor job of rendering in RTL mode, and you will probably have to spend extensive time doing CSS work-arounds for these browsers. This is far beyond the scope of what Gantry can do for you.
+Other limitations are entirely based on the browsers. Some browsers support RTL mode very well. Not surprisingly, these are the browsers based on Mozilla and WebKit including: Firefox, Safari, Chrome, etc. 
+
+Internet Explorer -- even version 9.0 -- does a very poor job of rendering in RTL mode. You will probably have to spend extensive time doing CSS work-arounds for these browsers. This is far beyond the scope of what Gantry can do for you.
