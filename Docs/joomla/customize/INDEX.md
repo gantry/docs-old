@@ -5,7 +5,7 @@ title: Adding Module Positions
 
 Adding Module Positions
 =======================
-This section covers how to add a new row of module positions to the Gantry Framework and to your Gantry enabled template.
+This section covers how to add a new row of module positions to the Gantry Framework and to your Gantry-enabled template.
 
 > [![](../assets/g4-module-positions.jpg)](http://youtube.com/embed/snZSUSWMnpM)
 >
@@ -14,12 +14,12 @@ This section covers how to add a new row of module positions to the Gantry Frame
 
 Step 1: Getting Ready
 ---------------------
-Determine the position name and location on your template where you would like your new "row module" position to appear. In our example we will use "example".
+Determine the position name and location on your template where you would like your new "row module" position to appear. In our example we will use "example."
 
 
 Step 2: Adding Position to index.php
 ------------------------------------
-Open your template `index.php` file and go to where you would like to add your new "row module" position. Using `$gantry` we will make a call to the object using the function `displayModules(positionname, modulelayouttype, modulechromelayout);` This call will need to be echoed.
+Open your template `index.php` file and go to where you would like to add your new "row module" position. Using `$gantry`, we will make a call to the object using the function `displayModules(positionname, modulelayouttype, modulechromelayout);` This call will need to be echoed.
 
 Example:
 
@@ -30,12 +30,12 @@ Example:
 </div>
 ~~~
 
-The position now will appear after we have configured the Gantry portion to recognize it. Until then it will not work properly.
+The position now will appear after we have configured the Gantry portion to recognize it. Until then, it will not work properly.
 
 
 Step 3: Adding Position to Gantry Framework
 -------------------------------------------
-Open `templateDetails.xml` and scroll down to the "positions" tag where the default Gantry positions are listed. Under here we will need to add our "row module" positions a through f as in the example below:
+Open `templateDetails.xml` and scroll down to the "positions" tag where the default Gantry positions are listed. Under here we will need to add our "row module" positions a through f, as in the example below:
 
 ~~~ .xml
 <position>example-a</position>
@@ -46,7 +46,7 @@ Open `templateDetails.xml` and scroll down to the "positions" tag where the defa
 <position>example-f</position>
 ~~~
 
-Next, open `template-options.xml` and scroll down to the line which says:
+Next, open `template-options.xml` and scroll down to the line which says this:
 
 ~~~ .xml
 <fieldset name="layouts" label="LAYOUTS">
