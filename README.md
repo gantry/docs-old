@@ -1,14 +1,14 @@
 Gantry Documentation
 ====================
-This repository contains the source of the Gantry documentation, currently accessible at [http://gantry-framework.com/documentation]().
+This repository contains the source of the Gantry documentation, currently accessible at <http://gantry-framework.com/documentation>.
 
 The documentation is contained in [Docs/](Docs) and is structured in folders, exactly as you see them on the main website.
 
-You can read all of the documentation within as its just in plain text files, marked up with [Markdown](http://daringfireball.net/projects/markdown/).
+You can read all of the documentation within (as it's just in plain text files) marked up with [Markdown](http://daringfireball.net/projects/markdown/).
 
 If you would like a local copy of the documentation, you can either [download it](https://github.com/gantry/docs/archive/master.zip) or you can clone the reopistory by running the follwing command:
 
-~~~
+~~~ .bash
 git clone git://github.com/gantry/docs gantry-docs
 ~~~
 
@@ -23,7 +23,7 @@ If you decide to fork for providing new content as commits. Please ensure you cr
 
 To get started with a local environment into the proper `staging` branch, you can run these commands:
 
-~~~
+~~~ .bash
 git clone git://github.com/gantry/docs gantry-docs
 cd gantry-docs
 git checkout -b staging origin/staging
@@ -36,18 +36,18 @@ This is a list of few conventions we follow when writing documentation that help
 
 * Every change/pull request must be applied or requested to the [staging branch](https://github.com/gantry/docs/tree/staging). Once reviewed, approved and pulled, it will get merged into the **master** branch and automatically picked up by the website.
 
-* Folder and file names must be written in snake_case. For example, if you wanted to convert “How to Install” in snake_case, you would name it “how_to_install”.
+* Folder and file names must be written in snake_case and always lowercase. For example, if you wanted to convert “How to Install” in snake_case, you would name it “how_to_install”. Filenames in the "assets" folders must be instead dash concatenated.
 
 * There are some reserved names that can’t be used for anything but the scope they are intended for:
     * **README.md**: [ _file_ ] This is a reserved name of GitHub, used to describe the content of a particular repository directory, like this you are reading right now.
 
-    * **TOC.md**: [ _file_ ] TOC (Table Of Content) does represent the structure of a project. Its content is a list of links to the various documents in the project. The TOC is represented as sidebars in the [Gantry Docs](http://gantry.com/docs).
+    * **TOC.md**: [ _file_ ] TOC (Table Of Content) does represent the structure of a project. Its content is a list of links to the various documents in the project. The TOC is represented as sidebars in the [Gantry Docs](http://gantry-framework.com/documentation).
 
     * **INDEX.md**: [ _file_ ] This file defines the default content for a folder. Exactly like HTML pages, if you hit a folder without specifying any file, INDEX.md (if found) will be assumed.
 
     * **REDIRECT.md**: [ _file_ ] This file sorely purpose is to redirect projects to different locations. For example, if a project `/docs/project/subproject/` contains a `REDIRECT.md`, when hitting on the web the `subproject` page, you’ll get redirect to `project`. By default it takes you back one level, although you can configure where to redirect to through YAML headers ([read more about YAML headers below](#yaml-headers)).
 
-    * **assets**: [ _folder_ ] When the project requires assets, such as images, they can be placed in the `assets` folder. Any filename inside `assets` must follow the same rules as any other file name (snake_case, no reserved names, etc).
+    * **assets**: [ _folder_ ] When the project requires assets, such as images, they can be placed in the `assets` folder. Any filename inside `assets` must be lower-case and dash concatenated.
 
 * Every header, except for the title one, must be preceeded by 2 empty lines and succeeded by no empty line.
 

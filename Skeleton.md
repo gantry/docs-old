@@ -1,6 +1,6 @@
 ---
 title: Skeleton Title
-breadcrumb: /joomla:Joomla/!extensions:Extensions/
+breadcrumb: /joomla:Joomla/!wordpress:Wordpress/
 
 ---
 
@@ -64,10 +64,23 @@ Notices are produced by using two levels of block quote for example `> >` to gen
 > >
 > > This is another line of the same notice
 
+Tables
+------
+
+| Left align | Right align | Center align |
+|:-----------|------------:|:------------:|
+| This       |        This |     This     |
+| column     |    *column* |  **column**  |
+| will       |        will |     will     |
+| be         |          be |      be      |
+| left       |       right |    center    |
+| aligned    |     aligned |   aligned    |
+
+
 Blocks of code.
 ---------------
 
-~~~ {.prettyprint .linenums}
+~~~ .html
 <!DOCTYPE HTML>
 
 <html>
@@ -97,7 +110,7 @@ Blocks of code.
 Line Breaks
 -----------
 
-A `<br />` tag can be recreated by using two or more spaces at the end of a line.   
+A `<br />` tag can be recreated by using two or more spaces at the end of a line.  
 This should text should be on a new line.
 
 An Image Example
