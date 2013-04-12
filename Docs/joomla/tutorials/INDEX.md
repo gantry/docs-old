@@ -5,14 +5,14 @@ title: Overriding a Feature
 
 Overriding a Feature
 ====================
-A fundamental principle of the Gantry Framework is its ability to be overridden, so it can be as flexible as possible to suit the needs of an individual site or template. Gantry allows you to override Module Layouts, Module Chromes, Layouts and provides a platform for extension overrides. The area of focus in this tutorial is that of Features.
+A fundamental principle of the Gantry Framework is its ability to be overridden. This allows it to be as flexible as possible in order to suit the needs of an individual site or template. Gantry allows you to override Module Layouts, Module Chromes, Layouts, and provides a platform for extension overrides. The area of focus in this tutorial is that of Features.
 
 
 What is a Feature?
 ------------------
-A feature is a standalone element that adds a specific utility to the template. They extend the functionality of the template and can be configured, either generally or for specific menu items using the Gantry administrator interface.
+A feature is a standalone element that adds a specific utility to the template. They extend the functionality of the template and can be configured either generally, or for specific menu items using the Gantry administrator interface.
 
-Features are located at `/libraries/gantry/features/` and include a variety of different types such as Date, Copyright and Logo. There are many other default features that are included.
+Features are located in `/libraries/gantry/features/` and include a variety of different types such as Date, Copyright, and Logo. There are many other default features included.
 
 Below is an example of the `/libraries/gantry/features/copyright.php` feature:
 
@@ -41,7 +41,7 @@ class GantryFeatureCopyright extends GantryFeature
 }
 ~~~
 
-There are several parts to a feature. First, the following sets the file as a Gantry Feature, importing the necessary functions:
+There are several components to a feature. First, the following sets the file as a Gantry Feature, importing the necessary functions:
 
 ~~~ .php
 <?php
@@ -58,7 +58,7 @@ class GantryFeatureCopyright extends GantryFeature
    var $_feature_name = 'copyright';
 ~~~
 
-Immediately following the naming of the feature, there is some additional processing code that should not be modified.
+Immediately following the naming of the feature is additional processing code that should not be modified.
 
 ~~~ .php
 function render($position)
@@ -89,14 +89,14 @@ After the XHTML structure, you complete the feature with the following:
 
 Overriding a Feature
 --------------------
-Gantry allows features to be overridden by either copying a feature directly from `/libraries/gantry/features/` or creating a new feature.php file at `/templates/[TEMPLATE]/features/`.
+Gantry allows features to be overridden by either copying a feature directly from `/libraries/gantry/features/` or creating a new **feature.php** file at `/templates/[TEMPLATE]/features/`.
 
 A feature file must follow the format in the section above. There is, in effect, two areas of modification. The first is the name that must be unique. The second is the XHTML layout where you can construct the feature's structure to meet your ends.
 
 
 Features and the Administrator
 ------------------------------
-Depending on the level of modification you plan for a particular feature, you may wish to edit the parameters for that feature. For this, you will need to edit the `/templates/[TEMPLATE]/template-options.xml` file.
+Depending on the level of modification you plan for a particular feature, you may wish to edit its parameters. For this, you will need to edit the `/templates/[TEMPLATE]/template-options.xml` file.
 
 The relevant part of this XML file begins with:
 

@@ -5,14 +5,14 @@ title: Creating an Unsupported Page
 
 Creating an Unsupported Page
 ============================
-This tutorial will take you through the steps needed to create an unsupported browser page functionality as used here on gantry-framework.org. You can see what this looks like by pointing your browser to: <http://www.gantry-framework.org/?tmpl=unsupported>. Users of unsupported browsers (IE6 and IE7) are automatically taken to this page whenever they try to access a page on gantry-framework.org.
+This tutorial will take you through the steps needed to create an unsupported browser page as used here on **gantry-framework.org**. You can see what this looks like by pointing your browser to: <http://www.gantry-framework.org/?tmpl=unsupported>. Users of unsupported browsers (IE6 and IE7) are automatically taken to this page whenever they try to access a page on gantry-framework.org.
 
 ![](assets/unsupported-browser.jpg)
 
 
 Step 1: Unsupported Browser Redirect Feature
 --------------------------------------------
-The logic for this Unsupported Browser page is powered by a custom feature that we've called **unsupportedredirect.php** in this instance. This is a custom feature that we create and drop into the template's `features/` folder. The code is very simple as you can see below:
+The logic for this unsupported browser page is powered by a custom feature that we've called **unsupportedredirect.php**, in this instance. This is a custom feature that we create and drop into the template's `features/` folder. The code is very simple as you can see below:
 
 ~~~ .php
 <?php
@@ -63,29 +63,29 @@ The feature is actually very simple, but let's break it down into parts so you c
 
 #### isEnabled()
 
-The `isEnabled()` method is set to true because we are effectively forcing this feature to be enabled. We don't need any user interaction to toggle this functionality although that could easily be added by adding a simple bit of XML in the **templateDetails.xml** if needed.
+The `isEnabled()` method is set to true because we are effectively forcing this feature to be enabled. We don't need any user interaction to toggle this functionality, though that could easily be added by inserting a simple bit of XML in the **templateDetails.xml** if needed.
 
 
 #### isInPosition()
 
-The `isInPosition()` method is set to false because this feature is not intended to be treated like a module and placed in a module position. It is purely some logic that just needs to run without any rendering output.
+The `isInPosition()` method is set to false because this feature is not intended to be treated like a module and placed in a module position. It's really logic that just needs to run without any rendering output.
 
 
 #### isOrderable()
 
-As you can see `isOrderable()` is set to true. This is so that this feature will show up in the Advanced section of the template details in the Feature Order list. You probably want to drag the **ie6redirect** feature to the top of the list to ensure that it runs first and doesn't waste time processing other features if your going to be redirected anyway.
+As you can see, `isOrderable()` is set to true. This is so this feature will show up in the **Advanced** section of the template details in the **Feature Order** list. You probably want to drag the **ie6redirect** feature to the top of the list to ensure that it runs first, and doesn't waste time processing other features if your going to be redirected anyway.
 
 
 #### init()
 
-This is where the logic actually happens. This feature does not need to display anything, so the render() method is not implemented. The init() method is the better place for any non-rendering functionality and as you can see here, there is just a simple `if` statement to ensure that we are not already on the unsupported page, the viewing browser is `ie`, and the short version is `6` or `7`. This ensure that only IE6 and IE7 browsers will enter the `if` statement, and redirect the browser to the **?tmpl=unsupported**.
+This is where the logic actually happens. This feature does not need to display anything, so the `render()` method is not implemented. The `init()` method is the better place for any non-rendering functionality and as you can see here, there is just a simple `if` statement to ensure that we are not already on the unsupported page, the viewing browser is `ie`, and the short version is `6` or `7`. This ensure that only IE6 and IE7 browsers will enter the `if` statement, and redirect the browser to the **?tmpl=unsupported**.
 
 
 Step 2: Unsupported tmpl file
 -----------------------------
-As you saw at the end of Step 1, we've redirected IE6 users to **?tmpl=unsupported**, but what does this mean? We are going to take advantage of a little-known feature in Joomla that allows you to change the 'index' file used when rendering a page. By default, Joomla looks for index.php inside your template folder, however if you pass another name in via the 'tmpl' request variable, for example, **?tmpl=unsupported**, Joomla will look for a file called **unsupported.php** and use this rather than index.php to render the page.
+As you saw at the end of Step 1, we've redirected IE6 users to **?tmpl=unsupported**, but what does this mean? We are going to take advantage of a little-known feature in Joomla that allows you to change the 'index' file used when rendering a page. By default, Joomla looks for **index.php** inside your template folder, however if you pass another name in via the 'tmpl' request variable (**?tmpl=unsupported** as an example), Joomla will look for a file called **unsupported.php** and use this rather than **index.php** to render the page.
 
-The unsupported.php is basically a stripped down version of our existing index.php file as you can see below:
+The **unsupported.php** is basically a stripped down version of our existing **index.php** file as you can see below:
 
 ~~~ .php
 <?php
@@ -159,13 +159,13 @@ $gantry->finalize();
 ?>
 ~~~
 
-Basically we've removed all the extraneous module calls, and left the page in a basic hard-coded state. You could of course keep some of the module positions if needed, but we opted for the simple approach and kept the output as basic as possible while still offering the feel of the regular gantry-framework.org site.
+Basically, we've removed all the extraneous module calls and left the page in a basic hard-coded state. You could keep some of the module positions if needed, but we opted for the simple approach and kept the output as basic as possible -- while still offering the feel of the regular gantry-framework.org site.
 
 
 Step 3: Tweaking and Testing
 ----------------------------
-At this point you should have a fully functional feature. To test it out in your regular browser, you can just point it to **http://YOUR_SITE/?tmpl=unsupported**, and it should show you the new page based on the unsupported.php file you created. You should tweak and optimize this output to suit your needs. We kept ours pretty similar to our regular page, and even included our regular template.css and joomla.css files, but we also added a new unsupported.css file that has some styling that is only needed on this page. You can see these in the `addStyles()` method in the unsupported.php file listed above.
+At this point, you should have a fully-functional feature. To test it out in your regular browser, you can just point it to **http://YOUR_SITE/?tmpl=unsupported**, and it should show you the new page based on the **unsupported.php** file you created. You should tweak and optimize this output to suit your needs. We kept ours pretty similar to our regular page, and even included our regular **template.css** and **joomla.css** files. We also added a new **unsupported.css** file that has some styling which is only needed on this page. You can see these in the `addStyles()` method in the **unsupported.php** file listed above.
 
-After you are pretty happy with the way this looks the last step is to actually test and fix it so that it looks correct in IE6 an IE7. You should be able to point your IE6 or IE7 browser directly at your site: **http://YOUR_SITE** and it should redirect you automatically to the unsupported page you have been working on. Just tweak and adjust your css as needed to ensure that things look correct in IE6, as this is the only browser that really sees the page.
+After you are pretty happy with the way this looks, you'll want to test and fix it so it looks correct in IE6 an IE7. You should be able to point your IE6 or IE7 browser directly at your site: **http://YOUR_SITE**, and it should redirect you automatically to the unsupported page you have been working on. Just tweak and adjust your CSS as needed to ensure that things look correct in IE6, as this is the only browser that really sees the page.
 
 That's it! Pretty easy right?

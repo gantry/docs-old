@@ -7,14 +7,14 @@ Adding a Custom Font
 ====================
 This tutorial will take you through the steps needed to add a custom font to your Gantry template and make it available on the Font Settings dropdown in the template parameters.
 
-In this example we will explain how you can add the custom free font **Bloody** to your Gantry template.
+In this example, we will explain how you can add the custom free font **Bloody** to your Gantry template.
 
 ![](assets/custom-font-setting.jpg)
 
 
 Step 1: Adding Your Custom Font Files
 --------------------------------------
-Bloody is a free font that you can download at [FontSquirrel](http://www.fontsquirrel.com/fonts/Bloody). Please ensure you download the @font-face Kit.
+**Bloody** is a free font that you can download at [FontSquirrel](http://www.fontsquirrel.com/fonts/Bloody). Please ensure you download the **@font-face Kit**.
 
 Unzip the package and move the following files to `/templates/[TEMPLATE]/fonts/`:
 
@@ -28,7 +28,7 @@ Unzip the package and move the following files to `/templates/[TEMPLATE]/fonts/`
 
 Step 2: Adding the Necessary CSS
 --------------------------------
-[Create your custom stylesheet file](custom_stylesheet.md), __gantry-custom.css__, and add it to `/templates/[TEMPLATE]/css/`. Add the following to the custom css file.
+[Create your custom stylesheet file](custom_stylesheet.md), __gantry-custom.css__, and add it to `/templates/[TEMPLATE]/css/`. Add the following to the custom CSS file.
 
 ~~~ .css
 /* Adding Font BLOODY */
@@ -67,24 +67,24 @@ With your text/code editor, open `/templates/[TEMPLATE]template-options.xml` and
 </field>
 ~~~
 
-Go to your template manager and confirm that the new font option is now available.
+Go to your template manager and confirm that the new font option is available.
 
 ![](assets/custom-font-setting.jpg)
 
-The Gantry template default font is Helvetica and the frontend will look like the following.
+The Gantry template default font is **Helvetica** and the frontend will look like this:
 
 ![](assets/helvetica-font.jpg)
 
-Now set the default font to **Bloody** in the Font Settings parameter, and reload the frontend to check the result.
+Now, set the default font to **Bloody** in the Font Settings parameter and reload the front end to check the result.
 
 ![](assets/bloody-font.jpg)
 
-You can add as many custom fonts as you wish and set the multiple option for the font settings.
+You can add as many custom fonts as you wish, and set the multiple option in the font settings.
 
 
 Font Usage on Specific Elements
 -------------------------------
-In addition to adding the **Bloody** font generally, as outlined above, you can also add it to specific elements such as component title and module title. In this example, we add the following to the custom CSS file mentioned above.
+In addition to adding the **Bloody** font, as outlined above, you can also add it to specific elements like component title and module title. In this example, we add the following to the custom CSS file mentioned above:
 
 ~~~ .css
 /* Adding Font BLOODY */
@@ -105,6 +105,6 @@ In addition to adding the **Bloody** font generally, as outlined above, you can 
 }
 ~~~
 
-Reload the frontend and check the result. Only the component title and module title will use the `Bloody` font and the rest of the content will use the default font `Helvetica`.
+Reload the front end and check the result. Only the component title and module title will use the `Bloody` font. The rest of the content will use the default font `Helvetica`.
 
 ![](assets/bloody-font-specific.jpg)
