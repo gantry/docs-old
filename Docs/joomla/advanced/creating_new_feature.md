@@ -5,42 +5,42 @@ title: Creating a New Feature
 
 Creating a New Feature
 ======================
-In the Gantry framework we use the term **Feature** to mean a specific bit of functionality. Features are flexible enough that they can be used to perform almost any kind of logic you would need. The base GantryFeature class contains methods that can be implemented to control how your feature functions. Those methods are:
+In the Gantry framework, we use the term **Feature** to mean a specific bit of functionality. Features are flexible enough that they can be used to perform almost any type of logic you would need. The base **GantryFeature** class contains methods that can be implemented to control how your feature functions. Those methods are:
 
 | `isEnabled()`
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------
-| by default this gets its state from the enabled toggle in the admin. You can override this to force the enabling of a feature without any UI interaction.
+| By default, this gets its state from the enabled toggle in the admin. You can override this to force the enabling of a feature without any UI interaction.
 | Returns `boolean` [true | false]
 
 
 | `getPosition()`
 |:------------------------------------------------------------------------------------------------------------------------------------------------------
-| by default this gets its position from the position element in the admin. Again, you can override this to force a position without any UI interaction.
+| This gets its position from the position element in the admin by default. Again, you can override this to force a position without any UI interaction.
 | Returns `string` [current position name]
 
 
 | `isInPosition([string $position])`
 |:-----------------------------------------------------------------------------------------------------
-| a method to determine if the feature is located in a specified position.
+| This is a method to determine if the feature is located in a specified position.
 | Argument [optional] `string` [position name to get compared with the current position of the feature]
 | Returns `boolean` [true | false] if the current position is the same as the argument
 
 
 | `isOrderable()`
 |:----------------------------------------------------------------------------------------------------
-| a method that defaults to true, but can be overriden if the order of this position is not important.
+| A method that defaults to true, but can be overriden if the order of this position is not important.
 | Returns `boolean` [true | false]
 
 
 | `setPrefix(string $prefix)`
 |:--------------------------------------------------------------------------
-| sets a prefix for handling prefixed fields such as chained elements.
+| This sets a prefix for handling prefixed fields such as chained elements.
 | Argument `string` [prefix name - usually the name of the main chain param]
 
 
 | `get($param [, $prefixed = true])`
 |:------------------------------------------------------------------------------------------
-| gets a param from the feature's configuration. Can also take a prefix for more specificity.
+| This gets a param from the feature's configuration. It can also take a prefix for more specificity.
 | Argument `string` [field name]
 | Argument [optional] `boolean` [true | false]
 | Returns `mixed` [the current value of the field]
@@ -48,26 +48,26 @@ In the Gantry framework we use the term **Feature** to mean a specific bit of fu
 
 | `init()`
 |:-------------------------------------------------------------------------------------------------------------
-| by default empty. Is the first method called on initialization of a feature. Used for setup or initialization
+| Empty by default. It's the first method called on initialization of a feature. Used for setup or initialization
 
 
 | `render()`
 |:----------------------------------------------------------------
-| by default empty. Used to render output in a particular position
+| This is used to render output in a particular position. It is empty by default.
 
 
 | `finalize()`
 |:--------------------------------------------------
-| by default empty. Called at the end of the feature
+| Empty by default, this is called at the end of the feature.
 
-All core features and any custom feature you create, should extend this GantryFeature class. To create a new feature of your own, you would just have to create a new file in your  `features/` folder that extended the `libraries/gantry/core/gantryfeatures.class.php` class. It will automatically get picked up by the Gantry framework and be processed. The best way to see what a feature can do for you is to examine a few of the core features located in the `libraries/gantry/features/` folder.
+All core features, and any custom feature you create, should extend this **GantryFeature** class. To create a new feature of your own, you would just have to create a new file in your  `features/` folder that extended the `libraries/gantry/core/gantryfeatures.class.php` class. It will automatically get picked up by the Gantry framework and be processed. The best way to see what a feature can do for you is to examine a few of the core features located in the `libraries/gantry/features/` folder.
 
 
 ToTop Feature
 -------------
-First let's look at one of the core features called `totop.php`. As you can imagine the **totop** feature is intended to display a link at the bottom of your page and provide a smooth-scroll back to the top of the page. The most important part of a feature is the actual feature PHP file. The core features are located in the `libraries/gantry/features/` folder. These should **never** be touched or changed.
+First, let's take a look at `totop.php`, one of the core features. As you can imagine, the **TopTop** feature is intended to display a link at the bottom of your page which provides a smooth-scroll back to the top of the page. The most important part of a feature is the actual feature PHP file. The core features are located in the `libraries/gantry/features/` folder. These should **never** be touched or changed.
 
-If you want to override the behavior of a core feature, simply copy the core feature in your `/templates/[YOUR_TEMPLATE]/features` folder. Gantry will automatically pick up your version of the file and use it rather than the default version if you have created one with the same name. The other part of a feature and one that is totally optional is the configuration section. As with other parts of Gantry, the configuration is handled in the `template-options.xml`.
+If you want to override the behavior of a core feature, simply copy the core feature in your `/templates/[YOUR_TEMPLATE]/features` folder. Gantry will automatically pick up your version of the file and use it rather than the default version if you have created one with the same name. The other part of a feature, and one that is totally optional, is the configuration section. As with other parts of Gantry, the configuration is handled in `template-options.xml`.
 
 For the **totop** feature the section in the `template-options.xml` looks like:
 
@@ -79,7 +79,7 @@ For the **totop** feature the section in the `template-options.xml` looks like:
 </fields>
 ~~~
 
-What this means is that in the administrator interface, there are going to be three fields rendered. One is a toggle element that will control the 'enabled' state and the second is position element that controls the position the feature is rendered in. The third field is a text field that allows you to enter some custom text. By exposing these elements in the XML, we allow interaction with the user. If you wanted to add new elements in this XML section, you could, and they would be available for you to use in your feature's PHP definition.
+This means that there are going to be three fields rendered in the administrator interface. One is a toggle element that will control the 'enabled' state, and the second is position element which controls the position the feature is rendered in. The third field is a text field which allows you to enter custom text. By exposing these elements in the XML, we allow interaction with the user. If you wanted to add new elements in this XML section, you could. They would be available for you to use in your feature's PHP definition.
 
 Next, let's look at the PHP for this feature:
 
@@ -131,8 +131,8 @@ class GantryFeatureToTop extends GantryFeature
 }
 ~~~
 
-As you can see the there are two methods implemented in the PHP definition of the feature. The first overrides the default `init()` method and this is used to setup the feature. In this case we are simply using it to added some JavaScript that will provide the smooth scrolling. The second method that is used is `render()`.
+As you can see, the there are two methods implemented in the PHP definition of the feature. The first overrides the default `init()` method. This is used to setup the feature. In this case, we are simply using it to added some JavaScript that will provide the smooth scrolling. The second method that is used is `render()`.
 
-This method actually renders out the link and the custom text field that was defined in the administrator interface. The other methods from the base GantryFeature class are not overridden. That means that the standard methods to get the enabled state, position, etc are being used and are pulling that data from the XML and the admin settings. You can see how custom XML fields like **text** are easily available and are prefixed by the feature name, so you can just use `get->("text")` to retrieve the value of of the chained field.
+This method actually renders out the link and the custom text field that was defined in the administrator interface. The other methods from the base GantryFeature class are not overridden. That means the standard methods to get the enabled state, position, etc. are being used, and are pulling that data from the XML and admin settings. You can see how custom XML fields like **text** are easily available and are prefixed by the feature name, so you can just use `get->("text")` to retrieve the value of of the chained field.
 
 Have a look through all the [default features](../configure/features.md) that come with Gantry to see how we achieved a wide variety of functionality with these features.

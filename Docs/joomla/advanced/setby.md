@@ -5,23 +5,23 @@ title: Session/Cookie/URL
 
 Set by: Session/Cookie/URL
 ==========================
-The Gantry framework has multiple ways in order to set the value of a configuration parameter. This is one of the things that lets Gantry be so flexible. You can have parameter settings that are per menu item and even override that with per user settings in the users session and cookies.
+The Gantry framework has multiple methods of setting the value of a configuration parameter. This is one of the things that makes Gantry so flexible. You can have parameter settings which are per-menu item, and even override that with per user settings in the users session and cookies.
 
-There are **static** and **dynamic** ways of setting the value of a parameter. The **static** ways of setting the values are the default and per menu item configured in the template administration. The **dynamic** ways of setting the value are using the users session, the users browser cookies, and the URL query string.
+There are **static** and **dynamic** ways of setting the value of a parameter. The **static** ways of setting the values are the default and per-menu item configured in the template administration. The **dynamic** methods of setting the value use the user's session, the user's browser cookies, and the URL query string.
 
 
 Parameter Value Precedence
 --------------------------
-All parameters start out with a default value that is set in the `template-options.xml`. But these values can be changed in multiple different ways, each overriding the next if it has a value. The order of precedence for setting values is shown here:
+All parameters start out with a default value that is set in `template-options.xml`. These values can be changed in multiple different ways, each overriding the next if it has a value. The order of precedence for setting values is shown here:
 
 ![](assets/setby-chart.png)
 
-The highest method that sets a value will always win. For example, if a **backgroundlevel** is set to **high** by for a particular menu item, but it is set to **low** by a URL link passing it in on a query string, then it is going to be set to **low** when the page is displayed because the URL Query string has higher precedence than the Per Menu Item setting.
+The highest method that sets a value will always win. For example, if a **backgroundlevel** is set to **high** by for a particular menu item, but it is set to **low** by a URL link passing it in on a query string, then it is going to be set to **low** when the page is displayed because the URL Query string has higher precedence than the per-menu item setting.
 
 
 Allowing Dynamic Parameter Values
 ---------------------------------
-By default, all setting of a parameter value by a dynamic method is turned off. In order to allow setting of a value dynamically you have to enable it for every parameter you want and by the methods that the parameter is allowed to use. This is done in the `template-options.xml`. A parameter can have the following syntax with **setby**'s and **setin**'s. The following is an example of how this is done:
+By default, all setting of a parameter value by a dynamic method is turned off. In order to allow setting of a value dynamically you have to enable it for every parameter you want and by the methods that the parameter is allowed to use. This is done in the `template-options.xml`. A parameter can have the following syntax with **setby**'s and **setin**'s. Here's an example:
 
 ~~~ .xml
 <param name="backgroundlevel" default="med" type="slider" class="graphic-level" label="BG_LEVEL" description="BG_LEVEL_DESC" setbyurl="true" setinsession="true" setbysession="true" setincookie="true" setbycookie="true" isbodyclass="true">
@@ -31,7 +31,7 @@ By default, all setting of a parameter value by a dynamic method is turned off. 
 </param>
 ~~~
 
-In the above example, the **backgroundlevel** can be set by the URL query String, a browser cookie and by the users session, this is defined by the **setbyurl**, **setbycookie**, and **setbysession** attributes. If a value is set by any of those means it is stored in the cookie and session as defined by the **setincookie** and **setinsession** attributes
+In the above example, the **backgroundlevel** can be set by the URL query string, a browser cookie, and by the users session. This is defined by the **setbyurl**, **setbycookie**, and **setbysession** attributes. If a value is set by any of those means, it is stored in the cookie and session as defined by the **setincookie** and **setinsession** attributes.
 
 The attributes allowed are:
 
@@ -46,9 +46,9 @@ The attributes allowed are:
 
 Notes on Presets
 ----------------
-Preset types can use the same dynamic values mechanisms to set the values of parameters. If a preset type is used to set a value dynamically then all of the parameters defined in the preset have their values set to that which is in the preset. But if an individual parameter is set at the same time then the individual parameter value overrides the one in the preset.
+Preset types can use the same dynamic values mechanisms to set the values of parameters. If a preset type is used to set a value dynamically, all of the parameters defined in the preset have their values set to that which is in the preset. If an individual parameter is set at the same time, then the individual parameter value overrides the one in the preset.
 
-For example if there are presets defined as follows:
+For example, if there are presets defined as follows:
 
 ~~~ .php
 $gantry_presets = array(
@@ -68,7 +68,7 @@ $gantry_presets = array(
 );
 ~~~
 
-And the parameters are defined as below:
+Here's a look at how the parameters are defined:
 
 ~~~ .xml
 <param name="presets" type="preset" mode="scroller" default="preset1" label="STYLE_PRESETS" description="STYLE_PRESETS_DESC" setbyurl="true" setinsession="true" setbysession="true" setbycookie="true" setinmenuitem="false" />
