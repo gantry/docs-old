@@ -10,7 +10,7 @@ WordPress
 
 * Configure
 
-    - [Template Overrides]()
+    - [Theme Overrides]()
     - [Presets](presets.md)
     - [Style](style.md)
     - [Gizmos](gizmos.md)
