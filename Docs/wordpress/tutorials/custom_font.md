@@ -107,6 +107,6 @@ In addition to adding the **Bloody** font, as outlined above, you can also add i
 }
 ~~~
 
-Reload the front end and check the result. Only the component title and module title will use the **Bloody** font. The rest of the content will use the default font **Helvetica**.
+Reload the front end and check the result. Only the content title and widget title will use the **Bloody** font. The rest of the content will use the default font **Helvetica**.
 
 ![](assets/bloody-font-specific.jpg)
