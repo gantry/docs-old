@@ -461,16 +461,6 @@ Step 6: Adding the Widget Position
 Now, it's time to define our new widget position in the administration. All of the widgets placed in that position will be displayed in the RokBox popup.
 
 
-#### templateDetails.xml
-
-We want to open up the template's `templateDetails.xml` file. Inside the first area, we want to add a line to the positions section. Look for the listing of widget positions that begins with the tag `<positions>`. At the bottom of the list, immediately before the `</positions>` tag, add the following:
-
-~~~ .xml
-<position id="login" name="Login" max_positions="1">Login</position>
-~~~
-
-This code adds the `login` position to Gantry and WordPress. It allows the WordPress to render the `Login` position in the widgets manager, so you can place any widgets (that you want to appear in the popup) inside.
-
 
 Step 7: Adding the CSS
 ----------------------
