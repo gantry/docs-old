@@ -169,7 +169,7 @@ Now, it's time to set up the parameters for this feature as well as define our n
 
 #### Template Options
 
-First, we want to open up the template's `templateDetails.xml` file. Inside, the first area we will want to add a line to is the positions section. Look for the listing of module positions that begins with the tag `<position>` and at the bottom of the list, immediately before the `</position>` tag, add the following `<position>login</position>`.
+First, you'll need to open up the template's `templateDetails.xml` file, which is located in your template's root directory. A line needs to be added to the position section of this file. Look for the listing of module positions that begins with the tag `<position>` and at the bottom of the list, immediately before the `</position>` tag, add the following: `<position>login</position>`.
 
 Next, we want to add the parameters for the feature itself in the **FEATURES** section. Find the following line in `template-options.xml`, which indicates the start of the Features panel:
 
