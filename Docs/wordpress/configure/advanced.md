@@ -69,3 +69,6 @@ LESS Compiler
 *LESS* is commonly used in our Gantry 4 CSS as a server side compiler. Its options allow you to determine the delay on that compiling process, whether CSS compression is also infused within it, and if you wish to debug the header. There is also an option to clear the LESS cache.
 
 ![](assets/advanced-less.jpg)
+
+Widgets Override
+Please add instruction here about Widgets Override 
