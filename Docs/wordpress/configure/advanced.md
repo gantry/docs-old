@@ -69,3 +69,9 @@ LESS Compiler
 *LESS* is commonly used in our Gantry 4 CSS as a server side compiler. Its options allow you to determine the delay on that compiling process, whether CSS compression is also infused within it, and if you wish to debug the header. There is also an option to clear the LESS cache.
 
 ![](assets/advanced-less.jpg)
+
+Naming a Custom Override
+--------------------------
+To rename the custom override, you would need to click on the custom override you want to rename. Then click on the pencil icon as shown in the image below. 
+<img src="http://www.rockettheme.com/forum/index.php?id=63160&amp;rb_v=file" alt="7-15-2011 8-03-20 PM.png" onclick="viewableArea(this);">
+Then you can hit enter to save the name.
