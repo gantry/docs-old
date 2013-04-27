@@ -64,6 +64,8 @@ The actual link makes use of the RokBox link syntax for calling a module into th
 
 Immediately following width and height declaration, we are referencing the module's surrounding div which tells RokBox which item needs to be placed into the popup. This surrounding div (rt-popuplogin in our example) will be placed in a layout later on in the tutorial.
 
+<strong>Caution: This syntax is not working for the new version of RokBox. You have to enable the backward compatibility in the RokBox plugin.</strong>
+
 
 Link/Button Text
 ----------------
