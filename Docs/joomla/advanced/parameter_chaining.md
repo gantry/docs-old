@@ -5,13 +5,13 @@ title: Parameter Chaining
 
 Parameter Chaining
 ==================
-During the development of the Gantry Framework, we found that we needed to organize sets of parameters into custom groups of related settings. You can create your own elements in *templateDetails.xml* to allow the setting of specific parameters which you can use later in your own features, layouts, etc. A good example of this is the **inactive** chain that controls what menu item should be displayed when the menu is inactive. The XML in question looks like this:
+During the development of the Gantry Framework, we found that we needed to organize sets of parameters into custom groups of related settings. You can create your own elements in *template-options.xml* to allow the setting of specific parameters which you can use later in your own features, layouts, etc. A good example of this is the **inactive** chain that controls what menu item should be displayed when the menu is inactive. The XML in question looks like this:
 
 ~~~ .xml
-<param name="inactive" type="chain" label="INACTIVE"  description="INACTIVE_DESC">
-    <param name="enabled" type="toggle" default="1" label="ENABLED"  setinmenuitem="false" />
-    <param name="menuitem" type="menuitem" label="SELECT_MENU_ITEM" setinmenuitem="false" />
-</param>
+<fields name="inactive" type="chain" label="INACTIVE"  description="INACTIVE_DESC">
+    <field name="enabled" type="toggle" default="1" label="ENABLED"  setinmenuitem="false" />
+    <field name="menuitem" type="menuitem" label="SELECT_MENU_ITEM" setinmenuitem="false" />
+</fields>
 ~~~
 
 This parameter block consists of a parent **chain** element. This element has a name called **inactive**. Within the chain, are two elements. One is a toggle called **enabled**, and the other is a menuitem element named **menuitem**.
