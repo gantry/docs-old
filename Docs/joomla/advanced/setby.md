@@ -24,11 +24,11 @@ Allowing Dynamic Parameter Values
 By default, all setting of a parameter value by a dynamic method is turned off. In order to allow setting of a value dynamically you have to enable it for every parameter you want and by the methods that the parameter is allowed to use. This is done in the `template-options.xml`. A parameter can have the following syntax with **setby**'s and **setin**'s. Here's an example:
 
 ~~~ .xml
-<param name="backgroundlevel" default="med" type="slider" class="graphic-level" label="BG_LEVEL" description="BG_LEVEL_DESC" setbyurl="true" setinsession="true" setbysession="true" setincookie="true" setbycookie="true" isbodyclass="true">
+<field name="backgroundlevel" default="med" type="slider" class="graphic-level" label="BG_LEVEL" description="BG_LEVEL_DESC" setbyurl="true" setinsession="true" setbysession="true" setincookie="true" setbycookie="true" isbodyclass="true">
     <option>low</option>
     <option>med</option>
     <option>high</option>
-</param>
+</field>
 ~~~
 
 In the above example, the **backgroundlevel** can be set by the URL query string, a browser cookie, and by the users session. This is defined by the **setbyurl**, **setbycookie**, and **setbysession** attributes. If a value is set by any of those means, it is stored in the cookie and session as defined by the **setincookie** and **setinsession** attributes.
@@ -71,12 +71,12 @@ $gantry_presets = array(
 Here's a look at how the parameters are defined:
 
 ~~~ .xml
-<param name="presets" type="preset" mode="scroller" default="preset1" label="STYLE_PRESETS" description="STYLE_PRESETS_DESC" setbyurl="true" setinsession="true" setbysession="true" setbycookie="true" setinmenuitem="false" />
-<param name="backgroundlevel" default="med" type="slider" class="graphic-level" label="BG_LEVEL" description="BG_LEVEL_DESC" setbyurl="true" setinsession="true" setbysession="true" setincookie="true" setbycookie="true" isbodyclass="true">
+<field name="presets" type="preset" mode="scroller" default="preset1" label="STYLE_PRESETS" description="STYLE_PRESETS_DESC" setbyurl="true" setinsession="true" setbysession="true" setbycookie="true" setinmenuitem="false" />
+<field name="backgroundlevel" default="med" type="slider" class="graphic-level" label="BG_LEVEL" description="BG_LEVEL_DESC" setbyurl="true" setinsession="true" setbysession="true" setincookie="true" setbycookie="true" isbodyclass="true">
     <option>low</option>
     <option>med</option>
     <option>high</option>
-</param>
+</field>
 ~~~
 
 A URL call with the query string:
