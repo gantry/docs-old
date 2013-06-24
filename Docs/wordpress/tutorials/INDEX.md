@@ -10,7 +10,7 @@ A fundamental principle of *Gantry Framework* is its ability to be overridden so
 
 What is a Gizmo?
 ------------------
-A gizmo is a standalone element that adds a specific utility to the template. It extends†the functionality of the template and can be configured, either generally or for specific overrides, using the Gantry administrator interface.
+A gizmo is a standalone element that adds a specific utility to the template. It extends the functionality of the template and can be configured, either generally or for specific overrides, using the Gantry administrator interface.
 
 Gizmos are located at `/wp-content/plugins/gantry/gizmos/` and include a variety of different types such as Google Analytics, Page Suffix and RokStyle. There are many other default gizmos†included.
 
