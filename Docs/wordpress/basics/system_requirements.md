@@ -5,7 +5,7 @@ title: System Requirements
 
 System Requirements
 ===================
-Gantry Framework has some system requirements you should be aware of prior to installing. You'll find these requirements listed below, broek ndown into their distinct groups.
+Gantry Framework has some system requirements you should be aware of prior to installing. You'll find these requirements listed below, break down into their distinct groups.
 
 WordPress Requirements
 -------------------
