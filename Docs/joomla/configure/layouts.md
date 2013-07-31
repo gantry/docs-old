@@ -63,6 +63,6 @@ As you can see, it's set for the two sidebars to be displayed on the right (each
 
 ![](assets/layouts-mb3.jpg)
 
-After click the Save or the Apply button in the toolbar, you will be able to see this layout applied to the frontend:
+After clicking the Save or the Apply button in the toolbar, you will be able to see this layout applied to the frontend:
 
 ![](assets/layouts-mb-example2.jpg)
