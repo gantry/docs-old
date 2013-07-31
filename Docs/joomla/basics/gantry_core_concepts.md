@@ -46,7 +46,7 @@ Here, you can see the traditional Joomla calls to get the language have been rep
 
 This call has built-in logic, which will include core Gantry CSS files, as well as any CSS files that match these names in the template CSS folders. Also, any browser-specific versions of these files will be added. For example, if you have `/css/master-ie8.css` in the template's css folder, it will get picked up also, but will only be presented to IE8 browsers.
 
-An important new features in Gantry 4 is the ability to add and compile LESS files into CSS by using the `addLess()` method. You can also include JavaScript files with the `addScript()` method. Let's take a look at the next bit of the file that includes some references to some module positions:
+An important new feature in Gantry 4 is the ability to add and compile LESS files into CSS by using the `addLess()` method. You can also include JavaScript files with the `addScript()` method. Let's take a look at the next bit of the file that includes some references to some module positions:
 
 ~~~ .php
 <?php /** Begin Top Surround **/ if ($gantry->countModules('top')) : ?>
