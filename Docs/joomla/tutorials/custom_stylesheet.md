@@ -10,7 +10,7 @@ This tutorial will take you through the steps needed to add a custom stylesheet 
 
 Custom Stylesheet with CSS
 --------------------------
-The Gantry template comes with structured CSS rules and properties which are compiled from the LESS files. However, there are some cases where we need to style the template without using LESS. One of the way is by using the custom CSS file with custom rules and properties to override a particular style in the template.
+The Gantry template comes with structured CSS rules and properties which are compiled from the LESS files. However, there are some cases where we need to style the template without using LESS. One way is by using the custom CSS file with custom rules and properties to override a particular style in the template.
 
 
 Step 1: Adding Your Custom CSS File
