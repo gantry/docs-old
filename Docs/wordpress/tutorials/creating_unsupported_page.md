@@ -90,51 +90,54 @@ defined('ABSPATH') or die('Restricted access');
 ?>
 <!doctype html>
 <html xml:lang="<?php echo $gantry->language; ?>" lang="<?php echo $gantry->language;?>" >
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php
-        $gantry->displayHead();
-        $gantry->addLess('global.less', 'master.css');
-    ?>
-</head>
-<div id="body-wrapper">
-    <div id="rt-showcase">
-        <div class="rt-showcase-pattern">
-            <div class="rt-showcase-pattern-2">
-                <div class="rt-container">
-                    <div class="rt-grid-12 rt-alpha rt-omega">
-                        <div class="rt-block main-showcase-logo">
-                            <div class="module-surround">
-                                <div class="module-content">
-                                    <div class="custom main-showcase-logo">
-                                        <div class="showcase-image">
-                                            <img src="/gantry/g-f/images/gantry_site/showcase-logo.png" alt="">
-                                        </div>
-                                        <div class="showcase-content">
-                                            <h1>
-                                                <span class="gantry-logo">Gantry</span> <small>Web Platform Theme Framework</small>
-                                            </h1>
-                                            <h1>
-                                                <b>Unsupported Browser</b>
-                                            </h1>
-                                            <p>
-                                                You are using a browser that is not supported by this website. That probably means your browser is woefully out of date, insecure, and just generally lacking in standards. Luckily for you there are literally 10s of modern, standards compatible browsers available to you at no cost. All you need to do is simply take the time to install one.
-                                            </p>
-                                            <p>
-                                                We suggest installing the latest version of <a href="http://www.mozilla.com/en-US/firefox/firefox.html">Firefox</a>, <a href="http://www.google.com/chrome">Google Chrome</a>, <a href="http://www.apple.com/safari/download/">Safari</a>, heck, even <a href="http://www.opera.com/">Opera</a> would be a better option.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-    </div>
-</div>
+	<head>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <?php
+	        $gantry->displayHead();
+	        $gantry->addLess('global.less', 'master.css');
+	    ?>
+	</head>
+	<body>
+		<div id="body-wrapper">
+		    <div id="rt-showcase">
+		        <div class="rt-showcase-pattern">
+		            <div class="rt-showcase-pattern-2">
+		                <div class="rt-container">
+		                    <div class="rt-grid-12 rt-alpha rt-omega">
+		                        <div class="rt-block main-showcase-logo">
+		                            <div class="module-surround">
+		                                <div class="module-content">
+		                                    <div class="custom main-showcase-logo">
+		                                        <div class="showcase-image">
+		                                            <img src="/gantry/g-f/images/gantry_site/showcase-logo.png" alt="">
+		                                        </div>
+		                                        <div class="showcase-content">
+		                                            <h1>
+		                                                <span class="gantry-logo">Gantry</span> <small>Web Platform Theme Framework</small>
+		                                            </h1>
+		                                            <h1>
+		                                                <b>Unsupported Browser</b>
+		                                            </h1>
+		                                            <p>
+		                                                You are using a browser that is not supported by this website. That probably means your browser is woefully out of date, insecure, and just generally lacking in standards. Luckily for you there are literally 10s of modern, standards compatible browsers available to you at no cost. All you need to do is simply take the time to install one.
+		                                            </p>
+		                                            <p>
+		                                                We suggest installing the latest version of <a href="http://www.mozilla.com/en-US/firefox/firefox.html">Firefox</a>, <a href="http://www.google.com/chrome">Google Chrome</a>, <a href="http://www.apple.com/safari/download/">Safari</a>, heck, even <a href="http://www.opera.com/">Opera</a> would be a better option.
+		                                            </p>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="clear"></div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<?php $gantry->displayFooter(); ?>
+	</body>
 </html>
 <?php
 $gantry->finalize();
