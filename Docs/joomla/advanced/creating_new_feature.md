@@ -60,7 +60,7 @@ In the Gantry framework, we use the term **Feature** to mean a specific bit of f
 |:--------------------------------------------------
 | Empty by default, this is called at the end of the feature.
 
-All core features, and any custom feature you create, should extend this **GantryFeature** class. To create a new feature of your own, you would just have to create a new file in your  `features/` folder that extended the `libraries/gantry/core/gantryfeatures.class.php` class. It will automatically get picked up by the Gantry framework and be processed. The best way to see what a feature can do for you is to examine a few of the core features located in the `libraries/gantry/features/` folder.
+All core features, and any custom feature you create, should extend this **GantryFeature** class. To create a new feature of your own, you would just have to create a new file in your  `features/` folder that extended the `libraries/gantry/core/gantryfeature.class.php` class. It will automatically get picked up by the Gantry framework and be processed. The best way to see what a feature can do for you is to examine a few of the core features located in the `libraries/gantry/features/` folder.
 
 
 ToTop Feature
