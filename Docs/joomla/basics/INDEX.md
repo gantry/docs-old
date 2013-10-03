@@ -13,9 +13,9 @@ Gantry is packed full of features created to empower the development of designs 
   Based on [Twitter Bootstrap](http://twitter.github.com/bootstrap/) [^1]
 
 
-* __Joomla 1.5 and 2.5 support__
+* __Joomla 2.5 and 3.x support__
 
-  Gantry Framework version 3 is available for Joomla 1.5 whilst the new responsive Gantry 4 framework is available for Joomla 2.5
+The new responsive Gantry 4 framework is available for Joomla 2.5 and 3.x
 
 
 * __Stunning new administrator interface__
