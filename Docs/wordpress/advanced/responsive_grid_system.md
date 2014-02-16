@@ -56,6 +56,6 @@ Navigation
 ----------
 The menu system for a smartphone device will be a select field. A select field is a great solution for this because most phones have nice native select UI elements. Using this method is necessary as it makes the menu accessible on mobile devices, as Fusion, and our other menu types, are simply too complex to render effectively on these devices. A new menu system will be created that is responsive, but will form part of Gantry.
 
-All other sizes will use the normal menu system build on **RokNavMenu**, such as **Fusion Menu** or **SplitMenu**.
+All other sizes will use the normal menu system built on **RokNavMenu**, such as **Fusion Menu** or **SplitMenu**.
 
 ![](assets/responsive3.jpg)
