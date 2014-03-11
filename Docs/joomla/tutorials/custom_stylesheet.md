@@ -19,6 +19,8 @@ To create a custom CSS file, you just have to create a new css file at `/templat
 
 ![](assets/template-custom-css.jpg)
 
+>> NOTE: The use of [TEMPLATE] in this guide is intended as a placeholder for the name of the template's primary directory. Replace [TEMPLATE] with the template directory name in order for these instructions to work with your site.
+
 
 Step 2: Adding Your Custom Rules and Properties
 -----------------------------------------------
