@@ -73,4 +73,34 @@ This is where we add our new position layout slider. We need to add the followin
 |       label  | Label in Template Manager for this module.                                     |
 | description  | description of what this area is used for.                                     |
 
+Note: Creating a New Module
+---------------------------
+When creating a new module in `<header id="rt-top-surround">`, you should also make a reference to the new module in our LESS files, specifically.
 
+~~~ .php
+#
+rt - header, #rt - top { 
+    z - index: 2; 
+    position: relative; 
+}
+~~~
+
+If, for example, your new module is called `#rt-coffee`, then you should throw the following code into the mix.
+
+~~~ .php
+#
+rt - header, #rt - top, #rt - coffee { 
+    z - index: 2; 
+    position: relative; 
+}
+~~~
+
+As a suggestion, you may want to put the following in a custom CSS or LESS file to avoid it being overridden in the event of a template update.
+
+~~~ .php
+#
+rt-coffee {
+	z-index: 2;
+	position: relative;
+}
+~~~

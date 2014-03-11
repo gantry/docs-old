@@ -10,7 +10,7 @@ This tutorial will take you through the steps needed to add a custom stylesheet 
 
 Custom Stylesheet with CSS
 --------------------------
-The Gantry template comes with structured CSS rules and properties which are compiled from the LESS files. However, there are some cases where we need to style the template without using LESS. One of the way is by using the custom CSS file with custom rules and properties to override a particular style in the template.
+The Gantry template comes with structured CSS rules and properties which are compiled from the LESS files. However, there are some cases where we need to style the template without using LESS. One way is by using the custom CSS file with custom rules and properties to override a particular style in the template.
 
 
 Step 1: Adding Your Custom CSS File
@@ -18,6 +18,8 @@ Step 1: Adding Your Custom CSS File
 To create a custom CSS file, you just have to create a new css file at `/templates/[TEMPLATE]/css/` and name it **[TEMPLATE]-custom.css**. The new custom CSS file will automatically get loaded by the Gantry framework.
 
 ![](assets/template-custom-css.jpg)
+
+>> NOTE: The use of [TEMPLATE] in this guide is intended as a placeholder for the name of the template's primary directory. Replace [TEMPLATE] with the template directory name in order for these instructions to work with your site.
 
 
 Step 2: Adding Your Custom Rules and Properties

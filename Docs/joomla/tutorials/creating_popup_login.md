@@ -32,11 +32,11 @@ class GantryFeatureLogin extends GantryFeature {
         <div class="rt-block">
             <div class="rt-popupmodule-button">
             <?php if ($user->guest) : ?>
-                <a href="#" class="buttontext button" rel="rokbox[355 385][module=rt-popuplogin]">
+                <a data-rokbox href="#" class="buttontext button" data-rokbox-element="#rt-popuplogin">
                     <span class="desc"><?php echo $this->get('text'); ?></span>
                 </a>
             <?php else : ?>
-                <a href="#" class="buttontext button" rel="rokbox[355 385][module=rt-popuplogin]">
+                <a data-rokbox href="#" class="buttontext button" data-rokbox-element="#rt-popuplogin">
                     <span class="desc"><?php echo $this->get('logouttext'); ?> <?php echo JText::sprintf($user->get('username')); ?></span>
                 </a>
             <?php endif; ?>
@@ -57,12 +57,10 @@ RokBox Syntax
 -------------
 
 ~~~ .html
-<a href="#" class="buttontext button" rel="rokbox[355 385][module=rt-popuplogin]">
+<a data-rokbox href="#" class="buttontext button" data-rokbox-element="#rt-popuplogin">
 ~~~
 
-The actual link makes use of the RokBox link syntax for calling a module into the popup. Using the `rel=` tag we are declaring the size (width height) of our intended popup. ex: `rokbox[355 385]`. You can adjust these width and height values to match the content you plan to have in your popup.
-
-Immediately following width and height declaration, we are referencing the module's surrounding div which tells RokBox which item needs to be placed into the popup. This surrounding div (rt-popuplogin in our example) will be placed in a layout later on in the tutorial.
+The actual link makes use of the RokBox link syntax for calling a module into the popup. Using the datasets `data-rokbox` and `data-rokbox-element` we are referencing the module's surrounding div which tells RokBox which item needs to be placed into the popup. This surrounding div (#rt-popuplogin in our example) will be placed in a layout later on in the tutorial.
 
 
 Link/Button Text
