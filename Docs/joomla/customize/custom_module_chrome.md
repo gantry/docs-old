@@ -26,7 +26,7 @@ Example:
 ~~~ .php
 function modChrome_example($module, &$params, &$attribs)
 {
-  if (!empty ($module->content)) { ?>
+  if (!empty ($module->content)) : ?>
   <div class="examplewrapper">
   <h2><?php echo $module->title; ?></h2>
   <div class="examplecontent">
