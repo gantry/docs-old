@@ -81,8 +81,8 @@ Step 4: Adding Layout to Template
 ---------------------------------
 Open up the template's **index.php** and find the module where we need to use the custom module layout.
 
-Edit the **displayModules** functions 3nd parameter to the name of your custom module layout you created in step 3. As seen in the example below:
+Edit the **displayModules** functions 2nd, 3rd parameter to the name of your custom module layout you created in step 3. As seen in the example below:
 
 ~~~ .php
-<?php echo $gantry->displayModules('top','example','standard'); ?>
+<?php echo $gantry->displayModules('top','standard','standard'); ?>
 ~~~
