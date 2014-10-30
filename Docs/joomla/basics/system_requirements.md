@@ -16,9 +16,9 @@ Server Requirements
 -------------------
 We try to ensure that Gantry templates (and specifically the Gantry Library) will work with any modern and secure server environment. The recommended minimum requirements are:
 
-* PHP 5.2.17+ (5.3+ recommended)
-* MySQL 3.23 (5+ recommended)
-* Apache 1.3 (2.2+ recommended)
+* PHP 5.3.10+ (5.4+ recommended)
+* MySQL 5.1+ (5.1+ recommended)
+* Apache 2.x+ (2.2+ recommended)
 * mod_mysql
 * mod_xml
 * mod_zlib

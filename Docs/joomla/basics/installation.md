@@ -5,6 +5,7 @@ title: Installation
 
 Installation
 ============
+
 The Gantry framework itself is independent of any template. Each Gantry-enabled template relies on the Gantry framework to provide the underlying base and extensive functionality that enables the creation of such powerful sites.
 
 > [![](../assets/g4-install.jpg)](http://youtube.com/embed/KOOuBQpSZDM)
@@ -14,6 +15,7 @@ The Gantry framework itself is independent of any template. Each Gantry-enabled 
 
 Downloading Gantry
 ------------------
+
 Gantry has three available download types:
 
 * __Bundle__: This includes the Framework (library, component & plugins), the Gantry template and associated extensions such as RokNavMenu.
@@ -26,6 +28,7 @@ The installation process is exactly the same for all three. The only difference 
 
 Installing Gantry
 -----------------
+
 Install at **Extensions → Extensions Manager → Install**. Select the **Choose File** button, locate the downloaded ZIP and click **Upload & Install** to begin the installation.
 
 ![](assets/install-upload.jpg)
@@ -34,6 +37,7 @@ The Gantry template will appear in the **Template Manager**, the Gantry plugins 
 
 Setting the Gantry Template as Default
 --------------------------------------
-If you are using the Gantry template, you will want to set it as the default template so it loads on the front end. Go to **Extensions → Template Manager**, select the **gantry** checkbox, and click **Default** in the button toolbar.
+
+If you are using the Gantry template, you will want to set it as the default template so it loads on the front end. Go to **Extensions → Template Manager**, select the **Gantry** checkbox, and click **Default** in the button toolbar.
 
 ![](assets/install-template-default.jpg)
