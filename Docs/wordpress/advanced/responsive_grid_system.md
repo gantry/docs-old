@@ -27,8 +27,16 @@ Responsive Support Classes
 --------------------------
 Another useful available feature, via Bootstrap, is the collection of responsive utility classes that can be used to help tweak layouts by providing a simple method of showing or hiding modules. Insert the below support classes into your widget custom variation to show/hide a widget for a particular mode, or add to a specific element in your content.
 
-![](assets/responsive2.jpg)
-
+|       Class       | Phones (<= 767px) | Tablets (768-959px) | Desktops (960-1199px) | Desktops (>= 1200px) |
+| :---------------- | :---------------- | :------------------ | :-------------------- | :------------------- |
+| `visible-phone`   | **Visible**       | Hidden              | Hidden                | Hidden               |
+| `visible-tablet`  | Hidden            | **Visible**         | Hidden                | Hidden               |
+| `visible-desktop` | Hidden            | Hidden              | **Visible**           | Hidden               |
+| `visible-large`   | Hidden            | Hidden              | Hidden                | **Visible**          |
+| `hidden-phone`    | Hidden            | **Visible**         | **Visible**           | **Visible**          |
+| `hidden-tablet`   | **Visible**       | Hidden              | **Visible**           | **Visible**          |
+| `hidden-desktop`  | **Visible**       | **Visible**         | Hidden                | **Visible**          |
+| `hidden-large`    | **Visible**       | **Visible**         | **Visible**           | Hidden               |
 
 Media Queries
 -------------
