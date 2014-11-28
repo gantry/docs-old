@@ -9,18 +9,18 @@ Layouts are blocks of code that control the HTML structure of a particular secti
 
 Here is a list of included layout files:
 
-| Layouts                  | Description
-|:-------------------------|:----------------------------------------------------------
-| body_debugmainbody.php   | Used for debugging mainbody layout configurations
-| ~~body_iphonemainbody.php~~  | **Deprecated** - Used for iPhone mainbody layout configurations
-| body_mainbody.php        | The default mainbody layout. This is the layout that controls the mainbody in relation to the sidebars.
-| doc_body.php             | Used to render the body tag, used in `displayBodyTag()`
-| doc_tag.php              | Used in the generic rendering of a tag output by the `displayClassesByTag()` method
-| feature_basic.php        | Used for generic outputting of feature contents
-| mod_basic.php            | A basic layout for modules
-| mod_sidebar.php          | Layout used for sidebars
-| mod_standard.php         | The stanndard layout for modules.
-| orderedbody_mainbody.php | Renders mainbody and sidebars in order for use with CSS tables
+|           Layouts           |                                               Description                                               |
+| :-------------------------- | :------------------------------------------------------------------------------------------------------ |
+| body_debugmainbody.php      | Used for debugging mainbody layout configurations                                                       |
+| ~~body_iphonemainbody.php~~ | **Deprecated** - Used for iPhone mainbody layout configurations                                         |
+| body_mainbody.php           | The default mainbody layout. This is the layout that controls the mainbody in relation to the sidebars. |
+| doc_body.php                | Used to render the body tag, used in `displayBodyTag()`                                                 |
+| doc_tag.php                 | Used in the generic rendering of a tag output by the `displayClassesByTag()` method                     |
+| feature_basic.php           | Used for generic outputting of feature contents                                                         |
+| mod_basic.php               | A basic layout for modules                                                                              |
+| mod_sidebar.php             | Layout used for sidebars                                                                                |
+| mod_standard.php            | The stanndard layout for modules.                                                                       |
+| orderedbody_mainbody.php    | Renders mainbody and sidebars in order for use with CSS tables                                          |
 
 
 Step 1: Purpose
@@ -32,7 +32,7 @@ In these rare cases, you can utilize the power of the Gantry framework to overri
 
 Step 2: Create/Copy New Layout Files
 ------------------------------------
-The simplist way to do this is to copy an existing layout. In this example, we'll copy the **body_mainbody.php** layout and modify it. These files are located here:
+The simplest way to do this is to copy an existing layout. In this example, we'll copy the **body_mainbody.php** layout and modify it. These files are located here:
 
 `[YOUR_SITE]/libraries/gantry/html/layouts/`
 
