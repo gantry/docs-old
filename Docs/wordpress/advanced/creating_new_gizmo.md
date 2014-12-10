@@ -5,46 +5,47 @@ title: Creating a New Gizmo
 
 Creating a New Gizmo
 ======================
+
 In the Gantry framework, we use the term **Gizmo** to refer to a specific type of functionality. Gizmos are flexible enough that they can be used to perform almost any kind of logic you would need. The base **GantryGizmo** class contains methods that can be implemented to control how your gizmo functions. Those methods are:
 
-| `isEnabled()`
-|:-------------------------------------------------------------------------------------------------------------------------------------------------------
-| By default, this gets its state from the enabled toggle in the admin. You can override this to force the enabling of a gizmo without any UI interaction.
-| Returns `boolean` [true | false]
+|                                                                      `isEnabled()`                                                                       |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| By default, this gets its state from the enabled toggle in the admin. You can override this to force the enabling of a gizmo without any UI interaction. |
+| Returns `boolean` (true / false)                                                                                                                         |
 
 
-| `setPrefix(string $prefix)`
-|:------------------------------------------------------------------------
-| This sets a prefix for handling prefixed parameters such as chained elements.
-| Argument `string` [prefix name - usually the name of the main chain param]
+|                          `setPrefix(string $prefix)`                          |
+| :---------------------------------------------------------------------------- |
+| This sets a prefix for handling prefixed parameters such as chained elements. |
+| Argument `string` (prefix name - usually the name of the main chain param)    |
 
 
-| `get($param [, $prefixed = true])`
-|:-----------------------------------------------------------------------------------------
-| This method gets a param from the gizmo's configuration. Can also take a prefix for more specificity.
-| Argument `string` [field name]
-| Argument [optional] `boolean` [true | false]
-| Returns `mixed` [the current value of the field]
+|                                   `get($param [, $prefixed = true])`                                  |
+| :---------------------------------------------------------------------------------------------------- |
+| This method gets a param from the gizmo's configuration. Can also take a prefix for more specificity. |
+| Argument `string` (field name)                                                                        |
+| Argument (optional) `boolean` (true / false)                                                          |
+| Returns `mixed` (the current value of the field)                                                      |
 
 
-| `init()`
-|:-----------------------------------------------------------------------------------------------------------
-| Empty, by default. It's the first method called on initialization of a gizmo. It's used for setup or initialization.
+|                                                       `init()`                                                       |
+| :------------------------------------------------------------------------------------------------------------------- |
+| Empty, by default. It's the first method called on initialization of a gizmo. It's used for setup or initialization. |
 
 
-| `query_parsed_init()`
-|:-----------------------------------------------------------------
-| Empty, by default. This method initializes the gizmos after a query gets parsed.
+|                              `query_parsed_init()`                               |
+| :------------------------------------------------------------------------------- |
+| Empty, by default. This method initializes the gizmos after a query gets parsed. |
 
 
-| `admin_init()`
-|:-------------------------------------------------------------------------------------
-| Empty, by default. It's used to initialize a gizmo when the admin dashboard gets initialized.
+|                                         `admin_init()`                                        |
+| :-------------------------------------------------------------------------------------------- |
+| Empty, by default. It's used to initialize a gizmo when the admin dashboard gets initialized. |
 
 
-| `finalize()`
-|:--------------------------------------------------
-| Empty, by default. This is called at the end of the gizmo.
+|                        `finalize()`                        |
+| :--------------------------------------------------------- |
+| Empty, by default. This is called at the end of the gizmo. |
 
 All core gizmos, and any custom gizmo you create, should extend this **GantryGizmo class**. To create a new gizmo of your own, you would just have to create a new file in your `gizmos/` folder that extended the **GantryGizmo class**. It will automatically be picked up by the Gantry framework and processed. The best way to see what one can do for you is to examine a few of the core gizmos.
 

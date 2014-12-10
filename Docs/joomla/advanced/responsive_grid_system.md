@@ -20,8 +20,13 @@ Responsive Grid Info
 --------------------
 The responsive grid system is designed for desktop, tablet and smartphone systems. Each has minor modifications to ensure compatibility in different modes. The table below shows the breakdown of screen resolutions and associated devices, and which layout characters are then applied to each.
 
-![](assets/responsive1.jpg)
-
+|       Label       | Layout Width (in pixels) |     Column Width (in pixels)    |     Gutter Width (in pixels)    |
+| :---------------- | :----------------------- | :------------------------------ | :------------------------------ |
+| Large Display     | >= 1200                  | 100                             | 20                              |
+| Default           | 960 to 1199              | 80                              | 20                              |
+| Portrait Tablets  | 768 to 959               | 64                              | 20                              |
+| Phones to Tablets | <= 767                   | Fluid Columns (No Fixed Widths) | Fluid Columns (No Fixed Widths) |
+| Phones            | <= 480                   | Fluid Columns (No Fixed Widths) | Fluid Columns (No Fixed Widths) |
 
 Responsive Support Classes
 --------------------------

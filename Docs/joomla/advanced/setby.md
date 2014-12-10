@@ -35,13 +35,15 @@ In the above example, the **backgroundlevel** can be set by the URL query string
 
 The attributes allowed are:
 
-* __setbyurl__ - allows you to pass in a parameter via the query string url (default = false)
-* __setbycookie__ - allows you to store the passed in value for an extended cookie set time (beyond a single php session) (default = false)
-* __setincookie__ - allows you to get the param value from a cookie (default = false)
-* __setbysession__ - allows you to store that passed value for the length of the session (default = false)
-* __setinsession__ - allows you to get the param value from the session (default = false)
-* __setinoverride__ - allows the param to be overridden in override styles (default = true)
-* __isbodyclass__ - allows you to set the value of the param to be a class on the body tag for css targeting (default = false)
+|   Attribute   |                                                       Description                                                       |
+| :------------ | :---------------------------------------------------------------------------------------------------------------------- |
+| setbyurl      | allows you to pass in a parameter via the query string url (default = false)                                            |
+| setbycookie   | allows you to store the passed in value for an extended cookie set time (beyond a single php session) (default = false) |
+| setincookie   | allows you to get the param value from a cookie (default = false)                                                       |
+| setbysession  | allows you to store that passed value for the length of the session (default = false)                                   |
+| setinsession  | allows you to get the param value from the session (default = false)                                                    |
+| setinoverride | allows the param to be overridden in override styles (default = true)                                                   |
+| isbodyclass   | allows you to set the value of the param to be a class on the body tag for css targeting (default = false)              |
 
 
 Notes on Presets
