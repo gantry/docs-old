@@ -15,7 +15,7 @@ The Gantry template comes with structured CSS rules and properties which are com
 
 Step 1: Adding Your Custom CSS File
 -----------------------------------
-To create a custom CSS file, you just have to create a new css file at `/templates/[TEMPLATE]/css/` and name it **[TEMPLATE]-custom.css**. The new custom CSS file will automatically get loaded by the Gantry framework.
+To create a custom CSS file, you just have to create a new css file at `/templates/[TEMPLATE]/css/` and name it **gantry-custom.css**. The new custom CSS file will automatically get loaded by the Gantry framework.
 
 ![](assets/template-custom-css.jpg)
 
@@ -24,7 +24,7 @@ To create a custom CSS file, you just have to create a new css file at `/templat
 
 Step 2: Adding Your Custom Rules and Properties
 -----------------------------------------------
-You can now add the custom rules and properties inside the **[TEMPLATE]-custom.css** file to customize your Gantry template. If you want to override any existing rules from the template, you would need to use CSS Specificity.
+You can now add the custom rules and properties inside the **gantry-custom.css** file to customize your Gantry template. If you want to override any existing rules from the template, you would need to use CSS Specificity.
 
 We will see how we use our custom stylesheet in the example below.
 
