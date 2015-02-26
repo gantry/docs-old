@@ -67,6 +67,7 @@ WordPress
     - [Adding a Custom StyleSheet](tutorials/custom_stylesheet.md)
     - [Adding a Custom Font](tutorials/custom_font.md)
     - [Customize the Error Page](tutorials/customize_error_page.md)
+    - [WPML Support](tutorials/wpml.md)
 
 
 [^1]: http://en.wikipedia.org/wiki/Wordpress
