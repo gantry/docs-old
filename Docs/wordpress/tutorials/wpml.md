@@ -8,10 +8,9 @@ Utilizing WPML Support with Gantry
 
 Gantry 4.1.3 added built-in support for WPML (WordPress Multilingual Plugin), a popular solution for creating a seamless multilanguage experience for your users, enabling them to easily switch between language settings on your site, and giving you the power to create unique layouts, widgets, and posts that appear only on particular languages.
 
-In essense, you can create three versions of a post, each written in a supported language, and have each of these posts only appear on the site for the language it is written in. It's a great way to cater your site to an International audience.
+In essence, you can create three versions of a post, each written in a supported language, and have each of these posts only appear on the site for the language it is written in. It's a great way to cater your site to an International audience.
 
 WPML doesn't translate your content for you, but it will give you the ability to quickly and easily set it up so your site is optimized for your diverse audience.
-
 
 Enabling WPML Support
 -----
@@ -22,7 +21,7 @@ If you are using a Gantry-powered theme or plugin that has already been updated 
 
 If your theme has custom styling or code or uses overwritten widgets or other components sourced from Gantry's core, you may need to make some minor edits in order to make this code compatible with WPML.
 
-### Renaming Fucntions and Adding Values to Arrays
+### Renaming Functions and Adding Values to Arrays
 
 The first thing you will need to do is search your theme directory (and subdirectories) for occurrences of `_r` and `_re`. These functions are not compatible with WPML. Here is an example of this used in an incompatible Gantry implementation.
 
@@ -47,9 +46,11 @@ The argument has also been changed. You will need to add an extra argument to wh
 
 In this case, `rt_gantry_wp_lang` is used because the example is the default **Gantry** theme. This should be changed to match the directory name of your theme's folder followed by `_lang`. For example, if your theme's folder is called `rt_myriad_wp` then the string would be changed to `rt_myriad_wp_lang`.
 
-### Adding Fields to WPML
+### Making Gantry Widgets Inputs Translatable with WPML
 
-The next thing you will want to do is access any **XML** files for extensions and/or widgets that are overwritten or in addition to the Gantry core and add any fields that you would like to make translatable. This is typically used for **Title** fields, as well as any other language-specific fields that would need to be translated with WPML.
+The next thing you will want to do is access any **XML** files for widgets that are overwritten or in addition to the Gantry core and add any fields that you would like to make translatable. This is typically used for **Title** fields, as well as any other language-specific fields that would need to be translated with WPML, especially in third-party custom widgets.
+
+>> NOTE: If the widget is filterable by widget_title (and all of the ones in RocketTheme themes are) it doesn't need to be defined in the wpml_inputs field as WPML handles widget_titles automatically.
 
 You can do this very easily, simply open the widget's XML and find the fields you wish to add. Here is an example:
 
@@ -67,7 +68,7 @@ Next, you will want to create a new line in the **fieldset** as follows:
 
 >> NOTE: The field name must be set to `wpml_inputs`, and `readonly="true"` should also be included to keep this field from appearing in the backend.
 
-The `description` should include any field names you want to have translatable by WPML. Separate these field names with spaces, if there are more than one. Here is an example of the updated XML file.
+The `default` field should include any field names you want to have translatable by WPML. Separate these field names with spaces, if there are more than one. Here is an example of the updated XML file.
 
 ~~~ .xml
 <fieldset name="widget">
@@ -76,9 +77,9 @@ The `description` should include any field names you want to have translatable b
 </fieldset>
 ~~~
 
-Using the Text Widget
+Converting Text Widgets to Multilingual Text Widget
 -----
 
-WPML has a feature that adds a **Multilanguage Text** widget to your arsenal. This is a great thing, and should be used for **ANY** text widget you wish to have set to a specific language. If you are updating an existing site and see an option to convert Text widgets to Multilanguage Text widgets, doing so will cause issues. We recommend instead replacing these widgets manually as Gantry's core conflicts with this feature.
+WPML has a feature that adds a **Multilanguage Text** widget to your arsenal. This is a great thing, and should be used for **ANY** text widget you wish to have set to a specific language. If you are updating an existing site and see an option to convert Text widgets to Multilanguage Text widgets, doing so will cause issues. We recommend instead replacing these widgets manually as the unique structure of widgets that the overrides mechanism requires makes this potentially problematic.
 
 We have hidden this function in the latest edition of Gantry to avoid this breaking anything. It should be very easy to create a new Multilingual Text widget, copy the text from the existing Text widget, and replace it.
