@@ -21,7 +21,7 @@ If you are using a Gantry-powered theme or plugin that has already been updated 
 
 If your theme has custom styling or code or uses overwritten widgets or other components sourced from Gantry's core, you may need to make some minor edits in order to make this code compatible with WPML.
 
-### Renaming Functions and Adding Values to Arrays
+### Changing Custom RocketTheme Functions to WordPress Native
 
 The first thing you will need to do is search your theme directory (and subdirectories) for occurrences of `_r` and `_re`. These functions are not compatible with WPML. Here is an example of this used in an incompatible Gantry implementation.
 
@@ -50,13 +50,13 @@ In this case, `rt_gantry_wp_lang` is used because the example is the default **G
 
 The next thing you will want to do is access any **XML** files for widgets that are overwritten or in addition to the Gantry core and add any fields that you would like to make translatable. This is typically used for **Title** fields, as well as any other language-specific fields that would need to be translated with WPML, especially in third-party custom widgets.
 
->> NOTE: If the widget is filterable by widget_title (and all of the ones in RocketTheme themes are) it doesn't need to be defined in the wpml_inputs field as WPML handles widget_titles automatically.
+>> NOTE: If the widget title is filterable by widget_title (and all of the ones in RocketTheme themes are) it doesn't need to be defined in the wpml_inputs field as WPML handles widget_titles automatically.
 
 You can do this very easily, simply open the widget's XML and find the fields you wish to add. Here is an example:
 
 ~~~ .xml
 <fieldset name="widget">
-	<field name="wpml_inputs" type="hidden" default="prefix" description="Input field names (separated by space) that can be translated by WPML" readonly="true" />
+    <field name="prefix" type="text" label="Prefix" class="widefat" size="30" default="You are here:" readonly="false" />
 </fieldset>
 ~~~
 
@@ -66,7 +66,7 @@ Next, you will want to create a new line in the **fieldset** as follows:
 <field name="wpml_inputs" type="hidden" default="prefix" description="Input field names (separated by space) that can be translated by WPML" readonly="true" />
 ~~~
 
->> NOTE: The field name must be set to `wpml_inputs`, and `readonly="true"` should also be included to keep this field from appearing in the backend.
+>> NOTE: The field name must be set to `wpml_inputs`, and `type="hidden"` should also be included to keep this field from appearing in the backend.
 
 The `default` field should include any field names you want to have translatable by WPML. Separate these field names with spaces, if there are more than one. Here is an example of the updated XML file.
 
@@ -87,7 +87,7 @@ We have hidden this function in the latest edition of Gantry to avoid this break
 Exceptions
 -----
 
-Some of the strings in Gantry Widgets won't translate. For example, Gantry Login Form.
+Some of the strings in Gantry Widgets won't translate. For example, the Gantry Login Form widget.
 
 This happens because some of the widgets (which aren't being overriden at the theme level) are being loaded from the **Gantry Framework** core and injected into the theme on the fly. Because of this, WPML is treating strings found in such widgets as strings that belong to the plugin and not theme itself. Because of this, they aren't being loaded properly in the frontend. In the case of the default **Gantry** theme, some examples would be **Gantry Login Form**, **Gantry Font Sizer**, and **Gantry Overrides Map**.
 
@@ -95,7 +95,7 @@ This isn't a big issue as we can solve this by following a few short steps. Firs
 
 In that section, please select **Auto-register strings always** and hit **Apply**. 
 
-After finishing this step, please log out of the WordPress administrator and switch to the frontend. 
+After finishing this step, please log out of the WordPress administrator and switch to the frontend and load up a page where you have placed your widgets.
 
 This is the moment when WPML should recognize these strings and add them to the **String Translation** page. Now, head back to the **String Translation** page in the WPML administrator and verify that **theme Gantry** is present in the context dropdown at the top of the page. If you can see such context and strings present inside of it - you should be good to go. 
 
