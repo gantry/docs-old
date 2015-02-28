@@ -23,5 +23,6 @@ WordPress
     - [Adding a Custom StyleSheet](custom_stylesheet.md)
     - [Adding a Custom Font](custom_font.md)
     - [Customize the Error Page](customize_error_page.md)
+    - [WPML Support](wpml.md)
 
 * [Back...](../)
